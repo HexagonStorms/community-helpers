@@ -52,9 +52,9 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href="index.html" class="navbar-brand ">
+                <a href="/" class="navbar-brand ">
                     <span class="logo"><strong>classified</strong><span class="handwriting">ads</span><br />
-                        <small >a minimalist theme built with bootstrap </small></span>
+                        <small >Putting the youth to help out in your community</small></span>
                 </a>
 
             </div>
@@ -64,12 +64,12 @@
             <div class="collapse navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right visible-xs">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="my_account.html">Login</a></li>
-                    <li><a href="register.html">Register</a></li>
-                    <li><a href="listings.html">Listings</a></li>
-                    <li><a href="account_dashboard.html">My account</a></li>
-                    <li><a href="account_ad_create.html">Post an ad</a></li>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/my_account">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/listings">Listings</a></li>
+                    <li><a href="/account_dashboard">My account</a></li>
+                    <li><a href="/account_ad_create">Post an ad</a></li>
                 </ul> 
                 <div class="nav navbar-nav navbar-right hidden-xs">
                     <div class="row">
@@ -78,10 +78,10 @@
 
 
                             <a data-toggle="modal" data-target="#modalLogin"  href="#">Login</a> | 
-                            <a href="register.html">Register</a> | 
-                            <a href="listings.html">Listings</a> | 
-                            <a href="account_dashboard.html">My account</a>
-                            <a href="account_ad_create.html" class="btn btn-warning post-ad-btn">Post an ad</a>
+                            <a href="/register">Register</a> | 
+                            <a href="/listings">Listings</a> | 
+                            <a href="/account_dashboard">My account</a>
+                            <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Post an ad</a>
 
                         </div>  
                     </div>
@@ -116,10 +116,10 @@
 
                 <div class="col-sm-8 col-xs-12">
                     <p class="footer-links">
-                        <a href="index.html" class="active">Home</a>
-                        <a href="typography.html">Typography</a>
-                        <a href="terms.html">Terms and Conditions</a>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="/" class="active">Home</a>
+                        <a href="#">Typography</a>
+                        <a href="/terms">Terms and Conditions</a>
+                        <a href="/contact">Contact Us</a>
                     </p>
                 </div>
             </div>
