@@ -11,14 +11,14 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link id="switch_style" href="css/bootstrap.css" rel="stylesheet">
+    <link id="switch_style" href="/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/theme.css" rel="stylesheet">
-    <link href="css/dropzone.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/dropzone.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
-    <link rel="stylesheet" type="text/css" href="js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -130,16 +130,16 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="js/jquery.flot.js"></script>
-    <script src="js/dropzone.js"></script>
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/jquery.flot.js"></script>
+    <script src="/js/dropzone.js"></script>
 
     <!-- Add fancyBox main JS and CSS files -->
-    <script type="text/javascript" src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
-    <script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.5"></script>
-    <script type="text/javascript" src="js/fancybox/helpers/jquery.fancybox-media.js?v=2.1.5"></script>
-    <script src="js/global.js"></script>
+    <script type="text/javascript" src="/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-media.js?v=2.1.5"></script>
+    <script src="/js/global.js"></script>
 
 </body>
 </html>
