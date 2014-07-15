@@ -3,6 +3,7 @@ a.navbar-brand small {
 }
 
 .btn-warning {
+
 	background-image: -webkit-linear-gradient(top, #12C227 0%, #12C227 100%);
 	background-image: linear-gradient(to bottom, #00CE18 0%, #089E19 100%);
 	border-color: #089E16;
