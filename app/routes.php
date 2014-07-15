@@ -23,6 +23,8 @@ Route::get('/account_ad_create', 'HomeController@account_ad_create');
 
 Route::get('/terms', 'HomeController@terms');
 
+// Currently Adding
+
 Route::get('/contact', 'HomeController@contact');
 
 Route::get('/account', 'HomeController@account');
