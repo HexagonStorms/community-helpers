@@ -19,6 +19,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/chcustom.css"/>
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -53,8 +54,8 @@
                 </button>
 
                 <a href="/" class="navbar-brand ">
-                    <span class="logo"><strong>classified</strong><span class="handwriting">ads</span><br />
-                        <small >Putting the youth to help out in your community</small></span>
+                    <span class="logo"><strong> Community-</strong><span class="handwriting">Helpers.com</span><br />
+                    <small >Putting the youth to help out in your community</small></span>
                 </a>
 
             </div>

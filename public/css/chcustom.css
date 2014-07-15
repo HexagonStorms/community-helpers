@@ -1,0 +1,15 @@
+a.navbar-brand small {
+	color: #4F60DF;
+}
+
+.btn-warning {
+	background-image: -webkit-linear-gradient(top, #12C227 0%, #139B49 100%);
+	background-image: linear-gradient(to bottom, #12C227 0%, #139B49 100%);
+	border-color: #000000;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+	background-image: -webkit-linear-gradient(top, #159424 0%, #3DA366 100%);
+	background-image: linear-gradient(to bottom, #159424 0%, #3DA366 100%);
+	border-color: #000000;
+}
