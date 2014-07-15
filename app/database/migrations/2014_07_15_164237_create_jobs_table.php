@@ -19,7 +19,6 @@ class CreateJobsTable extends Migration {
 			$table->string('description', 100);
 			$table->decimal('price', 5,2);
 			$table->boolean('is_complete');
-			$table->integer('rating')->nullable();
 			$table->date('required_date');
 			$table->date('required_time');
 			$table->integer('user_id')->unsigned();
