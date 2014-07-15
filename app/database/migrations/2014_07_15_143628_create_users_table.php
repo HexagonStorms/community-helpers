@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration {
 			$table->string('email', 200)->unique();
 			$table->string('password', 100);
 			$table->date('birth_date');
-			$table->string('gender', 1);-nullable;
+			$table->string('gender', 1)->nullable;
 			$table->boolean('is_helper');
 			$table->boolean('is_admin');
 			$table->text('bio')->nullable;
