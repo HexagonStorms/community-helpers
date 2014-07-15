@@ -74,7 +74,7 @@
                 <div class="col-sm-7">	
 
                     <ol class="breadcrumb">
-                        <li><a href="listings.html" class="link-info"><i class="fa fa-chevron-left"></i> Back to listings</a></li>
+                        <li><a href="listings" class="link-info"><i class="fa fa-chevron-left"></i> Back to listings</a></li>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Vehicles</a></li>
                         <li class="active">Cars</li>
@@ -312,14 +312,14 @@
                                                                                     <div class="row premium  listing-row">
 
                                 <div class="col-sm-2">
-                                    <a href="details.html" class="thumbnail " ><img alt="" src="css/images/listings/0.jpg"></a>
+                                    <a href="details" class="thumbnail " ><img alt="" src="css/images/listings/0.jpg"></a>
                                 </div>	 
 
                                 <div class="col-sm-10">
                                     <div class="row">
 
                                         <div class="col-sm-9">
-                                            <h3><a class=""  href="details.html">7 bedroom house for sale</a></h3>
+                                            <h3><a class=""  href="details">7 bedroom house for sale</a></h3>
                                         </div>                    
 
                                         <div class="col-sm-3">
@@ -369,14 +369,14 @@
                                                                                     <div class="row   listing-row">
 
                                 <div class="col-sm-2">
-                                    <a href="details.html" class="thumbnail " ><img alt="" src="css/images/listings/1.jpg"></a>
+                                    <a href="details" class="thumbnail " ><img alt="" src="css/images/listings/1.jpg"></a>
                                 </div>	 
 
                                 <div class="col-sm-10">
                                     <div class="row">
 
                                         <div class="col-sm-9">
-                                            <h3><a class=""  href="details.html">1 bedroom flat for sale</a></h3>
+                                            <h3><a class=""  href="details">1 bedroom flat for sale</a></h3>
                                         </div>                    
 
                                         <div class="col-sm-3">
@@ -426,14 +426,14 @@
                                                                                     <div class="row   listing-row">
 
                                 <div class="col-sm-2">
-                                    <a href="details.html" class="thumbnail property_sold"  style="position:relative;"><img alt="" src="css/images/listings/2.jpg"></a>
+                                    <a href="details" class="thumbnail property_sold"  style="position:relative;"><img alt="" src="css/images/listings/2.jpg"></a>
                                 </div>	 
 
                                 <div class="col-sm-10">
                                     <div class="row">
 
                                         <div class="col-sm-9">
-                                            <h3><a class=""  href="details.html">2 bedroom apartment for sale</a></h3>
+                                            <h3><a class=""  href="details">2 bedroom apartment for sale</a></h3>
                                         </div>                    
 
                                         <div class="col-sm-3">
@@ -483,14 +483,14 @@
                                                                                     <div class="row  last listing-row">
 
                                 <div class="col-sm-2">
-                                    <a href="details.html" class="thumbnail " ><img alt="" src="css/images/listings/3.jpg"></a>
+                                    <a href="details" class="thumbnail " ><img alt="" src="css/images/listings/3.jpg"></a>
                                 </div>	 
 
                                 <div class="col-sm-10">
                                     <div class="row">
 
                                         <div class="col-sm-9">
-                                            <h3><a class=""  href="details.html">2 bedroom house for sale</a></h3>
+                                            <h3><a class=""  href="details">2 bedroom house for sale</a></h3>
                                         </div>                    
 
                                         <div class="col-sm-3">
@@ -638,7 +638,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -665,7 +665,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -693,7 +693,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

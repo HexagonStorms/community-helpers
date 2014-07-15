@@ -65,7 +65,7 @@
                                             </label>
                                         </div>
                                         <br />
-                                        <a href="account_dashboard.html" class="btn btn-primary">Create account</a>
+                                        <a href="account_dashboard" class="btn btn-primary">Create account</a>
 
 
                                     </div>
@@ -154,7 +154,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -181,7 +181,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -209,7 +209,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

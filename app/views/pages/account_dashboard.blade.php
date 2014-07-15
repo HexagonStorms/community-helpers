@@ -16,19 +16,19 @@
 				<div class="panel-body">
 					<ul class="nav">
 						<li>
-							<a class="active" href="account_dashboard.html">Dashboard</a>
+							<a class="active" href="account_dashboard">Dashboard</a>
 						</li>						
 						<li>	
-							<a class="active" href="account_profile.html">My profile</a>
+							<a class="active" href="account_profile">My profile</a>
 						</li>
                         <li>
-							<a class="active" href="account_account.html">My account</a>
+							<a class="active" href="account_account">My account</a>
 						</li>
 						<li>
-							<a class="active" href="account_ads.html">Manage ads</a>
+							<a class="active" href="account_ads">Manage ads</a>
 						</li>
 						<li>
-							<a class="active" href="account_ad_create.html">Create new ad</a>
+							<a class="active" href="account_ad_create">Create new ad</a>
 						</li>
 					</ul>
 
@@ -118,7 +118,7 @@
                         <div class="col-sm-4">
                             <h3>Create a new ad</h3>
                             <p>Click on the button below to start creating a new ad. You can upload up to 20 images per property.</p>
-                            <a href="account_ad_create.html" class="btn btn-default">Create new ad</a>
+                            <a href="account_ad_create" class="btn btn-default">Create new ad</a>
                             <br />
                             <br />
                         </div>
@@ -127,7 +127,7 @@
                         <div class="col-sm-4">
                             <h3>Promote your ads</h3>
                             <p>If your ad has fallen to the 3rd or 4th page, it's a good time to 'bump' it back to the 1st page</p>
-                            <a href="account_ads.html" class="btn btn-default">Bump listings</a>
+                            <a href="account_ads" class="btn btn-default">Bump listings</a>
                             <br />
                             <br />
                         </div>
@@ -162,7 +162,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -189,7 +189,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -217,7 +217,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

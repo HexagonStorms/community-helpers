@@ -100,12 +100,12 @@
                                                                 <li class="dropdown">
                                     <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">Other countries <b class="caret"></b></a>
                                     <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu">
-                                        <li><a href="listings.html">USA</a></li>
-                                        <li><a href="listings.html">France</a></li>
-                                        <li><a href="listings.html">Germany</a></li>
-                                        <li><a href="listings.html">Spain and Portugal</a></li>
-                                        <li><a href="listings.html">Switzerland</a></li>
-                                        <li><a href="listings.html">Other Europe</a></li>
+                                        <li><a href="listings">USA</a></li>
+                                        <li><a href="listings">France</a></li>
+                                        <li><a href="listings">Germany</a></li>
+                                        <li><a href="listings">Spain and Portugal</a></li>
+                                        <li><a href="listings">Switzerland</a></li>
+                                        <li><a href="listings">Other Europe</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -115,11 +115,11 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html">London</a><br />
-                                                                                                <a href="listings.html">Edinburgh</a><br />
-                                                                                                <a href="listings.html">Manchester</a><br />
-                                                                                                <a href="listings.html">Birmingham</a><br />
-                                                                                                <a href="listings.html">Glasgow</a><br />
+                                                                                                <a href="listings">London</a><br />
+                                                                                                <a href="listings">Edinburgh</a><br />
+                                                                                                <a href="listings">Manchester</a><br />
+                                                                                                <a href="listings">Birmingham</a><br />
+                                                                                                <a href="listings">Glasgow</a><br />
                                                                                             </div>
                                         </div>
 
@@ -128,11 +128,11 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html">Liverpool</a><br />
-                                                                                                <a href="listings.html">Bristol</a><br />
-                                                                                                <a href="listings.html">Oxford</a><br />
-                                                                                                <a href="listings.html">Cambridge</a><br />
-                                                                                                <a href="listings.html">Cardiff</a><br />
+                                                                                                <a href="listings">Liverpool</a><br />
+                                                                                                <a href="listings">Bristol</a><br />
+                                                                                                <a href="listings">Oxford</a><br />
+                                                                                                <a href="listings">Cambridge</a><br />
+                                                                                                <a href="listings">Cardiff</a><br />
                                                                                             </div>
                                         </div>
 
@@ -141,11 +141,11 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html">Brighton</a><br />
-                                                                                                <a href="listings.html">Newcastle-upon-Tyne</a><br />
-                                                                                                <a href="listings.html">Leeds</a><br />
-                                                                                                <a href="listings.html">York</a><br />
-                                                                                                <a href="listings.html">Inverness</a><br />
+                                                                                                <a href="listings">Brighton</a><br />
+                                                                                                <a href="listings">Newcastle-upon-Tyne</a><br />
+                                                                                                <a href="listings">Leeds</a><br />
+                                                                                                <a href="listings">York</a><br />
+                                                                                                <a href="listings">Inverness</a><br />
                                                                                             </div>
                                         </div>
 
@@ -154,11 +154,11 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html">Bath</a><br />
-                                                                                                <a href="listings.html">Nottingham</a><br />
-                                                                                                <a href="listings.html">Reading</a><br />
-                                                                                                <a href="listings.html">Aberdeen</a><br />
-                                                                                                <a href="listings.html">Chester</a><br />
+                                                                                                <a href="listings">Bath</a><br />
+                                                                                                <a href="listings">Nottingham</a><br />
+                                                                                                <a href="listings">Reading</a><br />
+                                                                                                <a href="listings">Aberdeen</a><br />
+                                                                                                <a href="listings">Chester</a><br />
                                                                                             </div>
                                         </div>
 
@@ -171,18 +171,18 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Avon</a><br />
-                                                                                                <a href="listings.html" >Bedfordshire</a><br />
-                                                                                                <a href="listings.html" >Berkshire</a><br />
-                                                                                                <a href="listings.html" >Buckinghamshire</a><br />
-                                                                                                <a href="listings.html" >Cambridgeshire</a><br />
-                                                                                                <a href="listings.html" >Cheshire</a><br />
-                                                                                                <a href="listings.html" >Cleveland</a><br />
-                                                                                                <a href="listings.html" >Cornwall</a><br />
-                                                                                                <a href="listings.html" >Cumbria</a><br />
-                                                                                                <a href="listings.html" >Derbyshire</a><br />
-                                                                                                <a href="listings.html" >Devon</a><br />
-                                                                                                <a href="listings.html" >Dorset</a><br />
+                                                                                                <a href="listings" >Avon</a><br />
+                                                                                                <a href="listings" >Bedfordshire</a><br />
+                                                                                                <a href="listings" >Berkshire</a><br />
+                                                                                                <a href="listings" >Buckinghamshire</a><br />
+                                                                                                <a href="listings" >Cambridgeshire</a><br />
+                                                                                                <a href="listings" >Cheshire</a><br />
+                                                                                                <a href="listings" >Cleveland</a><br />
+                                                                                                <a href="listings" >Cornwall</a><br />
+                                                                                                <a href="listings" >Cumbria</a><br />
+                                                                                                <a href="listings" >Derbyshire</a><br />
+                                                                                                <a href="listings" >Devon</a><br />
+                                                                                                <a href="listings" >Dorset</a><br />
                                                                                             </div>
                                         </div>
 
@@ -191,18 +191,18 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Durham</a><br />
-                                                                                                <a href="listings.html" >East Sussex</a><br />
-                                                                                                <a href="listings.html" >Essex</a><br />
-                                                                                                <a href="listings.html" >Gloucestershire</a><br />
-                                                                                                <a href="listings.html" >Hampshire</a><br />
-                                                                                                <a href="listings.html" >Herefordshire</a><br />
-                                                                                                <a href="listings.html" >Hertfordshire</a><br />
-                                                                                                <a href="listings.html" >Isle of Wight</a><br />
-                                                                                                <a href="listings.html" >Kent</a><br />
-                                                                                                <a href="listings.html" >Lancashire</a><br />
-                                                                                                <a href="listings.html" >Leicestershire</a><br />
-                                                                                                <a href="listings.html" >Lincolnshire</a><br />
+                                                                                                <a href="listings" >Durham</a><br />
+                                                                                                <a href="listings" >East Sussex</a><br />
+                                                                                                <a href="listings" >Essex</a><br />
+                                                                                                <a href="listings" >Gloucestershire</a><br />
+                                                                                                <a href="listings" >Hampshire</a><br />
+                                                                                                <a href="listings" >Herefordshire</a><br />
+                                                                                                <a href="listings" >Hertfordshire</a><br />
+                                                                                                <a href="listings" >Isle of Wight</a><br />
+                                                                                                <a href="listings" >Kent</a><br />
+                                                                                                <a href="listings" >Lancashire</a><br />
+                                                                                                <a href="listings" >Leicestershire</a><br />
+                                                                                                <a href="listings" >Lincolnshire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -211,18 +211,18 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >London</a><br />
-                                                                                                <a href="listings.html" >Merseyside</a><br />
-                                                                                                <a href="listings.html" >Middlesex</a><br />
-                                                                                                <a href="listings.html" >Norfolk</a><br />
-                                                                                                <a href="listings.html" >Northamptonshire</a><br />
-                                                                                                <a href="listings.html" >Northumberland</a><br />
-                                                                                                <a href="listings.html" >North Humberside</a><br />
-                                                                                                <a href="listings.html" >North Yorkshire</a><br />
-                                                                                                <a href="listings.html" >Nottinghamshire</a><br />
-                                                                                                <a href="listings.html" >Oxfordshire</a><br />
-                                                                                                <a href="listings.html" >Rutland</a><br />
-                                                                                                <a href="listings.html" >Shropshire</a><br />
+                                                                                                <a href="listings" >London</a><br />
+                                                                                                <a href="listings" >Merseyside</a><br />
+                                                                                                <a href="listings" >Middlesex</a><br />
+                                                                                                <a href="listings" >Norfolk</a><br />
+                                                                                                <a href="listings" >Northamptonshire</a><br />
+                                                                                                <a href="listings" >Northumberland</a><br />
+                                                                                                <a href="listings" >North Humberside</a><br />
+                                                                                                <a href="listings" >North Yorkshire</a><br />
+                                                                                                <a href="listings" >Nottinghamshire</a><br />
+                                                                                                <a href="listings" >Oxfordshire</a><br />
+                                                                                                <a href="listings" >Rutland</a><br />
+                                                                                                <a href="listings" >Shropshire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -231,18 +231,18 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Somerset</a><br />
-                                                                                                <a href="listings.html" >South Humberside</a><br />
-                                                                                                <a href="listings.html" >South Yorkshire</a><br />
-                                                                                                <a href="listings.html" >Staffordshire</a><br />
-                                                                                                <a href="listings.html" >Suffolk</a><br />
-                                                                                                <a href="listings.html" >Surrey</a><br />
-                                                                                                <a href="listings.html" >Tyne and Wear</a><br />
-                                                                                                <a href="listings.html" >Warwickshire</a><br />
-                                                                                                <a href="listings.html" >West Midlands</a><br />
-                                                                                                <a href="listings.html" >West Sussex</a><br />
-                                                                                                <a href="listings.html" >West Yorkshire</a><br />
-                                                                                                <a href="listings.html" >Worcestershire</a><br />
+                                                                                                <a href="listings" >Somerset</a><br />
+                                                                                                <a href="listings" >South Humberside</a><br />
+                                                                                                <a href="listings" >South Yorkshire</a><br />
+                                                                                                <a href="listings" >Staffordshire</a><br />
+                                                                                                <a href="listings" >Suffolk</a><br />
+                                                                                                <a href="listings" >Surrey</a><br />
+                                                                                                <a href="listings" >Tyne and Wear</a><br />
+                                                                                                <a href="listings" >Warwickshire</a><br />
+                                                                                                <a href="listings" >West Midlands</a><br />
+                                                                                                <a href="listings" >West Sussex</a><br />
+                                                                                                <a href="listings" >West Yorkshire</a><br />
+                                                                                                <a href="listings" >Worcestershire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -253,8 +253,8 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Clwyd</a><br />
-                                                                                                <a href="listings.html" >Dyfed</a><br />
+                                                                                                <a href="listings" >Clwyd</a><br />
+                                                                                                <a href="listings" >Dyfed</a><br />
                                                                                             </div>
                                         </div>
 
@@ -263,8 +263,8 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Gwent</a><br />
-                                                                                                <a href="listings.html" >Gwynedd</a><br />
+                                                                                                <a href="listings" >Gwent</a><br />
+                                                                                                <a href="listings" >Gwynedd</a><br />
                                                                                             </div>
                                         </div>
 
@@ -273,8 +273,8 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Mid Glamorgan</a><br />
-                                                                                                <a href="listings.html" >Powys</a><br />
+                                                                                                <a href="listings" >Mid Glamorgan</a><br />
+                                                                                                <a href="listings" >Powys</a><br />
                                                                                             </div>
                                         </div>
 
@@ -283,8 +283,8 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >South Glamorgan</a><br />
-                                                                                                <a href="listings.html" >West Glamorgan</a><br />
+                                                                                                <a href="listings" >South Glamorgan</a><br />
+                                                                                                <a href="listings" >West Glamorgan</a><br />
                                                                                             </div>
                                         </div>
 
@@ -295,14 +295,14 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Aberdeenshire</a><br />
-                                                                                                <a href="listings.html" >Angus</a><br />
-                                                                                                <a href="listings.html" >Argyll</a><br />
-                                                                                                <a href="listings.html" >Ayrshire</a><br />
-                                                                                                <a href="listings.html" >Banffshire</a><br />
-                                                                                                <a href="listings.html" >Berwickshire</a><br />
-                                                                                                <a href="listings.html" >Bute</a><br />
-                                                                                                <a href="listings.html" >Caithness</a><br />
+                                                                                                <a href="listings" >Aberdeenshire</a><br />
+                                                                                                <a href="listings" >Angus</a><br />
+                                                                                                <a href="listings" >Argyll</a><br />
+                                                                                                <a href="listings" >Ayrshire</a><br />
+                                                                                                <a href="listings" >Banffshire</a><br />
+                                                                                                <a href="listings" >Berwickshire</a><br />
+                                                                                                <a href="listings" >Bute</a><br />
+                                                                                                <a href="listings" >Caithness</a><br />
                                                                                             </div>
                                         </div>
 
@@ -311,14 +311,14 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Clackmannanshire</a><br />
-                                                                                                <a href="listings.html" >Dumfriesshire</a><br />
-                                                                                                <a href="listings.html" >Dunbartonshire</a><br />
-                                                                                                <a href="listings.html" >East Lothian</a><br />
-                                                                                                <a href="listings.html" >Fife</a><br />
-                                                                                                <a href="listings.html" >Inverness-shire</a><br />
-                                                                                                <a href="listings.html" >Kincardineshire</a><br />
-                                                                                                <a href="listings.html" >Kinross-shire</a><br />
+                                                                                                <a href="listings" >Clackmannanshire</a><br />
+                                                                                                <a href="listings" >Dumfriesshire</a><br />
+                                                                                                <a href="listings" >Dunbartonshire</a><br />
+                                                                                                <a href="listings" >East Lothian</a><br />
+                                                                                                <a href="listings" >Fife</a><br />
+                                                                                                <a href="listings" >Inverness-shire</a><br />
+                                                                                                <a href="listings" >Kincardineshire</a><br />
+                                                                                                <a href="listings" >Kinross-shire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -327,14 +327,14 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Kirkcudbrightshire</a><br />
-                                                                                                <a href="listings.html" >Lanarkshire</a><br />
-                                                                                                <a href="listings.html" >Midlothian</a><br />
-                                                                                                <a href="listings.html" >Moray</a><br />
-                                                                                                <a href="listings.html" >Nairnshire</a><br />
-                                                                                                <a href="listings.html" >Orkney</a><br />
-                                                                                                <a href="listings.html" >Peeblesshire</a><br />
-                                                                                                <a href="listings.html" >Perthshire</a><br />
+                                                                                                <a href="listings" >Kirkcudbrightshire</a><br />
+                                                                                                <a href="listings" >Lanarkshire</a><br />
+                                                                                                <a href="listings" >Midlothian</a><br />
+                                                                                                <a href="listings" >Moray</a><br />
+                                                                                                <a href="listings" >Nairnshire</a><br />
+                                                                                                <a href="listings" >Orkney</a><br />
+                                                                                                <a href="listings" >Peeblesshire</a><br />
+                                                                                                <a href="listings" >Perthshire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -343,14 +343,14 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Renfrewshire</a><br />
-                                                                                                <a href="listings.html" >Ross-shire</a><br />
-                                                                                                <a href="listings.html" >Roxburghshire</a><br />
-                                                                                                <a href="listings.html" >Selkirkshire</a><br />
-                                                                                                <a href="listings.html" >Shetland</a><br />
-                                                                                                <a href="listings.html" >Stirlingshire</a><br />
-                                                                                                <a href="listings.html" >Sutherland</a><br />
-                                                                                                <a href="listings.html" >West Lothian</a><br />
+                                                                                                <a href="listings" >Renfrewshire</a><br />
+                                                                                                <a href="listings" >Ross-shire</a><br />
+                                                                                                <a href="listings" >Roxburghshire</a><br />
+                                                                                                <a href="listings" >Selkirkshire</a><br />
+                                                                                                <a href="listings" >Shetland</a><br />
+                                                                                                <a href="listings" >Stirlingshire</a><br />
+                                                                                                <a href="listings" >Sutherland</a><br />
+                                                                                                <a href="listings" >West Lothian</a><br />
                                                                                             </div>
                                         </div>
 
@@ -359,7 +359,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Wigtownshire</a><br />
+                                                                                                <a href="listings" >Wigtownshire</a><br />
                                                                                             </div>
                                         </div>
 
@@ -370,7 +370,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Antrim</a><br />
+                                                                                                <a href="listings" >Antrim</a><br />
                                                                                             </div>
                                         </div>
 
@@ -379,7 +379,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Armagh</a><br />
+                                                                                                <a href="listings" >Armagh</a><br />
                                                                                             </div>
                                         </div>
 
@@ -388,7 +388,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Down</a><br />
+                                                                                                <a href="listings" >Down</a><br />
                                                                                             </div>
                                         </div>
 
@@ -397,7 +397,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Fermanagh</a><br />
+                                                                                                <a href="listings" >Fermanagh</a><br />
                                                                                             </div>
                                         </div>
 
@@ -406,7 +406,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Londonderry</a><br />
+                                                                                                <a href="listings" >Londonderry</a><br />
                                                                                             </div>
                                         </div>
 
@@ -415,7 +415,7 @@
 
                                         <div class="row directory-block">
                                             <div class="col-sm-12">
-                                                                                                <a href="listings.html" >Tyrone</a><br />
+                                                                                                <a href="listings" >Tyrone</a><br />
                                                                                             </div>
                                         </div>
 
@@ -620,13 +620,13 @@
                 <div class="panel-body">
                     <ul class="nav nav-category">
                         <li>
-                            <a class="active" href="category.html">All categories</a>
+                            <a class="active" href="category">All categories</a>
                             <ul>
-                                <li><a href="listings.html">Cars, Vans & Motorbikes</a>
+                                <li><a href="listings">Cars, Vans & Motorbikes</a>
                                 <ul>
-                                    <li><a class="active" href="listings.html">Cars</a>
+                                    <li><a class="active" href="listings">Cars</a>
                                         <ul>
-                                            <li><a class="active" href="listings.html"><strong>Porsche</strong></a> (66)<a href="#" class="remove-category"><i class="fa fa-times"></i></a></li>
+                                            <li><a class="active" href="listings"><strong>Porsche</strong></a> (66)<a href="#" class="remove-category"><i class="fa fa-times"></i></a></li>
                                         </ul>
                                     </li>
 
@@ -928,27 +928,27 @@
                 <div class="panel-body">
                     <ul class="nav">
                         <li>
-                            <a class="active" href="category.html">Greater London (12)</a>
+                            <a class="active" href="category">Greater London (12)</a>
                             <ul>
-                                <li><a href="listings.html"> - Central London (11)</a></li>
-                                <li><a class="active" href="listings.html"> - East London (1)</a></li>
-                                <li><a class="active" href="listings.html"> - North London (1)</a></li>
-                                <li><a class="active" href="listings.html"> - North London (1)</a></li>
-                                <li><a class="active" href="listings.html"> - North West London  (1)</a></li>
-                                <li><a class="active" href="listings.html"> - South East London  (1)</a></li>
-                                <li><a class="active" href="listings.html"> - South West London  (1)</a></li>
-                                <li><a class="active" href="listings.html"> - West London  (1)</a></li>
+                                <li><a href="listings"> - Central London (11)</a></li>
+                                <li><a class="active" href="listings"> - East London (1)</a></li>
+                                <li><a class="active" href="listings"> - North London (1)</a></li>
+                                <li><a class="active" href="listings"> - North London (1)</a></li>
+                                <li><a class="active" href="listings"> - North West London  (1)</a></li>
+                                <li><a class="active" href="listings"> - South East London  (1)</a></li>
+                                <li><a class="active" href="listings"> - South West London  (1)</a></li>
+                                <li><a class="active" href="listings"> - West London  (1)</a></li>
                             </ul>
                         </li>
-                        <li><a href="category.html">Brighton (5)</a></li>
-                        <li><a href="category.html">Cambridge (2)</a></li>
-                        <li><a href="category.html">Essex (2)</a></li>
-                        <li><a href="category.html">Guildford (2)</a></li>
-                        <li><a href="category.html">Kent (2)</a></li>
-                        <li><a href="category.html">Luton (2)</a></li>
-                        <li><a href="category.html">Milton Keynes (2)</a></li>
-                        <li><a href="category.html">Oxford (2)</a></li>
-                        <li><a href="category.html">Reading (2)</a></li>
+                        <li><a href="category">Brighton (5)</a></li>
+                        <li><a href="category">Cambridge (2)</a></li>
+                        <li><a href="category">Essex (2)</a></li>
+                        <li><a href="category">Guildford (2)</a></li>
+                        <li><a href="category">Kent (2)</a></li>
+                        <li><a href="category">Luton (2)</a></li>
+                        <li><a href="category">Milton Keynes (2)</a></li>
+                        <li><a href="category">Oxford (2)</a></li>
+                        <li><a href="category">Reading (2)</a></li>
                     </ul>					
 
                 </div>
@@ -981,11 +981,11 @@
                 										   										
                 <div class="ribbon-wrapper-red"><div class="ribbon-red">&nbsp;<span>Featured</span></div></div>
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/0.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/0.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Renault Megane Convertible, 2002, 1.6 Petrol - <strong>&pound;14,350</strong></a></h3>
+                    <h3><a class=""  href="details">Renault Megane Convertible, 2002, 1.6 Petrol - <strong>&pound;14,350</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1002,18 +1002,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row premium listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/1.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/1.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Ford Fusion 2 2003 1.4 - <strong>&pound;9,950</strong></a></h3>
+                    <h3><a class=""  href="details">Ford Fusion 2 2003 1.4 - <strong>&pound;9,950</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1030,18 +1030,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row premium listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail property_sold"  style="position:relative;"><img alt="176 * 120" src="css/images/listings/2.jpg"></a>
+                    <a href="details" class="thumbnail property_sold"  style="position:relative;"><img alt="176 * 120" src="css/images/listings/2.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Volkswangen golf as 2002 1.6 Automatic 5 Door - <strong>&pound;22,250</strong></a></h3>
+                    <h3><a class=""  href="details">Volkswangen golf as 2002 1.6 Automatic 5 Door - <strong>&pound;22,250</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1058,18 +1058,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/3.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/3.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Renault Clio Dynamique 16v 1.2 51 plate - <strong>&pound;5,000</strong></a></h3>
+                    <h3><a class=""  href="details">Renault Clio Dynamique 16v 1.2 51 plate - <strong>&pound;5,000</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1086,18 +1086,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/4.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/4.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Mercedes-Benz C Class C220 CDI Avantgarde SE - <strong>&pound;15,000</strong></a></h3>
+                    <h3><a class=""  href="details">Mercedes-Benz C Class C220 CDI Avantgarde SE - <strong>&pound;15,000</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1114,18 +1114,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail property_sold"  style="position:relative;"><img alt="176 * 120" src="css/images/listings/5.jpg"></a>
+                    <a href="details" class="thumbnail property_sold"  style="position:relative;"><img alt="176 * 120" src="css/images/listings/5.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Range rover sport hse 2.7 tdv6 2005 - <strong>&pound;10,000</strong></a></h3>
+                    <h3><a class=""  href="details">Range rover sport hse 2.7 tdv6 2005 - <strong>&pound;10,000</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1142,18 +1142,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/6.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/6.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Honda CR-V 2.0 i-VTEC Executive PETROL AUTOMATIC 2006 - <strong>&pound;12,950</strong></a></h3>
+                    <h3><a class=""  href="details">Honda CR-V 2.0 i-VTEC Executive PETROL AUTOMATIC 2006 - <strong>&pound;12,950</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1170,18 +1170,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/7.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/7.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">HONDA ACCORD 2.0 I-VTEC ES 4dr Auto Saloon - <strong>&pound;19,950</strong></a></h3>
+                    <h3><a class=""  href="details">HONDA ACCORD 2.0 I-VTEC ES 4dr Auto Saloon - <strong>&pound;19,950</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1198,18 +1198,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/8.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/8.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">AUDI A6 2.0 TDI S Line TOP SPEC 2008 08 4dr AUTO DSG - <strong>&pound;50,000</strong></a></h3>
+                    <h3><a class=""  href="details">AUDI A6 2.0 TDI S Line TOP SPEC 2008 08 4dr AUTO DSG - <strong>&pound;50,000</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1226,18 +1226,18 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
             </div>
                         <div class="row  listing-row">
                                 <div class="col-sm-2">
-                    <a href="details.html" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/9.jpg"></a>
+                    <a href="details" class="thumbnail " ><img alt="176 * 120" src="css/images/listings/9.jpg"></a>
                 </div>
 
                 <div class="col-sm-10">
-                    <h3><a class=""  href="details.html">Ford Mondeo Zetec 2.0 Automatic - <strong>&pound;35,000</strong></a></h3>
+                    <h3><a class=""  href="details">Ford Mondeo Zetec 2.0 Automatic - <strong>&pound;35,000</strong></a></h3>
                     <p class="muted">Located in <strong>Richmond, London</strong></p>
                     <p class="muted">Posted Feb 05, 2014 to <a href="#" class="underline">Cars, Vans & Motorbikes</a></p>
                     <p>Excellent Condition. Displacement: 2,900 cc Power Output: 250 bhp Drivetrain: 2-WD  Second hand car for sale – 7377790212 Available car – beat – blue color, Honda city –white /black Indica ecs – white Alto – white Nano – red /white...</p>
@@ -1254,7 +1254,7 @@
                         <span class="classified_links pull-right">
                             <a class="link-info underline" href="#">Share</a>&nbsp;
                             <a class="link-info underline" href="#">Add to favorites</a>
-                            &nbsp;<a class="link-info underline" href="details.html">Details</a>&nbsp;
+                            &nbsp;<a class="link-info underline" href="details">Details</a>&nbsp;
                             &nbsp;<a class="link-info underline" href="#">Contact</a></span>
                     </p>
                 </div>
@@ -1293,7 +1293,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -1320,7 +1320,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -1348,7 +1348,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

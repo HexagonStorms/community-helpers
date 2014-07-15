@@ -14,19 +14,19 @@
 				<div class="panel-body">
 					<ul class="nav">
 						<li>
-							<a class="active" href="account_dashboard.html">Dashboard</a>
+							<a class="active" href="account_dashboard">Dashboard</a>
 						</li>						
 						<li>	
-							<a class="active" href="account_profile.html">My profile</a>
+							<a class="active" href="account_profile">My profile</a>
 						</li>
                         <li>
-							<a class="active" href="account_account.html">My account</a>
+							<a class="active" href="account_account">My account</a>
 						</li>
 						<li>
-							<a class="active" href="account_ads.html">Manage ads</a>
+							<a class="active" href="account_ads">Manage ads</a>
 						</li>
 						<li>
-							<a class="active" href="account_ad_create.html">Create new ad</a>
+							<a class="active" href="account_ad_create">Create new ad</a>
 						</li>
 					</ul>
 
@@ -81,9 +81,9 @@
                                                 <td class="main-td">
 
 
-                                                    <a href="account_ad_create.html">BMW 525D SE TOURING SILVER</a><a href="#" class="no-views">(11 views)</a><br />
+                                                    <a href="account_ad_create">BMW 525D SE TOURING SILVER</a><a href="#" class="no-views">(11 views)</a><br />
 
-                                                    <a class="edit-ad" href="account_ad_create.html">Edit ad</a>
+                                                    <a class="edit-ad" href="account_ad_create">Edit ad</a>
                                                     <a class="extend-ad" href="#" data-toggle="tooltip" title="Extend ad by 30 days">Extend for 30 days</a>
                                                     <a class="remove-ad" href="#">Remove this ad</a>
 
@@ -96,7 +96,7 @@
 
                                             <tr>
                                                 <td><img src="css/images/listings/2.jpg" style="width:75px" /></td>
-                                                <td><a href="account_ad_create.html">SEAT Leon 1.6 TDI CR S 5dr (2010)</a><a href="#" class="no-views">(22 views)</a><br />
+                                                <td><a href="account_ad_create">SEAT Leon 1.6 TDI CR S 5dr (2010)</a><a href="#" class="no-views">(22 views)</a><br />
 
                                                     <a class="edit-ad" href="#">Edit ad</a>
                                                     <a class="extend-ad" href="#" data-toggle="tooltip" title="Extend ad by 30 days">Extend for 30 days</a>
@@ -110,7 +110,7 @@
 
                                             <tr>
                                                 <td><img src="css/images/listings/3.jpg" style="width:75px" /></td>
-                                                <td><a href="account_ad_create.html">03 PLATE MINI COOPER. *12 MONTHS MOT* STUNNING</a><a href="#" class="no-views">(57 views)</a><br />
+                                                <td><a href="account_ad_create">03 PLATE MINI COOPER. *12 MONTHS MOT* STUNNING</a><a href="#" class="no-views">(57 views)</a><br />
 
                                                     <a class="edit-ad" href="#">Edit ad</a>
                                                     <a class="extend-ad" href="#" data-toggle="tooltip" title="Extend ad by 30 days">Extend for 30 days</a>
@@ -123,7 +123,7 @@
 
                                             <tr>
                                                 <td><img src="css/images/listings/4.jpg" style="width:75px" /></td>
-                                                <td><a href="account_ad_create.html">Green renault clio grande</a><a href="#" class="no-views">(98 views)</a><br />
+                                                <td><a href="account_ad_create">Green renault clio grande</a><a href="#" class="no-views">(98 views)</a><br />
 
                                                     <a class="edit-ad" href="#">Edit ad</a>
                                                     <a class="extend-ad" href="#" data-toggle="tooltip" title="Extend ad by 30 days">Extend for 30 days</a>
@@ -136,7 +136,7 @@
 
                                             <tr>
                                                 <td><img src="css/images/listings/5.jpg" style="width:75px" /></td>
-                                                <td><a href="account_ad_create.html">2008 Scuderia Spider 16M</a><a href="#" class="no-views">(62 views)</a><br />
+                                                <td><a href="account_ad_create">2008 Scuderia Spider 16M</a><a href="#" class="no-views">(62 views)</a><br />
 
                                                     <a class="edit-ad" href="#">Edit ad</a>
                                                     <a class="extend-ad" href="#" data-toggle="tooltip" title="Extend ad by 30 days">Extend for 30 days</a>
@@ -179,7 +179,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -206,7 +206,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -234,7 +234,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

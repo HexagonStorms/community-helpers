@@ -49,7 +49,7 @@
                 <br />
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center">
-                        <a href="listings.html" class="btn btn-primary search-btn">Search</a>
+                        <a href="listings" class="btn btn-primary search-btn">Search</a>
                     </div>
                 </div>                
                 <br />
@@ -98,7 +98,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Houses and flats</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Car and vehicles</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Shopping</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Houses and flats</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Car and vehicles</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Shopping</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Houses and flats</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Car and vehicles</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             </div>
                             <div class="col-sm-9">
                                 <h4>Shopping</h4>
-                                <p><a href="listings.html" >Cars</a>, <a href="listings.html" >Car Parts</a>, <a href="listings.html" >Campervans</a>, <a href="listings.html">Motobikes</a>, <a href="listings.html" >Scooters</a>, <a href="listings.html" >Vans</a>, <a href="listings.html" >Trucks</a></p>
+                                <p><a href="listings" >Cars</a>, <a href="listings" >Car Parts</a>, <a href="listings" >Campervans</a>, <a href="listings">Motobikes</a>, <a href="listings" >Scooters</a>, <a href="listings" >Vans</a>, <a href="listings" >Trucks</a></p>
                             </div>
                         </div>
                     </div>
@@ -216,12 +216,12 @@
                                                 <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" id="myTabDrop1" href="#">Other countries <b class="caret"></b></a>
                             <ul aria-labelledby="myTabDrop1" role="menu" class="dropdown-menu">
-                                <li><a href="listings.html">USA</a></li>
-                                <li><a href="listings.html">France</a></li>
-                                <li><a href="listings.html">Germany</a></li>
-                                <li><a href="listings.html">Spain and Portugal</a></li>
-                                <li><a href="listings.html">Switzerland</a></li>
-                                <li><a href="listings.html">Other Europe</a></li>
+                                <li><a href="listings">USA</a></li>
+                                <li><a href="listings">France</a></li>
+                                <li><a href="listings">Germany</a></li>
+                                <li><a href="listings">Spain and Portugal</a></li>
+                                <li><a href="listings">Switzerland</a></li>
+                                <li><a href="listings">Other Europe</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -231,11 +231,11 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html">London</a><br />
-                                                                                <a href="listings.html">Edinburgh</a><br />
-                                                                                <a href="listings.html">Manchester</a><br />
-                                                                                <a href="listings.html">Birmingham</a><br />
-                                                                                <a href="listings.html">Glasgow</a><br />
+                                                                                <a href="listings">London</a><br />
+                                                                                <a href="listings">Edinburgh</a><br />
+                                                                                <a href="listings">Manchester</a><br />
+                                                                                <a href="listings">Birmingham</a><br />
+                                                                                <a href="listings">Glasgow</a><br />
                                                                             </div>
                                 </div>
 
@@ -244,11 +244,11 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html">Liverpool</a><br />
-                                                                                <a href="listings.html">Bristol</a><br />
-                                                                                <a href="listings.html">Oxford</a><br />
-                                                                                <a href="listings.html">Cambridge</a><br />
-                                                                                <a href="listings.html">Cardiff</a><br />
+                                                                                <a href="listings">Liverpool</a><br />
+                                                                                <a href="listings">Bristol</a><br />
+                                                                                <a href="listings">Oxford</a><br />
+                                                                                <a href="listings">Cambridge</a><br />
+                                                                                <a href="listings">Cardiff</a><br />
                                                                             </div>
                                 </div>
 
@@ -257,11 +257,11 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html">Brighton</a><br />
-                                                                                <a href="listings.html">Newcastle-upon-Tyne</a><br />
-                                                                                <a href="listings.html">Leeds</a><br />
-                                                                                <a href="listings.html">York</a><br />
-                                                                                <a href="listings.html">Inverness</a><br />
+                                                                                <a href="listings">Brighton</a><br />
+                                                                                <a href="listings">Newcastle-upon-Tyne</a><br />
+                                                                                <a href="listings">Leeds</a><br />
+                                                                                <a href="listings">York</a><br />
+                                                                                <a href="listings">Inverness</a><br />
                                                                             </div>
                                 </div>
 
@@ -270,11 +270,11 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html">Bath</a><br />
-                                                                                <a href="listings.html">Nottingham</a><br />
-                                                                                <a href="listings.html">Reading</a><br />
-                                                                                <a href="listings.html">Aberdeen</a><br />
-                                                                                <a href="listings.html">Chester</a><br />
+                                                                                <a href="listings">Bath</a><br />
+                                                                                <a href="listings">Nottingham</a><br />
+                                                                                <a href="listings">Reading</a><br />
+                                                                                <a href="listings">Aberdeen</a><br />
+                                                                                <a href="listings">Chester</a><br />
                                                                             </div>
                                 </div>
 
@@ -287,18 +287,18 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Avon</a><br />
-                                                                                <a href="listings.html" >Bedfordshire</a><br />
-                                                                                <a href="listings.html" >Berkshire</a><br />
-                                                                                <a href="listings.html" >Buckinghamshire</a><br />
-                                                                                <a href="listings.html" >Cambridgeshire</a><br />
-                                                                                <a href="listings.html" >Cheshire</a><br />
-                                                                                <a href="listings.html" >Cleveland</a><br />
-                                                                                <a href="listings.html" >Cornwall</a><br />
-                                                                                <a href="listings.html" >Cumbria</a><br />
-                                                                                <a href="listings.html" >Derbyshire</a><br />
-                                                                                <a href="listings.html" >Devon</a><br />
-                                                                                <a href="listings.html" >Dorset</a><br />
+                                                                                <a href="listings" >Avon</a><br />
+                                                                                <a href="listings" >Bedfordshire</a><br />
+                                                                                <a href="listings" >Berkshire</a><br />
+                                                                                <a href="listings" >Buckinghamshire</a><br />
+                                                                                <a href="listings" >Cambridgeshire</a><br />
+                                                                                <a href="listings" >Cheshire</a><br />
+                                                                                <a href="listings" >Cleveland</a><br />
+                                                                                <a href="listings" >Cornwall</a><br />
+                                                                                <a href="listings" >Cumbria</a><br />
+                                                                                <a href="listings" >Derbyshire</a><br />
+                                                                                <a href="listings" >Devon</a><br />
+                                                                                <a href="listings" >Dorset</a><br />
                                                                             </div>
                                 </div>
 
@@ -307,18 +307,18 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Durham</a><br />
-                                                                                <a href="listings.html" >East Sussex</a><br />
-                                                                                <a href="listings.html" >Essex</a><br />
-                                                                                <a href="listings.html" >Gloucestershire</a><br />
-                                                                                <a href="listings.html" >Hampshire</a><br />
-                                                                                <a href="listings.html" >Herefordshire</a><br />
-                                                                                <a href="listings.html" >Hertfordshire</a><br />
-                                                                                <a href="listings.html" >Isle of Wight</a><br />
-                                                                                <a href="listings.html" >Kent</a><br />
-                                                                                <a href="listings.html" >Lancashire</a><br />
-                                                                                <a href="listings.html" >Leicestershire</a><br />
-                                                                                <a href="listings.html" >Lincolnshire</a><br />
+                                                                                <a href="listings" >Durham</a><br />
+                                                                                <a href="listings" >East Sussex</a><br />
+                                                                                <a href="listings" >Essex</a><br />
+                                                                                <a href="listings" >Gloucestershire</a><br />
+                                                                                <a href="listings" >Hampshire</a><br />
+                                                                                <a href="listings" >Herefordshire</a><br />
+                                                                                <a href="listings" >Hertfordshire</a><br />
+                                                                                <a href="listings" >Isle of Wight</a><br />
+                                                                                <a href="listings" >Kent</a><br />
+                                                                                <a href="listings" >Lancashire</a><br />
+                                                                                <a href="listings" >Leicestershire</a><br />
+                                                                                <a href="listings" >Lincolnshire</a><br />
                                                                             </div>
                                 </div>
 
@@ -327,18 +327,18 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >London</a><br />
-                                                                                <a href="listings.html" >Merseyside</a><br />
-                                                                                <a href="listings.html" >Middlesex</a><br />
-                                                                                <a href="listings.html" >Norfolk</a><br />
-                                                                                <a href="listings.html" >Northamptonshire</a><br />
-                                                                                <a href="listings.html" >Northumberland</a><br />
-                                                                                <a href="listings.html" >North Humberside</a><br />
-                                                                                <a href="listings.html" >North Yorkshire</a><br />
-                                                                                <a href="listings.html" >Nottinghamshire</a><br />
-                                                                                <a href="listings.html" >Oxfordshire</a><br />
-                                                                                <a href="listings.html" >Rutland</a><br />
-                                                                                <a href="listings.html" >Shropshire</a><br />
+                                                                                <a href="listings" >London</a><br />
+                                                                                <a href="listings" >Merseyside</a><br />
+                                                                                <a href="listings" >Middlesex</a><br />
+                                                                                <a href="listings" >Norfolk</a><br />
+                                                                                <a href="listings" >Northamptonshire</a><br />
+                                                                                <a href="listings" >Northumberland</a><br />
+                                                                                <a href="listings" >North Humberside</a><br />
+                                                                                <a href="listings" >North Yorkshire</a><br />
+                                                                                <a href="listings" >Nottinghamshire</a><br />
+                                                                                <a href="listings" >Oxfordshire</a><br />
+                                                                                <a href="listings" >Rutland</a><br />
+                                                                                <a href="listings" >Shropshire</a><br />
                                                                             </div>
                                 </div>
 
@@ -347,18 +347,18 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Somerset</a><br />
-                                                                                <a href="listings.html" >South Humberside</a><br />
-                                                                                <a href="listings.html" >South Yorkshire</a><br />
-                                                                                <a href="listings.html" >Staffordshire</a><br />
-                                                                                <a href="listings.html" >Suffolk</a><br />
-                                                                                <a href="listings.html" >Surrey</a><br />
-                                                                                <a href="listings.html" >Tyne and Wear</a><br />
-                                                                                <a href="listings.html" >Warwickshire</a><br />
-                                                                                <a href="listings.html" >West Midlands</a><br />
-                                                                                <a href="listings.html" >West Sussex</a><br />
-                                                                                <a href="listings.html" >West Yorkshire</a><br />
-                                                                                <a href="listings.html" >Worcestershire</a><br />
+                                                                                <a href="listings" >Somerset</a><br />
+                                                                                <a href="listings" >South Humberside</a><br />
+                                                                                <a href="listings" >South Yorkshire</a><br />
+                                                                                <a href="listings" >Staffordshire</a><br />
+                                                                                <a href="listings" >Suffolk</a><br />
+                                                                                <a href="listings" >Surrey</a><br />
+                                                                                <a href="listings" >Tyne and Wear</a><br />
+                                                                                <a href="listings" >Warwickshire</a><br />
+                                                                                <a href="listings" >West Midlands</a><br />
+                                                                                <a href="listings" >West Sussex</a><br />
+                                                                                <a href="listings" >West Yorkshire</a><br />
+                                                                                <a href="listings" >Worcestershire</a><br />
                                                                             </div>
                                 </div>
 
@@ -369,8 +369,8 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Clwyd</a><br />
-                                                                                <a href="listings.html" >Dyfed</a><br />
+                                                                                <a href="listings" >Clwyd</a><br />
+                                                                                <a href="listings" >Dyfed</a><br />
                                                                             </div>
                                 </div>
 
@@ -379,8 +379,8 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Gwent</a><br />
-                                                                                <a href="listings.html" >Gwynedd</a><br />
+                                                                                <a href="listings" >Gwent</a><br />
+                                                                                <a href="listings" >Gwynedd</a><br />
                                                                             </div>
                                 </div>
 
@@ -389,8 +389,8 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Mid Glamorgan</a><br />
-                                                                                <a href="listings.html" >Powys</a><br />
+                                                                                <a href="listings" >Mid Glamorgan</a><br />
+                                                                                <a href="listings" >Powys</a><br />
                                                                             </div>
                                 </div>
 
@@ -399,8 +399,8 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >South Glamorgan</a><br />
-                                                                                <a href="listings.html" >West Glamorgan</a><br />
+                                                                                <a href="listings" >South Glamorgan</a><br />
+                                                                                <a href="listings" >West Glamorgan</a><br />
                                                                             </div>
                                 </div>
 
@@ -411,14 +411,14 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Aberdeenshire</a><br />
-                                                                                <a href="listings.html" >Angus</a><br />
-                                                                                <a href="listings.html" >Argyll</a><br />
-                                                                                <a href="listings.html" >Ayrshire</a><br />
-                                                                                <a href="listings.html" >Banffshire</a><br />
-                                                                                <a href="listings.html" >Berwickshire</a><br />
-                                                                                <a href="listings.html" >Bute</a><br />
-                                                                                <a href="listings.html" >Caithness</a><br />
+                                                                                <a href="listings" >Aberdeenshire</a><br />
+                                                                                <a href="listings" >Angus</a><br />
+                                                                                <a href="listings" >Argyll</a><br />
+                                                                                <a href="listings" >Ayrshire</a><br />
+                                                                                <a href="listings" >Banffshire</a><br />
+                                                                                <a href="listings" >Berwickshire</a><br />
+                                                                                <a href="listings" >Bute</a><br />
+                                                                                <a href="listings" >Caithness</a><br />
                                                                             </div>
                                 </div>
 
@@ -427,14 +427,14 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Clackmannanshire</a><br />
-                                                                                <a href="listings.html" >Dumfriesshire</a><br />
-                                                                                <a href="listings.html" >Dunbartonshire</a><br />
-                                                                                <a href="listings.html" >East Lothian</a><br />
-                                                                                <a href="listings.html" >Fife</a><br />
-                                                                                <a href="listings.html" >Inverness-shire</a><br />
-                                                                                <a href="listings.html" >Kincardineshire</a><br />
-                                                                                <a href="listings.html" >Kinross-shire</a><br />
+                                                                                <a href="listings" >Clackmannanshire</a><br />
+                                                                                <a href="listings" >Dumfriesshire</a><br />
+                                                                                <a href="listings" >Dunbartonshire</a><br />
+                                                                                <a href="listings" >East Lothian</a><br />
+                                                                                <a href="listings" >Fife</a><br />
+                                                                                <a href="listings" >Inverness-shire</a><br />
+                                                                                <a href="listings" >Kincardineshire</a><br />
+                                                                                <a href="listings" >Kinross-shire</a><br />
                                                                             </div>
                                 </div>
 
@@ -443,14 +443,14 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Kirkcudbrightshire</a><br />
-                                                                                <a href="listings.html" >Lanarkshire</a><br />
-                                                                                <a href="listings.html" >Midlothian</a><br />
-                                                                                <a href="listings.html" >Moray</a><br />
-                                                                                <a href="listings.html" >Nairnshire</a><br />
-                                                                                <a href="listings.html" >Orkney</a><br />
-                                                                                <a href="listings.html" >Peeblesshire</a><br />
-                                                                                <a href="listings.html" >Perthshire</a><br />
+                                                                                <a href="listings" >Kirkcudbrightshire</a><br />
+                                                                                <a href="listings" >Lanarkshire</a><br />
+                                                                                <a href="listings" >Midlothian</a><br />
+                                                                                <a href="listings" >Moray</a><br />
+                                                                                <a href="listings" >Nairnshire</a><br />
+                                                                                <a href="listings" >Orkney</a><br />
+                                                                                <a href="listings" >Peeblesshire</a><br />
+                                                                                <a href="listings" >Perthshire</a><br />
                                                                             </div>
                                 </div>
 
@@ -459,14 +459,14 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Renfrewshire</a><br />
-                                                                                <a href="listings.html" >Ross-shire</a><br />
-                                                                                <a href="listings.html" >Roxburghshire</a><br />
-                                                                                <a href="listings.html" >Selkirkshire</a><br />
-                                                                                <a href="listings.html" >Shetland</a><br />
-                                                                                <a href="listings.html" >Stirlingshire</a><br />
-                                                                                <a href="listings.html" >Sutherland</a><br />
-                                                                                <a href="listings.html" >West Lothian</a><br />
+                                                                                <a href="listings" >Renfrewshire</a><br />
+                                                                                <a href="listings" >Ross-shire</a><br />
+                                                                                <a href="listings" >Roxburghshire</a><br />
+                                                                                <a href="listings" >Selkirkshire</a><br />
+                                                                                <a href="listings" >Shetland</a><br />
+                                                                                <a href="listings" >Stirlingshire</a><br />
+                                                                                <a href="listings" >Sutherland</a><br />
+                                                                                <a href="listings" >West Lothian</a><br />
                                                                             </div>
                                 </div>
 
@@ -475,7 +475,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Wigtownshire</a><br />
+                                                                                <a href="listings" >Wigtownshire</a><br />
                                                                             </div>
                                 </div>
 
@@ -486,7 +486,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Antrim</a><br />
+                                                                                <a href="listings" >Antrim</a><br />
                                                                             </div>
                                 </div>
 
@@ -495,7 +495,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Armagh</a><br />
+                                                                                <a href="listings" >Armagh</a><br />
                                                                             </div>
                                 </div>
 
@@ -504,7 +504,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Down</a><br />
+                                                                                <a href="listings" >Down</a><br />
                                                                             </div>
                                 </div>
 
@@ -513,7 +513,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Fermanagh</a><br />
+                                                                                <a href="listings" >Fermanagh</a><br />
                                                                             </div>
                                 </div>
 
@@ -522,7 +522,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Londonderry</a><br />
+                                                                                <a href="listings" >Londonderry</a><br />
                                                                             </div>
                                 </div>
 
@@ -531,7 +531,7 @@
 
                                 <div class="row directory-block">
                                     <div class="col-sm-12">
-                                                                                <a href="listings.html" >Tyrone</a><br />
+                                                                                <a href="listings" >Tyrone</a><br />
                                                                             </div>
                                 </div>
 
@@ -558,11 +558,11 @@
                         <div class="panel-heading">Quick guide</div>
 
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="typography.html">Our tips to stay safe</a></li>
-                            <li class="list-group-item"><a href="typography.html">How to buy guide</a></li>
-                            <li class="list-group-item"><a href="typography.html">How to sell guide</a></li>
-                            <li class="list-group-item"><a href="typography.html">Help and contact us</a></li>
-                            <li class="list-group-item"><a href="typography.html">Frequently asked questions</a></li>
+                            <li class="list-group-item"><a href="typography">Our tips to stay safe</a></li>
+                            <li class="list-group-item"><a href="typography">How to buy guide</a></li>
+                            <li class="list-group-item"><a href="typography">How to sell guide</a></li>
+                            <li class="list-group-item"><a href="typography">Help and contact us</a></li>
+                            <li class="list-group-item"><a href="typography">Frequently asked questions</a></li>
                         </ul>
 
 
@@ -616,12 +616,12 @@
 
 
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail"  data-toggle="tooltip" data-placement="top" title="Programmer job availiable at Uber in London">
-                                        <a href="details.html" class="">
+                                        <a href="details" class="">
                                             <img alt="" src="css/images/logos/uberlogo_large_verge_medium_landscape.png" style="width: 100%" >
                                         </a>
                                     </div>
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail"  data-toggle="tooltip" data-placement="top"  title="Porsche Boxster S, 2.9 2dr reg Apr 2007 ">
-                                        <a href="details.html" class="">
+                                        <a href="details" class="">
                                             <img alt="" src="css/images/logos/car-78738_150.jpg"  />
                                         </a>
                                     </div>
@@ -629,12 +629,12 @@
 
 
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail" data-toggle="tooltip" data-placement="top"  title="Please find my lost cat">
-                                        <a href="details.html" class="" >
+                                        <a href="details" class="" >
                                             <img alt="" src="css/images/logos/cats-q-c-120-80-4.jpg"  />
                                         </a>
                                     </div>
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail" data-toggle="tooltip" data-placement="top"  title="Mini copper looking for a quick sell !! - London - £2,485">
-                                        <a href="details.html" class="" >
+                                        <a href="details" class="" >
                                             <img alt="" src="css/images/logos/transport-q-c-120-80-8.jpg"  />
                                         </a>
                                     </div>
@@ -642,12 +642,12 @@
 
 
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail" data-toggle="tooltip" data-placement="top"  title="Old MP3 player for sale">
-                                        <a href="details.html" class="" >
+                                        <a href="details" class="" >
                                             <img alt="" src="css/images/logos/technics-q-c-120-80-10.jpg"  />
                                         </a>
                                     </div>
                                     <div class="col-sm-6 col-xs-4 featured-thumbnail" data-toggle="tooltip" data-placement="top" title="Designer job availiable at Uber in London">
-                                        <a href="details.html" class="" >
+                                        <a href="details" class="" >
                                             <img alt="" src="css/images/logos/uberlogo_large_verge_medium_landscape.png"  />
                                         </a>
                                     </div>
@@ -684,7 +684,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -711,7 +711,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -739,7 +739,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>

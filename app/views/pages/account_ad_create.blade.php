@@ -14,19 +14,19 @@
 				<div class="panel-body">
 					<ul class="nav">
 						<li>
-							<a class="active" href="account_dashboard.html">Dashboard</a>
+							<a class="active" href="account_dashboard">Dashboard</a>
 						</li>						
 						<li>	
-							<a class="active" href="account_profile.html">My profile</a>
+							<a class="active" href="account_profile">My profile</a>
 						</li>
                         <li>
-							<a class="active" href="account_account.html">My account</a>
+							<a class="active" href="account_account">My account</a>
 						</li>
 						<li>
-							<a class="active" href="account_ads.html">Manage ads</a>
+							<a class="active" href="account_ads">Manage ads</a>
 						</li>
 						<li>
-							<a class="active" href="account_ad_create.html">Create new ad</a>
+							<a class="active" href="account_ad_create">Create new ad</a>
 						</li>
 					</ul>
 
@@ -392,7 +392,7 @@
                         <br />
                         <button type="submit" class="btn btn-default hidden-xs">Save draft</button>
                         <button type="submit" class="btn btn-default hidden-xs">Preview ad</button>
-                        <a href="account_credits.html" class="btn btn-primary pull-right"><i class="icon-ok"></i>  Publish ad</a>
+                        <a href="account_credits" class="btn btn-primary pull-right"><i class="icon-ok"></i>  Publish ad</a>
                         <br /><p class=" hidden-xs" style="text-align: right"><small>* payment options will be<br /> shown on the next screen</small></p>
                     </div>
 
@@ -424,7 +424,7 @@
             <div class="modal-body">
                 <p>If you have an account with us, please enter your details below.</p>
 
-                <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
                     <div class="form-group">
                         <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
@@ -451,7 +451,7 @@
             </div>
 
             <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register.html">Register now</a></p></div>
+                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
             </div>
 
         </div><!-- /.modal-content -->
@@ -479,7 +479,7 @@
                         <div class="col-md-6">
 
                         </div><div class="col-md-6">
-                        <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
                         </div>
                     </div>
                 </form>
