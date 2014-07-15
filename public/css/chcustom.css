@@ -1,0 +1,41 @@
+a.navbar-brand small {
+	color: #4F60DF;
+}
+
+.btn-warning {
+	background-image: -webkit-linear-gradient(top, #12C227 0%, #12C227 100%);
+	background-image: linear-gradient(to bottom, #00CE18 0%, #089E19 100%);
+	border-color: #089E16;
+}
+
+.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
+	background-image: -webkit-linear-gradient(top, #35B644 0%, #10721B 100%);
+	background-image: linear-gradient(to bottom, #35B644 0%, #10721B 100%);
+	border-color: #089E16;
+}
+
+.btn-primary {
+	background-image: -webkit-linear-gradient(top, #007fff 0%, #0066cc 100%);
+	background-image: linear-gradient(to bottom, #007fff 0%, #0066cc 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007fff', endColorstr='#ff0066cc', GradientType=0);
+	border-color: #0061c2;
+}
+
+.directory i {
+	color: #10B82B;
+}
+
+.topbar {
+border: 3px solid #4F60DF;
+}
+
+/* Ribbon Color Change */
+
+.ribbon-red {
+  
+  background-image: -webkit-linear-gradient(top, #4F60DF 0%, #4F60DF 100%);
+  background-image: linear-gradient(to bottom, #4F60DF 0%, #4F60DF 100%);
+  background-repeat: repeat-x;
+  
+}
