@@ -9,7 +9,15 @@ a.navbar-brand small {
 }
 
 .btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .open .dropdown-toggle.btn-warning {
-	background-image: -webkit-linear-gradient(top, #159424 0%, #3DA366 100%);
-	background-image: linear-gradient(to bottom, #159424 0%, #3DA366 100%);
+	background-image: -webkit-linear-gradient(top, #159424 0%, #0D5C2C 100%);
+	background-image: linear-gradient(to bottom, #159424 0%, #0D5C2C 100%);
 	border-color: #000000;
+}
+
+.btn-primary {
+background-image: -webkit-linear-gradient(top, #007fff 0%, #0066cc 100%);
+background-image: linear-gradient(to bottom, #007fff 0%, #0066cc 100%);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007fff', endColorstr='#ff0066cc', GradientType=0);
+border-color: #0061c2;
 }
