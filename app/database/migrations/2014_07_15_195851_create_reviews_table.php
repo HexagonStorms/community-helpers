@@ -16,7 +16,8 @@ class CreateReviewsTable extends Migration {
 		{
 		    $table->integer('jobs_id')->unsigned();
 		    $table->foreign('jobs_id')->references('id')->on('jobs');
-		    $table->integer('ratings');
+		    $table->integer('ratings')->nullable();
+		    $table->string('comment', 100)->nullable();
 		    $table->primary('jobs_id');
 			$table->timestamps();
 		});
