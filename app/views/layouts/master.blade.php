@@ -54,8 +54,8 @@
                 </button>
 
                 <a href="/" class="navbar-brand ">
-                    <span class="logo"><strong>classified</strong><span class="handwriting">ads</span><br />
-                        <small >Putting the youth to help out in your community</small></span>
+                    <span class="logo"><strong>Community-</strong><span class="handwriting">Helper.com</span><br />
+                        <small>Putting the youth to help out in your community</small></span>
                 </a>
 
             </div>
