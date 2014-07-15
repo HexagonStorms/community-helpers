@@ -2,7 +2,7 @@
 
 @section('content')
 
-<hr style="border: 3px solid #D2160A"/>
+<hr class="topbar"/>
 
 <div class="container">
     <div class="row">
@@ -21,7 +21,7 @@
 							<a class="active" href="account_profile">My profile</a>
 						</li>
                         <li>
-							<a class="active" href="account_account">My account</a>
+							<a class="active" href="account">My account</a>
 						</li>
 						<li>
 							<a class="active" href="account_ads">Manage ads</a>

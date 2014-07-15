@@ -22,7 +22,7 @@
 							<a class="active" href="account_profile">My profile</a>
 						</li>
                         <li>
-							<a class="active" href="account_account">My account</a>
+							<a class="active" href="account">My account</a>
 						</li>
 						<li>
 							<a class="active" href="account_ads">Manage ads</a>
