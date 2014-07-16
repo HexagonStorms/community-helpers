@@ -16,10 +16,10 @@
                         consequat.</p>
                         <div class="row">
                             <div class="col-sm-6">
-                                <a href="register"><button type="button" class="btn btn-primary">Register</button></a>
+                                <a href="register"><button type="button" class="btn btn-warning">Register</button></a>
                             </div>
                             <div class="col-sm-6">
-                                <a href="search"><button type="button" class="btn btn-warning">Search Jobs</button></a>
+                                <a href="search"><button type="button" class="btn btn-primary">Search Jobs</button></a>
                             </div>
                         </div>
                     </div>

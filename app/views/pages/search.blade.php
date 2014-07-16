@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <br />
-                <p class="main_description">Search thousands of stores, brands, products and user classifieds all in one place</p>
+                <p class="main_description">Search for jobs in your community</p>
 
                 <br /><br />
                 <div class="row">
@@ -17,22 +17,22 @@
 
                             <div class="col-sm-10 col-sm-offset-1">
                                 <div class="input-group">
-                                    <span class="input-group-addon input-group-addon-text">Find me a</span>
+                                    <span class="input-group-addon input-group-addon-text">Find </span>
 
-                                    <input type="text" class="form-control col-sm-3" placeholder="e.g. BMW, 2 bed flat, sofa ">
+                                    <input type="text" class="form-control col-sm-3" placeholder="e.g. mowing lawns, vacuuming ">
                                     <div class=" input-group-addon hidden-xs">
                                         <div class="btn-group" >
                                             <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
                                                 All categories <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Cars, Vans & Motorbikes</a></li>
-                                                <li><a href="#">Community</a></li>
-                                                <li><a href="#">Flats & Houses</a></li>
-                                                <li><a href="#">For Sale</a></li>
-                                                <li><a href="#">Jobs</a></li>
+                                                <li><a href="#">Garage</a></li>
+                                                <li><a href="#">Indoor</a></li>
+                                                <li><a href="#">Landscaping</a></li>
+                                                <li><a href="#">Moving</a></li>
+                                                <li><a href="#">Outdoor</a></li>
                                                 <li><a href="#">Pets</a></li>
-                                                <li><a href="#">Services</a></li>
+                                               
                                             </ul>
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                 <br />
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center">
-                        <a href="listings" class="btn btn-primary search-btn">Search</a>
+                        <a href="listings" class="btn btn-primary search-btn">Search jobs</a>
                     </div>
                 </div>                
                 <br />
@@ -57,11 +57,12 @@
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center">
 
+                    	<!-- Revolving Text -->
                         <div id="quotes">
-                            <div class="text-item" style="display: none;">Boom! <strong>Vince</strong> just sold a <strong>Washing Machine</strong> in <strong>Sheffield</strong></div>
-                            <div class="text-item" style="display: none;"><strong>Julia</strong> is availiable for <strong>home cleaning</strong> in <strong>Manchester</strong></div>
-                            <div class="text-item" style="display: none;">Success! <strong>Paul</strong> has just sold a <strong>Mercedes-Benz E-class</strong> in <strong>Liverpool</strong></div>
-                            <div class="text-item" style="display: none;">Hey, <strong>Uber</strong> has a <strong>job opening</strong> in <strong>London</strong></div>
+                            <div class="text-item" style="display: none;">Boom! <strong>Vince</strong> just mowed <strong>Mary T.</strong>'s lawn in <strong>Schertz</strong></div>
+                            <div class="text-item" style="display: none;"><strong>Samuel</strong> is available for <strong>home cleaning</strong> in <strong>Boerne</strong></div>
+                            <div class="text-item" style="display: none;">Success! <strong>Paul</strong> just washed <strong>Michael M.</strong>'s car in <strong>La Vernia</strong></div>
+                            <div class="text-item" style="display: none;">Hey, <strong>Georgia W.</strong> is looking for somebody to walk her dogs in <strong>San Antonio</strong></div>
                         </div>
 
 
@@ -97,7 +98,7 @@
                                 <i class="fa fa-tree"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Landscaping</h4>
+                                <a href="#"><h4>Landscaping</h4></a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +109,7 @@
                                 <i class="fa fa-car"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Garage</h4>
+                                <a href="#"><h4>Garage</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -119,7 +120,7 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Indoor Cleaning</h4>
+                                <a href="#"><h4>Indoor Cleaning</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -129,7 +130,7 @@
                                 <i class="fa fa-paw"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Pets</h4>
+                                <a href="#"><h4>Pets</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -140,7 +141,7 @@
                                 <i class="fa fa-truck"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Moving</h4>
+                                <a href="#"><h4>Moving</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -151,7 +152,7 @@
                                 <i class="fa fa-road"></i>
                             </div>
                             <div class="col-sm-9">
-                                <h4>Outdoor</h4>  
+                                <a href="#"><h4>Outdoor</h4><a/>
                             </div>
                         </div>
                     </div>
