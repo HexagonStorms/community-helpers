@@ -9,7 +9,7 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('temp_users.users');
 	}
 
 
