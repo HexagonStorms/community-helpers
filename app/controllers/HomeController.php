@@ -55,9 +55,9 @@ class HomeController extends BaseController {
 		return View::make('pages.contact');
 	}
 
-	public function account()
+	public function account_settings()
 	{
-		return View::make('pages.account');
+		return View::make('pages.account_settings');
 	}
 
 	public function account_ads()

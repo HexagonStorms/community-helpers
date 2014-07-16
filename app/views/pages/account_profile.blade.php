@@ -21,7 +21,7 @@
             							<a class="active" href="account_profile">Edit Profile</a>
             						</li>
                                     <li>
-            							<a class="active" href="account">Account Settings</a>
+            							<a class="active" href="account_settings">Account Settings</a>
             						</li>
             						<li>
             							<a class="active" href="account_ads">Manage Listings</a>

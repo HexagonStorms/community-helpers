@@ -27,7 +27,12 @@ Route::get('/terms', 'HomeController@terms');
 
 Route::get('/contact', 'HomeController@contact');
 
-Route::get('/account', 'HomeController@account');
+Route::get('/account', function()
+{ 
+    return Redirect::action('HomeController@account_settings');
+});
+
+Route::get('/account_settings', 'HomeController@account_settings');
 
 Route::get('/account_ads', 'HomeController@account_ads');
 
