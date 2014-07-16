@@ -31,6 +31,27 @@ a.navbar-brand small {
 border: 3px solid #4F60DF;
 }
 
+/* img width */
+
+.adjustable-width {
+width: 100%;
+}
+
+.adjustable-width-25 {
+width: 25%;
+}
+
+.adjustable-width-50 {
+width: 50%;
+}
+
+.adjustable-width-75 {
+width: 75%;
+}
+
+
+
+
 /* Ribbon Color Change */
 
 .ribbon-red {
@@ -41,7 +62,7 @@ border: 3px solid #4F60DF;
   
 }
 
-/* Jumbotron Color */
+/* Homepage Divs */
 
 .jumbotron {
   background-color: #BDC7FF;
