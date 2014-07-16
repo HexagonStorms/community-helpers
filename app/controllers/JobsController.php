@@ -9,9 +9,11 @@ class JobsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//return ('Show a list of all posts');
-        //return View::make('temp_jobs.index')->with($data);
-        return View::make('temp_jobs.index');
+		$jobs = Job::with('user')->orderBy('created_at', 'desc')->paginate(4);
+		$data = array(
+			'jobs' => $jobs
+		);
+        return View::make('temp_jobs.index')->with($data);
 	}
 
 
