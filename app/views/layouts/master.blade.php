@@ -16,7 +16,7 @@
     <!-- Custom styles for this template -->
     <link href="/css/theme.css" rel="stylesheet">
     <link href="/css/dropzone.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/chcustom.css"/>
@@ -54,7 +54,7 @@
                 </button>
 
                 <a href="/" class="navbar-brand ">
-                    <span class="logo"><strong>Community-</strong><span class="handwriting">Helper.com</span><br />
+                    <span class="logo"><strong>Community-</strong><span class="handwriting">Helpers.com</span><br />
                     <small>Putting the youth to help out in your community</small></span>
                 </a>
 
@@ -70,7 +70,7 @@
                     <li><a href="/register">Register</a></li>
                     <li><a href="/listings">Listings</a></li>
                     <li><a href="/account_dashboard">My account</a></li>
-                    <li><a href="/account_ad_create">Post an ad</a></li>
+                    <li><a href="/account_ad_create">Create Job</a></li>
                 </ul> 
                 <div class="nav navbar-nav navbar-right hidden-xs">
                     <div class="row">
@@ -82,7 +82,7 @@
                             <a href="/register">Register</a> | 
                             <a href="/listings">Listings</a> | 
                             <a href="/account_dashboard">My account</a>
-                            <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Post an ad</a>
+                            <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Create Job</a>
 
                         </div>  
                     </div>
