@@ -1,6 +1,11 @@
+/* Nav Logo */
+
 a.navbar-brand small {
 	color: #4F60DF;
 }
+
+
+/* Buttons */
 
 .btn-warning {
 
@@ -18,9 +23,20 @@ a.navbar-brand small {
 .btn-primary {
 	background-image: -webkit-linear-gradient(top, #007fff 0%, #0066cc 100%);
 	background-image: linear-gradient(to bottom, #007fff 0%, #0066cc 100%);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007fff', endColorstr='#ff0066cc', GradientType=0);
 	border-color: #0061c2;
+}
+
+.btn-info {
+background-image: -webkit-linear-gradient(top, #79a618 0%, #597912 100%);
+background-image: linear-gradient(to bottom, #6700C7 0%, #6700C7 100%);
+border-color: #6700C7;
+}
+
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+  background-image: -webkit-linear-gradient(top, #6C06C9 0%, #6C06C9 100%);
+  background-image: linear-gradient(to bottom, #6C06C9 0%, #3E0077 100%);
+  border-color: #3E0077;
 }
 
 .directory i {
@@ -31,7 +47,7 @@ a.navbar-brand small {
 border: 3px solid #4F60DF;
 }
 
-/* img width */
+/* Adjusting, width, and centering */
 
 .adjustable-width {
 width: 100%;
@@ -47,6 +63,11 @@ width: 50%;
 
 .adjustable-width-75 {
 width: 75%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 
 

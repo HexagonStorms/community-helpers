@@ -111,14 +111,13 @@
             <div class="row">
 
                 <div class="col-sm-4 col-xs-12">
-                    <p><strong>&copy; Bootstrap Classifieds 2014</strong></p>
+                    <p><strong>&copy; Community-Helpers.com {{ date('Y') }}</strong></p>
                     <p>All rights reserved</p>
                 </div>          
 
                 <div class="col-sm-8 col-xs-12">
                     <p class="footer-links">
                         <a href="/" class="active">Home</a>
-                        <a href="#">Typography</a>
                         <a href="/terms">Terms and Conditions</a>
                         <a href="/contact">Contact Us</a>
                     </p>

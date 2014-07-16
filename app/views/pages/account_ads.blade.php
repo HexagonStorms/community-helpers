@@ -3,58 +3,33 @@
 @section('content')
 
 <hr class="topbar"/>
-            <div class="container">
+<div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <div class="sidebar-account">		
-	<div class="row ">
-		<div class="col-lg-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">My account</div>
-				<div class="panel-body">
-					<ul class="nav">
-						<li>
-							<a class="active" href="account_dashboard">Dashboard</a>
-						</li>						
-						<li>	
-							<a class="active" href="account_profile">My profile</a>
-						</li>
-                        <li>
-							<a class="active" href="account">My account</a>
-						</li>
-						<li>
-							<a class="active" href="account_ads">Manage ads</a>
-						</li>
-						<li>
-							<a class="active" href="account_ad_create">Create new ad</a>
-						</li>
-					</ul>
+            <div class="sidebar-account">       
+                <div class="row ">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">My account</div>
+                            <div class="panel-body">
+                                <ul class="nav">              
+                                    <li>
+                                        <a class="active" href="account_settings">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="account_dashboard">Dashboard</a>
+                                    </li>                       
+                                    <li>    
+                                        <a class="active" href="account_profile">Edit Profile</a>
+                                    </li>
+                                </ul>
 
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row hidden-xs">
-<div class="col-lg-12">
-		<div class="well">
-			<div class="row ">
-<div class="col-lg-3">
-												<img src="css/images/icons/Crest.png" width="45"/>
-											</div>
-			<div class="col-lg-9">
-
-<h4 style="margin-top: 0">Increase visibility</h4>
-			<p>Don't forget to 'bump' your listing to gain more visibility</p>
-
-			</div>
-			</div>
-
-		</div>
-		</div>
-		</div>
-
-</div>        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="col-sm-9">
             <div class="panel panel-default">

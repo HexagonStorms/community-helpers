@@ -7,34 +7,28 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <div class="sidebar-account">		
-            	<div class="row ">
-            		<div class="col-lg-12">
-            			<div class="panel panel-default">
-            				<div class="panel-heading">My account</div>
-            				<div class="panel-body">
-            					<ul class="nav">
-            						<li>
-            							<a class="active" href="account_dashboard">View Profile</a>
-            						</li>						
-            						<li>	
-            							<a class="active" href="account_profile">Edit Profile</a>
-            						</li>
+            <div class="sidebar-account">       
+                <div class="row ">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">My account</div>
+                            <div class="panel-body">
+                                <ul class="nav">              
                                     <li>
-            							<a class="active" href="account_settings">Account Settings</a>
-            						</li>
-            						<li>
-            							<a class="active" href="account_ads">Manage Listings</a>
-            						</li>
-            						<li>
-            							<a class="active" href="account_ad_create">Create Job</a>
-            						</li>
-            					</ul>
+                                        <a class="active" href="account_settings">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="account_dashboard">Dashboard</a>
+                                    </li>                       
+                                    <li>    
+                                        <a class="active" href="account_profile">Edit Profile</a>
+                                    </li>
+                                </ul>
 
-            				</div>
-            			</div>
-            		</div>
-            	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
