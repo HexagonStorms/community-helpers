@@ -8,58 +8,39 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="sidebar-account">		
-	<div class="row ">
-		<div class="col-lg-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">My account</div>
-				<div class="panel-body">
-					<ul class="nav">
-						<li>
-							<a class="active" href="account_dashboard">View Profile</a>
-						</li>						
-						<li>	
-							<a class="active" href="account_profile">Edit Profile</a>
-						</li>
-                        <li>
-							<a class="active" href="account">Account Settings</a>
-						</li>
-						<li>
-							<a class="active" href="account_ads">Manage Listings</a>
-						</li>
-						<li>
-							<a class="active" href="account_ad_create">Create Job</a>
-						</li>
-					</ul>
+            	<div class="row ">
+            		<div class="col-lg-12">
+            			<div class="panel panel-default">
+            				<div class="panel-heading">My account</div>
+            				<div class="panel-body">
+            					<ul class="nav">
+            						<li>
+            							<a class="active" href="account_dashboard">View Profile</a>
+            						</li>						
+            						<li>	
+            							<a class="active" href="account_profile">Edit Profile</a>
+            						</li>
+                                    <li>
+            							<a class="active" href="account">Account Settings</a>
+            						</li>
+            						<li>
+            							<a class="active" href="account_ads">Manage Listings</a>
+            						</li>
+            						<li>
+            							<a class="active" href="account_ad_create">Create Job</a>
+            						</li>
+            					</ul>
 
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row hidden-xs">
-<div class="col-lg-12">
-		<div class="well">
-			<div class="row ">
-<div class="col-lg-3">
-												<img src="css/images/icons/Crest.png" width="45"/>
-											</div>
-			<div class="col-lg-9">
-
-<h4 style="margin-top: 0">Increase visibility</h4>
-			<p>Don't forget to 'bump' your listing to gain more visibility</p>
-
-			</div>
-			</div>
-
-		</div>
-		</div>
-		</div>
-
-</div>        </div>
+            				</div>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+        </div>
 
         <div class="col-sm-9">
             <div class="panel panel-default">
-                <div class="panel-heading">Manage adverts</div>
+                <div class="panel-heading">Edit Profile</div>
                 <div class="panel-body">
 
                     <form class="form-horizontal">
@@ -79,27 +60,28 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- FORM: First, Last, Birth-Date Entry -->
                                 <div class="col-sm-8">
                                     <br />
                                     <div class="form-group">
-                                        <label for="inputEmail1" class="col-sm-4 control-label">Display name</label>
+                                        <label for="first_name" class="col-sm-4 control-label">First Name</label>
                                         <div class="col-sm-8">
-                                            <input type="email" class="form-control" id="inputEmail1" placeholder="The name you want other people to see">
+                                            <input type="first_name" class="form-control" id="first_name" placeholder="First name">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="inputEmail1" class="col-sm-4 control-label">Company name</label>
+                                        <label for="last_name" class="col-sm-4 control-label">Last Name</label>
                                         <div class="col-sm-8">
-                                            <input type="email" class="form-control" id="inputEmail1" placeholder="Your company name">
+                                            <input type="last_name" class="form-control" id="last_name" placeholder="First name">
                                         </div>
                                     </div>
 
-
                                     <div class="form-group">
-                                        <label for="inputEmail1" class="col-sm-4 control-label">Website</label>
+                                        <label for="birth_date" class="col-sm-4 control-label">Birth Date</label>
                                         <div class="col-sm-8">
-                                            <input type="email" class="form-control" id="inputEmail1" placeholder="http://">
+                                            <input type="date" class="form-control" id="birth_date">
                                         </div>
                                     </div>
 
@@ -108,47 +90,47 @@
 
                             <div class="form-group">
                                 <div class="col-sm-12">
-                                    <label for="inputEmail1" style="width: 100%" class="control-label">About you</label><br /><br />
-                                    <textarea class="form-control col-sm-8" rows="6" style="width: 99%"></textarea>
+                                    <label for="bio" class="control-label adjustable-width">Bio</label><br /><br />
+                                    <textarea class="form-control col-sm-8 adjustable-width" rows="6"></textarea>
                                 </div>						  
                             </div>	
 
                             <hr />
 
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-sm-2 control-label">Address</label>
+                                <label for="street" class="col-sm-2 control-label">Street</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Your address">
+                                    <input type="street" class="form-control" id="street" placeholder="Street address">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-sm-2 control-label">Email address</label>
+                                <label for="apt_num" class="col-sm-2 control-label">Apt. #</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Must be valid, we'll send you a validation message">
+                                    <input type="apt_num" class="form-control" id="apt_num" placeholder="Blank if not needed">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-sm-2 control-label">Mobile</label>
+                                <label for="city" class="col-sm-2 control-label">City</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Your mobile number">
+                                    <input type="city" class="form-control" id="city" placeholder="City">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="inputEmail1" class="col-sm-2 control-label">Home phone</label>
+                                <label for="state" class="col-sm-2 control-label">State</label>
                                 <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="Don't forget to include the area code">
+                                    <input type="state" class="form-control" id="state" placeholder="State">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="zip" class="col-sm-2 control-label">Zipcode</label>
+                                <div class="col-sm-10">
+                                    <input type="zip" class="form-control" id="zip" placeholder="Zipcode">
                                 </div>
                             </div>	
-
-                            <div class="form-group">
-                                <label for="inputEmail1" class="col-sm-2 control-label">Fax</label>
-                                <div class="col-sm-10">
-                                    <input type="email" class="form-control" id="inputEmail1" placeholder="If you still use a fax machine">
-                                </div>
-                            </div>
 
                             <br />
                             <button type="submit" class="btn btn-primary">Save profile</button>
