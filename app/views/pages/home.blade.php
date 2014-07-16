@@ -13,8 +13,15 @@
                         ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
+                        consequat.</p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <a href="register"><button type="button" class="btn btn-primary">Register</button></a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="search"><button type="button" class="btn btn-warning">Search Jobs</button></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-6 col-xs-12">
                         <iframe width="100%" height="315" src="//www.youtube.com/embed/tNZvNs6r800" frameborder="0" allowfullscreen></iframe>
