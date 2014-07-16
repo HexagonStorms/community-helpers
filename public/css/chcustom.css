@@ -40,3 +40,45 @@ border: 3px solid #4F60DF;
   background-repeat: repeat-x;
   
 }
+
+/* Jumbotron Color */
+
+.jumbotron {
+  background-color: #BDC7FF;
+}
+
+.sidekick {
+  padding: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #FFF;
+}
+.sidekick h1,
+.sidekick .h1 {
+  color: inherit;
+}
+.sidekick p {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 200;
+}
+.container .sidekick {
+  border-radius: 0px;
+}
+.sidekick .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .sidekick {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .container .jumbotron {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 58.5px;
+  }
+}
