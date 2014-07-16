@@ -15,19 +15,19 @@
 				<div class="panel-body">
 					<ul class="nav">
 						<li>
-							<a class="active" href="account_dashboard">Dashboard</a>
+							<a class="active" href="account_dashboard">View Profile</a>
 						</li>						
 						<li>	
-							<a class="active" href="account_profile">My profile</a>
+							<a class="active" href="account_profile">Edit Profile</a>
 						</li>
                         <li>
-							<a class="active" href="account">My account</a>
+							<a class="active" href="account">Account Settings</a>
 						</li>
 						<li>
-							<a class="active" href="account_ads">Manage ads</a>
+							<a class="active" href="account_ads">Manage Listings</a>
 						</li>
 						<li>
-							<a class="active" href="account_ad_create">Create new ad</a>
+							<a class="active" href="account_ad_create">Create Job</a>
 						</li>
 					</ul>
 
