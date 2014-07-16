@@ -38,3 +38,7 @@ Route::get('/account_profile', 'HomeController@account_profile');
 Route::get('/details', 'HomeController@details');
 
 Route::get('/my_account', 'HomeController@my_account');
+
+
+Route::resource('jobs', 'JobsController');
+Route::resource('users', 'UsersController');
