@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@home');
 
+Route::get('/search', 'HomeController@search');
+
 Route::get('/register', 'HomeController@register');
 
 Route::get('/listings', 'HomeController@listings');
@@ -22,8 +24,6 @@ Route::get('/account_dashboard', 'HomeController@account_dashboard');
 Route::get('/account_ad_create', 'HomeController@account_ad_create');
 
 Route::get('/terms', 'HomeController@terms');
-
-// Currently Adding
 
 Route::get('/contact', 'HomeController@contact');
 
