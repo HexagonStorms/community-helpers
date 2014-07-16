@@ -9,7 +9,9 @@ class JobsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		//return ('Show a list of all posts');
+        //return View::make('temp_jobs.index')->with($data);
+        return View::make('temp_jobs.index');
 	}
 
 

@@ -20,7 +20,7 @@ class CreateJobsTable extends Migration {
 			$table->decimal('price', 5,2);
 			$table->boolean('is_complete');
 			$table->date('required_date');
-			$table->date('required_time');
+			$table->time('required_time');
 			$table->integer('user_id')->unsigned();
 		    $table->foreign('user_id')->references('id')->on('users');
 			$table->timestamps();

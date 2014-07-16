@@ -4,7 +4,7 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Jobs extends Eloquent implements UserInterface, RemindableInterface{
+class Job extends Eloquent {
 
 	// the db table this model realtes to
     protected $table = 'jobs';
