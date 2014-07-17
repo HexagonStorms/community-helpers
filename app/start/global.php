@@ -79,3 +79,15 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/*
+|--------------------------------------------------------------------------
+| Customer Form Macro
+|--------------------------------------------------------------------------
+|
+| Add Description frank
+|
+*/
+Form::macro('datetime', function($input_name, $value = '') {
+    return '<input type="datetime-local" name="' . $input_name . '"/>';
+});

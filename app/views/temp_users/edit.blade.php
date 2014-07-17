@@ -1,7 +1,9 @@
 @extends('layouts.master')
 
 @section('content')
-	{{ Form::open(array('action' => 'UsersController@store', 'role' => 'form', 'files' => true) )}}
+
+	{{ Form::model($user, array('action' => array('UsersController@update', $user->id), 'method' => 'PUT', 'files' => true)) }}
+
 		<div><h3>Contact Info</h3></div>
 		<div class="form-group">
 			{{ Form::label('first_name', 'First Name') }}
@@ -15,10 +17,6 @@
 			{{ Form::label('email', 'Email') }}
 			{{ Form::email('email') }}<br>
 			{{ $errors->first('email', '<span class="help-block">:message</span>')}}<br>
-
-			{{ Form::label('password', 'Password') }}
-			{{ Form::password('password') }}<br>
-			{{ $errors->first('password', '<span class="help-block">:message</span>')}}<br>
 
 			{{ Form::label('birth_date', 'Date of Birth') }}
 			{{ Form::text('birth_date') }}<br>
@@ -35,6 +33,11 @@
 			{{ $errors->first('is_admin', '<span class="help-block">:message</span>')}}<br>
 		</div>
 		<div><h3>Address</h3></div>
+
+			{{ Form::label('apt_num', 'Apt. Num.') }}
+			{{ Form::text('apt_num') }}<br>
+			{{ $errors->first('apt_num', '<span class="help-block">:message</span>')}}<br>
+
 			{{ Form::label('street', 'Street') }}
 			{{ Form::text('street') }}<br>
 			{{ $errors->first('street', '<span class="help-block">:message</span>')}}<br>

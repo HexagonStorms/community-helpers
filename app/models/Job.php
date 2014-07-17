@@ -13,9 +13,7 @@ class Job extends Eloquent {
     static public $rules = [
     	'category' => 'required|max:50',
     	'description' => 'required|max:100',
-        'price' => 'required',
-        'description' => 'required|max:100',
-        'is_complete' => 'required',
+        'price' => 'required|numeric',
         'required_date' => 'required',
         'required_time' => 'required',
     ];
@@ -25,10 +23,10 @@ class Job extends Eloquent {
  //    	return $this->belongsToMany('User');
 	// }// end of helpers
 
- //    public function owner()
- //    {
- //        return $this->belongsTo('User');
- //    }// end of helpers
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }// end of helpers
 
 
     // public function renderBody()
