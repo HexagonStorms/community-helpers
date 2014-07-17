@@ -4,6 +4,23 @@ a.navbar-brand small {
 	color: #4F60DF;
 }
 
+.side-hr {
+border-right: 1px solid #999;
+}
+
+/* Padding, Margin, and Border adjustments */
+
+.no-padding {
+  padding: 0px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+
+.show-border {
+  border: 1px solid #DADADA;
+}
 
 /* Buttons */
 

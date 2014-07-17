@@ -37,13 +37,24 @@
                 <div class="panel-body">
 
                     <div class="row">
-                            <div class="col-sm-3">
-                                <h3>Total Jobs Created</h3>
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Total Jobs Created</h3>
                                 <p>4</p>
                             </div>
-                            <div class="col-sm-3">
-                                <h3>Reviews Published</h3>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Reviews Published</h3>
                                 <p>3</p>
+                            </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Views this month</h3>
+                                <p>121</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Views all time</h3>
+                                <p>345</p>
                             </div>
                     </div>
                     
@@ -53,50 +64,100 @@
 
         <div class="col-sm-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Active Jobs</div>
                 <div class="panel-body">
 
-                    <div class="row">
+                    <!-- Active Job #1 -->
+                    <div class="col-sm-12 no-padding"><h2>Job #1</h2></div>
+                    <div class="col-sm-12 no-padding show-border">
 
-                        <div class="col-sm-3 col-xs-6" style="border-right: 1px solid #DADADA; text-align: center;">
-                            <h3 style="text-align: center;">Total Jobs Created</h3>
-                            <p>4</p>
+                        <div class="col-sm-2">
+                            <div class="col-sm-12 no-padding">
+                                <div class="col-sm-3 no-padding">
+                                    <i class="fa fa-home fa-lg"></i>
+                                </div>
+                                <div class="col-sm-9 no-padding">
+                                    <p>Indoor</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <p>Wash the dishes</p>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3 col-xs-6" style="border-right: 1px solid #DADADA; text-align: center;">
-                            <h3 style="text-align: center;">Reviews published</h3>
-                            <p>3</p>
+                        <div class="col-sm-1 no-padding">
+                            <h1 >$20</h1>
                         </div>
 
-                        <div class="col-sm-3 col-xs-6" style="border-right: 1px solid #DADADA; text-align: center;">
-                            <h3 style="text-align: center;">Views this month</h3>
-                            <p>272</p>
+                        <div class="col-sm-3 no-padding">
+                            <div class="col-sm-12 no-padding">
+                                    <p>By: Mary McWalters</p>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <p>Accepted on Wednesday, 5:12pm.</p>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3 col-xs-6" style="text-align: center;">
-                            <h3 style="text-align: center;">Views all time</h3>
-                            <p>1880</p>
+                        <div class="col-sm-4 no-padding">
+                            <h6><em>Description:</em></h6>
                         </div>
 
+                        <div class="col-sm-2 no padding">
+                            <div class="col-sm-12 no-padding">
+                                <p>Due by Friday, 5pm</p>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <button type="button" class="btn btn-warning btn-xs">Mark Complete</button>
+                            </div>
+                        </div>
                     </div>
-                    <br />
 
 
-                    <br /><br />
-                    <div class="row">
+                    <!-- Active Job #2 -->
+                    <div class="col-sm-12 no-padding"><h2>Job #2</h2></div>
+                    <div class="col-sm-12 no-padding show-border">
 
-                        <div class="col-sm-12" >
-                            <h3 style="text-align: center;">53 views in the last 24 hours</h3>
+                        <div class="col-sm-2">
+                            <div class="col-sm-12 no-padding">
+                                <div class="col-sm-3 no-padding">
+                                    <i class="fa fa-road fa-lg"></i>
+                                </div>
+                                <div class="col-sm-9 no-padding">
+                                    <p>Garage</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <p>Organize garage</p>
+                            </div>
                         </div>
 
-                    </div>
+                        <div class="col-sm-1 no-padding">
+                            <h1 >$30</h1>
+                        </div>
 
+                        <div class="col-sm-3 no-padding">
+                            <div class="col-sm-12 no-padding">
+                                    <p>By: Timothy Mann</p>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <p>Accepted on Monday, 9:45am.</p>
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div id="visualization"></div>
+                        <div class="col-sm-4 no-padding">
+                            <h6><em>Description:</em></h6>
+                        </div>
+
+                        <div class="col-sm-2 no padding">
+                            <div class="col-sm-12 no-padding">
+                                <p>Due by Sunday, 5pm</p>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <button type="button" class="btn btn-warning btn-xs">Mark Complete</button>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
