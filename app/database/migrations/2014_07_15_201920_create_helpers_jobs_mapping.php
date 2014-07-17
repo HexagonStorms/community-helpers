@@ -16,10 +16,10 @@ class CreateHelpersJobsMapping extends Migration {
 		{
 			$table->integer('user_id')->unsigned();
 		    $table->foreign('user_id')->references('id')->on('users');
-		    $table->integer('jobs_id')->unsigned();
-		    $table->foreign('jobs_id')->references('id')->on('jobs');
-		    $table->boolean('is_accepted');
-		    $table->primary(array('user_id', 'jobs_id'));
+		    $table->integer('job_id')->unsigned();
+		    $table->foreign('job_id')->references('id')->on('jobs');
+		    $table->boolean('is_accepted')->default(False);
+		    $table->primary(array('user_id', 'job_id'));
 			$table->timestamps();
 		});
 	}
