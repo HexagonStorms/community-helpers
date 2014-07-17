@@ -131,7 +131,18 @@ class JobsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$job = Job::findorFail($id);
+        // if ($post->canManagePost() )
+        // {
+            $job->delete();
+            Session::flash('successMessage', 'Post successfully deleted');
+            return Redirect::action('JobsController@index');
+        //}
+        //else
+        //{
+            //Session::flash('errorMessage', 'Access Denied');
+            //return Redirect::action('PostsController@index');
+        //}
 	}
 
 
