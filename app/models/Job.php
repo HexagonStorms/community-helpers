@@ -25,10 +25,10 @@ class Job extends Eloquent {
  //    	return $this->belongsToMany('User');
 	// }// end of helpers
 
- //    public function owner()
- //    {
- //        return $this->belongsTo('User');
- //    }// end of helpers
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }// end of helpers
 
 
     // public function renderBody()
