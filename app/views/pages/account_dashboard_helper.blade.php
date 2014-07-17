@@ -66,65 +66,12 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Active Jobs</div>
                 <div class="panel-body">
-
-                    <!-- Active Job #1 -->
-                    <div class="col-sm-12 no-padding"><h2>Job #1</h2></div>
-                    <div class="col-sm-12 no-padding show-border">
-
-                        <div class="col-sm-2 side-hr">
-                            <div class="col-sm-12 no-padding">
-                                <div class="col-sm-3 no-padding">
-                                    <i class="fa fa-home fa-lg"></i>
-                                </div>
-                                <div class="col-sm-9 no-padding">
-                                    <p>Indoor</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p>Wash the dishes</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-1 no-padding side-hr">
-                            <div class="col-sm-12">
-                                <p>Price</p>
-                            </div>
-                            <div class="col-sm-12">
-                                <p>$25</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3 no-padding side-hr">
-                            <div class="col-sm-12 no-padding">
-                                    <p>By: Mary McWalters</p>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p>Due on Wednesday, 5:12pm.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 no-padding side-hr">
-                            <div class="col-sm-12 no-padding">
-                                    <p><em>Description</em>:</p>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p></p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-2 no padding">
-                            <div class="col-sm-12 no-padding">
-                                <p>6082 Juniper Pass</p>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p>4.1 miles away</p>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    <table class="table">
+                        <th>Category</th>
+                        <th>Job</th>
+                        <th>Price</th>
+                        <th>
                     
-
                 </div>
             </div>
         </div>
