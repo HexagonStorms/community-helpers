@@ -35,21 +35,32 @@ class UsersController extends \BaseController {
 	 */
 	public function store()
 	{
-		$user = new User();
-		$user->first_name = Input::get('first_name');
-		$user->last_name = Input::get('last_name');
-		$user->email = Input::get('email');
-		$user->password = Hash::make(Input::get('password'));
-		$user->birth_date = Input::get('birth_date');
-		$user->is_helper = Input::has('is_helper');
-		$user->is_admin = Input::has('is_admin');
-		$user->street = Input::get('street');
-		$user->city = Input::get('city');
-		$user->state = Input::get('state');
-		$user->zip = Input::get('zip');
-		$user->save();
+		$validator = Validator::make(Input::all(), User::$rules);
 
-		return Redirect::action('UsersController@show', $user->id);
+		if ($validator->fails())
+		{
+			// set flash data
+			Session::flash('errorMessage', 'Error: Missing Some Input');
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+		else
+		{
+			$user = new User();
+			$user->first_name = Input::get('first_name');
+			$user->last_name = Input::get('last_name');
+			$user->email = Input::get('email');
+			$user->password = Hash::make(Input::get('password'));
+			$user->birth_date = Input::get('birth_date');
+			$user->is_helper = Input::has('is_helper');
+			$user->is_admin = Input::has('is_admin');
+			$user->street = Input::get('street');
+			$user->city = Input::get('city');
+			$user->state = Input::get('state');
+			$user->zip = Input::get('zip');
+			$user->save();
+
+			return Redirect::action('UsersController@show', $user->id);
+		}
 	}
 
 
@@ -88,7 +99,9 @@ class UsersController extends \BaseController {
 	public function update($id)
 	{
 		$user = User::find($id);
-		$validator = Validator::make(Input::all(), User::$rules);
+		$rules = User::$rules;
+		unset($rules['password']);
+		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails())
 		{
@@ -124,7 +137,10 @@ class UsersController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$user = User::findorfail($id);
+		$user->delete();
+		Session::flash('successMessage', 'Success: Post Deleted');
+		return Redirect::action('UsersController@index');
 	}
 
 
