@@ -21,6 +21,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
+
+	static public $rules = [
+		'first_name' => 'required|max:50',
+		'last_name' => 'required|max:50',
+		'email' => 'required',
+		'password' => 'required',
+		'birth_date' => 'required',
+		'street' => 'required|max:50',
+		'city' => 'required',
+		'state' => 'required|max:2',
+		'zip' => 'required|digits:5',
+		'gender'=> 'max:1'
+    ];
+
 	protected $hidden = array('password', 'remember_token');
 
 	// public function jobsApplied()
@@ -37,4 +51,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->hasMany('Job');
     }
+
+
+	public function setStateAttribute ($value)
+	{
+		$this->attributes['state'] = strtoupper($value);
+	}
+
+	public function setCityAttribute ($value)
+	{
+		$this->attributes['city'] = ucwords(strtolower($value));
+	}
 }
