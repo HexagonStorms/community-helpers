@@ -75,16 +75,16 @@
                     <li><a href="/account_dashboard">My account</a></li>
                     @endif
                     <li><a href="/account_ad_create">Create Job</a></li>
-                </ul> 
+                </ul>
                 <div class="nav navbar-nav navbar-right hidden-xs">
                     <div class="row">
 
                         <div class="pull-right">
 
 
-                            <a data-toggle="modal" data-target="#modalLogin"  href="#">Login</a> | 
-                            <a href="/register">Register</a> | 
-                            <a href="/listings">Listings</a> | 
+                            <a data-toggle="modal" data-target="#modalLogin"  href="#">Login</a> |
+                            <a href="/register">Register</a> |
+                            <a href="/listings">Listings</a> |
                             @if(Auth::check())
                             <a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a>
                             @else
@@ -92,7 +92,7 @@
                             @endif
                             <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Create Job</a>
 
-                        </div>  
+                        </div>
                     </div>
 
 
@@ -129,7 +129,7 @@
                 <div class="col-sm-4 col-xs-12">
                     <p><strong>&copy; Bootstrap Classifieds 2014</strong></p>
                     <p>All rights reserved</p>
-                </div>          
+                </div>
 
                 <div class="col-sm-8 col-xs-12">
                     <p class="footer-links">
