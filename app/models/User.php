@@ -55,8 +55,5 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function setCityAttribute ($value)
 	{
 		$this->attributes['city'] = ucwords(strtolower($value));
-	{
-	    return $this->hasMany('Job');
 	}
 }
-
