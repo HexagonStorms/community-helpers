@@ -14,11 +14,11 @@ class CreateReviewsTable extends Migration {
 	{
 		Schema::create('reviews', function($table)
 		{
-		    $table->integer('jobs_id')->unsigned();
-		    $table->foreign('jobs_id')->references('id')->on('jobs');
-		    $table->integer('ratings')->nullable();
+		    $table->integer('job_id')->unsigned();
+		    $table->foreign('job_id')->references('id')->on('jobs');
+		    $table->integer('rating')->nullable();
 		    $table->text('comment')->nullable();
-		    $table->primary('jobs_id');
+		    $table->primary('job_id');
 			$table->timestamps();
 		});
 	}

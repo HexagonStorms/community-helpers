@@ -42,3 +42,4 @@ Route::get('/my_account', 'HomeController@my_account');
 
 Route::resource('jobs', 'JobsController');
 Route::resource('users', 'UsersController');
+Route::resource('reviews', 'ReviewsController');
