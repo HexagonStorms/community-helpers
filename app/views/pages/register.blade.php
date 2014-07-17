@@ -18,8 +18,6 @@
                                 <div class="well">
                                     <div class="form-group">
 
-                                        <h2> Basic Info </h2>
-
                                         <div class="form-group">
                                             <label for="is_helper">I am a</label>
                                             <select class="form-control">
@@ -28,6 +26,31 @@
                                             </select>
                                         </div>
 
+                                        <h2> Parents </h2>
+
+                                        <label for="first_name">Parent's Full name</label>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="parent_first_name" class="form-control " id="parent_first_name" placeholder="Parent first name">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="parent_last_name" class="form-control " id="parent_last_name" placeholder="Parent last name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="parent_email">Parent Email address</label>
+                                        <input type="email" class="form-control " id="parent_email" placeholder="Parent's email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="parent_phone">Parent Phone Number</label>
+                                        <input type="parent_phone" class="form-control " id="parent_phone" placeholder="###-####-####">
+                                    </div>
+
+                                    <h2> Helper </h2>
+
+                                    <div class="form-group">
                                         <label for="first_name">Full name</label>
                                         <div class="row">
                                             <div class="col-sm-6">
