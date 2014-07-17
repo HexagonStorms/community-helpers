@@ -71,7 +71,7 @@
                     <div class="col-sm-12 no-padding"><h2>Job #1</h2></div>
                     <div class="col-sm-12 no-padding show-border">
 
-                        <div class="col-sm-2">
+                        <div class="col-sm-2 side-hr">
                             <div class="col-sm-12 no-padding">
                                 <div class="col-sm-3 no-padding">
                                     <i class="fa fa-home fa-lg"></i>
@@ -85,78 +85,45 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-1 no-padding">
-                            <h1 >$20</h1>
+                        <div class="col-sm-1 no-padding side-hr">
+                            <div class="col-sm-12">
+                                <p>Price</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>$25</p>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3 no-padding">
+                        <div class="col-sm-3 no-padding side-hr">
                             <div class="col-sm-12 no-padding">
                                     <p>By: Mary McWalters</p>
                             </div>
                             <div class="col-sm-12 no-padding">
-                                <p>Accepted on Wednesday, 5:12pm.</p>
+                                <p>Due on Wednesday, 5:12pm.</p>
                             </div>
                         </div>
 
-                        <div class="col-sm-4 no-padding">
-                            <h6><em>Description:</em></h6>
+                        <div class="col-sm-4 no-padding side-hr">
+                            <div class="col-sm-12 no-padding">
+                                    <p><em>Description</em>:</p>
+                            </div>
+                            <div class="col-sm-12 no-padding">
+                                <p></p>
+                            </div>
                         </div>
 
                         <div class="col-sm-2 no padding">
                             <div class="col-sm-12 no-padding">
-                                <p>Due by Friday, 5pm</p>
+                                <p>6082 Juniper Pass</p>
                             </div>
                             <div class="col-sm-12 no-padding">
-                                <button type="button" class="btn btn-warning btn-xs">Mark Complete</button>
+                                <p>4.1 miles away</p>
                             </div>
                         </div>
                     </div>
 
 
-                    <!-- Active Job #2 -->
-                    <div class="col-sm-12 no-padding"><h2>Job #2</h2></div>
-                    <div class="col-sm-12 no-padding show-border">
-
-                        <div class="col-sm-2">
-                            <div class="col-sm-12 no-padding">
-                                <div class="col-sm-3 no-padding">
-                                    <i class="fa fa-road fa-lg"></i>
-                                </div>
-                                <div class="col-sm-9 no-padding">
-                                    <p>Garage</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p>Organize garage</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-1 no-padding">
-                            <h1 >$30</h1>
-                        </div>
-
-                        <div class="col-sm-3 no-padding">
-                            <div class="col-sm-12 no-padding">
-                                    <p>By: Timothy Mann</p>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <p>Accepted on Monday, 9:45am.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4 no-padding">
-                            <h6><em>Description:</em></h6>
-                        </div>
-
-                        <div class="col-sm-2 no padding">
-                            <div class="col-sm-12 no-padding">
-                                <p>Due by Sunday, 5pm</p>
-                            </div>
-                            <div class="col-sm-12 no-padding">
-                                <button type="button" class="btn btn-warning btn-xs">Mark Complete</button>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
