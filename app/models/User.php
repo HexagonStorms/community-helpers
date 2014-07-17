@@ -21,6 +21,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var array
 	 */
+
+	static public $rules = [
+
+    ];
+
 	protected $hidden = array('password', 'remember_token');
 
 	public function jobsApplied()
@@ -28,8 +33,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    return $this->hasMany('jobs')->withPivot('is_accepted');
 	}
 
-	public function jobsCreated()
+	public function jobs()
 	{
-	    return $this->hasMany('jobs');
+	    return $this->hasMany('Job');
 	}
 }
