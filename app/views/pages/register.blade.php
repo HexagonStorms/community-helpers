@@ -6,217 +6,196 @@
 <div class="container">
     <br />
     <div class="row">
-
         <div class="col-sm-12">
             <h1>Create an account</h1>
-
             <hr />
             <div class="row">
-                <div class="col-sm-12 col-md-6">
-
-
-
+                <div class="col-sm-12">
                     <form class="form-vertical">
-                        <fieldset>
+                    <fieldset>
+                        <div class="row">  
+                            <div class="col-sm-12" >
+                                <div class="well">
+                                    <div class="form-group">
 
-                            <div class="row">  
-                                <div class="col-sm-12" >
-
-                                    <div class="well">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Full name</label>
-                                            <div class="row">
-                                                <div class="col-sm-3">
-                                                    <select class="form-control">
-                                                        <option value="1">Mr</option>
-                                                        <option value="2">Mrs</option>
-                                                        <option value="3">Miss</option>
-                                                        <option value="4">Ms</option>
-                                                        <option value="5">Dr</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <input type="email" class="form-control " id="exampleInputEmail1" placeholder="First name">
-                                                </div>
-                                                <div class="col-sm-5">
-                                                    <input type="email" class="form-control " id="exampleInputEmail1" placeholder="Last name">
-                                                </div>
+                                            <label for="is_helper">I am a</label>
+                                            <select class="form-control">
+                                                <option>Giver / Looking for help</option>
+                                                <option>Helper with parent</option>
+                                            </select>
+                                        </div>
+
+                                        <h2> Parents </h2>
+
+                                        <label for="first_name">Parent's Full name</label>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="parent_first_name" class="form-control " id="parent_first_name" placeholder="Parent first name">
                                             </div>
+                                            <div class="col-sm-6">
+                                                <input type="parent_last_name" class="form-control " id="parent_last_name" placeholder="Parent last name">
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div class="form-group">
+                                        <label for="parent_email">Parent Email address</label>
+                                        <input type="email" class="form-control " id="parent_email" placeholder="Parent's email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="parent_phone">Parent Phone Number</label>
+                                        <input type="parent_phone" class="form-control " id="parent_phone" placeholder="###-####-####">
+                                    </div>
+
+                                    <h2> Helper </h2>
+
+                                    <div class="form-group">
+                                        <label for="first_name">Full name</label>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="first_name" class="form-control " id="first_name" placeholder="First name">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="last_name" class="form-control " id="last_name" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Birth Date</label>
+                                        <input type="date" class="form-control " id="birth_date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control " id="exampleInputEmail1" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Make sure your password is longer than 6 characters">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm your password">
+                                    </div>
+
+                                    <h2></h2>
+
+                                    <br />
+                                    <h2> Address </h2>	
+
+                                    <div class="form-group">
+                                        <label for="street">Street Address</label>
+                                        <input type="street" class="form-control" id="street" placeholder="Street Address">
+                                    </div>
+                                
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="apt_num">Apt.#</label>
+                                                <input type="apt_num" class="form-control" id="apt_num" placeholder="Apartment Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="city">City</label>
+                                                <input type="city" class="form-control" id="city" placeholder="City">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="state">State</label>
+                                                <select class="form-control">
+                                                    <option value="AL">Alabama</option>
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="AZ">Arizona</option>
+                                                    <option value="AR">Arkansas</option>
+                                                    <option value="CA">California</option>
+                                                    <option value="CO">Colorado</option>
+                                                    <option value="CT">Connecticut</option>
+                                                    <option value="DE">Delaware</option>
+                                                    <option value="DC">District of Columbia</option>
+                                                    <option value="FL">Florida</option>
+                                                    <option value="GA">Georgia</option>
+                                                    <option value="HI">Hawaii</option>
+                                                    <option value="ID">Idaho</option>
+                                                    <option value="IL">Illinois</option>
+                                                    <option value="IN">Indiana</option>
+                                                    <option value="IA">Iowa</option>
+                                                    <option value="KS">Kansas</option>
+                                                    <option value="KY">Kentucky</option>
+                                                    <option value="LA">Louisiana</option>
+                                                    <option value="ME">Maine</option>
+                                                    <option value="MD">Maryland</option>
+                                                    <option value="MA">Massachusetts</option>
+                                                    <option value="MI">Michigan</option>
+                                                    <option value="MN">Minnesota</option>
+                                                    <option value="MS">Mississippi</option>
+                                                    <option value="MO">Missouri</option>
+                                                    <option value="MT">Montana</option>
+                                                    <option value="NE">Nebraska</option>
+                                                    <option value="NV">Nevada</option>
+                                                    <option value="NH">New Hampshire</option>
+                                                    <option value="NJ">New Jersey</option>
+                                                    <option value="NM">New Mexico</option>
+                                                    <option value="NY">New York</option>
+                                                    <option value="NC">North Carolina</option>
+                                                    <option value="ND">North Dakota</option>
+                                                    <option value="OH">Ohio</option>
+                                                    <option value="OK">Oklahoma</option>
+                                                    <option value="OR">Oregon</option>
+                                                    <option value="PA">Pennsylvania</option>
+                                                    <option value="RI">Rhode Island</option>
+                                                    <option value="SC">South Carolina</option>
+                                                    <option value="SD">South Dakota</option>
+                                                    <option value="TN">Tennessee</option>
+                                                    <option value="TX">Texas</option>
+                                                    <option value="UT">Utah</option>
+                                                    <option value="VT">Vermont</option>
+                                                    <option value="VA">Virginia</option>
+                                                    <option value="WA">Washington</option>
+                                                    <option value="WV">West Virginia</option>
+                                                    <option value="WI">Wisconsin</option>
+                                                    <option value="WY">Wyoming</option>
+                                                </select>               
+                                            </div>
                                         </div>
 
-
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control " id="exampleInputEmail1" placeholder="Enter email">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="zip">Zipcode</label>
+                                                <input type="zip" class="form-control" id="zip" placeholder="Zipcode">
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Make sure your password is longer than 6 characters">
+                                    </div> 
+
+
+                                    <h2> About You </h2>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <label for="bio" class="control-label adjustable-width">Bio</label><br /><br />
+                                            <textarea class="form-control col-sm-8 adjustable-width" rows="6"></textarea>
+                                        </div>                        
+                                    </div>  			  
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <a href="account_dashboard"><button type="button" class="margin-save btn btn-primary btn-lg">Create account</button></a>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Confirm password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm your password">
-                                        </div>							  
-
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox"> We can contact you with relevant properties, offers and news
-                                            </label>
-                                        </div>
-                                        <br />
-                                        <a href="account_dashboard" class="btn btn-primary">Create account</a>
-
-
                                     </div>
                                 </div>
-
-
-
-
                             </div>
-
                         </div>
-
-                        <div class="col-md-6 col-sm-12 account-sidebar hidden-sm">
-
-                            <div class="row">
-                                <div class="col-sm-3" style="text-align: center;">
-                                    <img src="css/images/icons/Crest.png" width="50"/>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h3>Why us?</h3>
-                                    <p>We're one of the most recognisable brands, attracting thousands of buyers every month.<p>
-                                    </div>
-                            </div>
-                            <br />
-
-                            <div class="row">
-                                <div class="col-sm-3" style="text-align: center;">
-                                    <img src="css/images/icons/Pie-Chart.png" width="40"/>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h3>Magnet for buyers</h3>
-                                    <p>We make sure your listings receive maximum exposure and is presented in an engaging way</p>
-                                </div>
-                            </div>
-                            <br />
-
-                            <div class="row">
-                                <div class="col-sm-3" style="text-align: center;">
-                                    <img src="css/images/icons/Search.png" width="40"/>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h3>Focused searches</h3>
-                                    <p>Our technology and algorithm matches potential buyers directly to your listings</p>
-                                </div>
-                            </div>
-                            <br />
-                            <div class="row">
-                                <div class="col-sm-3" style="text-align: center;">
-                                    <img src="css/images/icons/Telephone.png" width="40"/>
-                                </div>
-                                <div class="col-sm-8">
-                                    <h3>Mobile web</h3>
-                                    <p>Your listings will always be accessible to everyone, even when they are on the move, via our responsive mobile website</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <br />
-
-
-
-
-
-
-                </fieldset>
-            </form>
-
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
-
-
-
-</div>
-</div><!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Sign in to your account</h4>
-            </div>
-            <div class="modal-body">
-                <p>If you have an account with us, please enter your details below.</p>
-
-                <form method="POST" action="account_dashboard" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
-
-                    <div class="form-group">
-                        <input placeholder="Your username/email" class="form-control" name="email" type="text">                </div>
-
-                    <div class="form-group">
-                        <input placeholder="Your password" class="form-control" name="password" type="password" value="">                </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-
-                        </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary pull-right">Login</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a data-toggle="modal" href="#modalForgot">Forgot your password?</a>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-
-            <div class="modal-footer" style="text-align: center">
-                <div class="error-message"><p style="color: #000; font-weight: normal;">Don't have an account? <a class="link-info" href="register">Register now</a></p></div>
-            </div>
-
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="modalForgot" tabindex="-1" role="dialog" aria-labelledby="modalForgot" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Forgot your password?</h4>
-            </div>
-            <div class="modal-body">
-                <p>Enter your email to continue</p>
-
-                <form role="form">
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your email address">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-
-                        </div><div class="col-md-6">
-                        <a href="my_account" class="btn btn-primary pull-right">Continue</a>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 @stop
