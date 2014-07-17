@@ -13,4 +13,7 @@
 <p>{{{ $user->state }}}</p><br>
 <p>{{{ $user->zip }}}</p><br>
 
+{{ Form::open(array('action' => array('UsersController@destroy', $user->id), 'method' => 'DELETE')) }}
+    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+{{ Form::close() }}
 @stop
