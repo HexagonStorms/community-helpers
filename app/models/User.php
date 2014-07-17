@@ -37,10 +37,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $hidden = array('password', 'remember_token');
 
-	public function jobsApplied()
-	{
-	    return $this->hasMany('jobs')->withPivot('is_accepted');
-	}
+	// public function jobsApplied()
+	// {
+	//     return $this->hasMany('Job')->withPivot('is_accepted');
+	// }
 
 	public function jobs()
 	{
@@ -55,6 +55,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	public function setCityAttribute ($value)
 	{
 		$this->attributes['city'] = ucwords(strtolower($value));
+	{
+	    return $this->hasMany('Job');
 	}
 }
 
