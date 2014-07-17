@@ -46,7 +46,14 @@ Route::get('/details', 'HomeController@details');
 
 Route::get('/my_account', 'HomeController@my_account');
 
-
 Route::resource('jobs', 'JobsController');
+
 Route::resource('users', 'UsersController');
+
 Route::resource('reviews', 'ReviewsController');
+
+Route::get('/login', 'HomeController@showLogin');
+
+Route::post('/login', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@doLogout');
