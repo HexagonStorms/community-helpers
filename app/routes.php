@@ -21,13 +21,20 @@ Route::get('/listings', 'HomeController@listings');
 
 Route::get('/account_dashboard', 'HomeController@account_dashboard');
 
+Route::get('/account_dashboard_helper', 'HomeController@account_dashboard_helper');
+
 Route::get('/account_ad_create', 'HomeController@account_ad_create');
 
 Route::get('/terms', 'HomeController@terms');
 
 Route::get('/contact', 'HomeController@contact');
 
-Route::get('/account', 'HomeController@account');
+Route::get('/account', function()
+{ 
+    return Redirect::action('HomeController@account_settings');
+});
+
+Route::get('/account_settings', 'HomeController@account_settings');
 
 Route::get('/account_ads', 'HomeController@account_ads');
 
