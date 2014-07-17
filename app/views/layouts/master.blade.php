@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="/js/fancybox/helpers/jquery.fancybox-buttons.css?v=2.1.5" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/chcustom.css"/>
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="../../assets/js/html5shiv.js"></script>
@@ -41,7 +41,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    
+
     <!-- Navigation Bar (Left) -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -69,7 +69,11 @@
                     <li><a href="/my_account">Login</a></li>
                     <li><a href="/register">Register</a></li>
                     <li><a href="/listings">Listings</a></li>
+                    @if(Auth::check())
+                    <li><a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a></li>
+                    @else
                     <li><a href="/account_dashboard">My account</a></li>
+                    @endif
                     <li><a href="/account_ad_create">Create Job</a></li>
                 </ul> 
                 <div class="nav navbar-nav navbar-right hidden-xs">
@@ -81,7 +85,11 @@
                             <a data-toggle="modal" data-target="#modalLogin"  href="#">Login</a> | 
                             <a href="/register">Register</a> | 
                             <a href="/listings">Listings</a> | 
+                            @if(Auth::check())
+                            <a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a>
+                            @else
                             <a href="/account_dashboard">My account</a>
+                            @endif
                             <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Create Job</a>
 
                         </div>  
@@ -100,6 +108,14 @@
 
 
     </nav>
+
+    <!------ Alert Messages ------>
+    @if (Session::has('successMessage'))
+        <div class="alert alert-success fade_message">{{{ Session::get('successMessage') }}}</div>
+    @endif
+    @if (Session::has('errorMessage'))
+        <div class="alert alert-danger fade_message">{{{ Session::get('errorMessage') }}}</div>
+        @endif
 
     <!-- Page Content -->
     @yield('content')
@@ -141,6 +157,9 @@
     <script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-buttons.js?v=2.1.5"></script>
     <script type="text/javascript" src="/js/fancybox/helpers/jquery.fancybox-media.js?v=2.1.5"></script>
     <script src="/js/global.js"></script>
+    <script>
+        $('.fade_message').delay(2000).fadeOut(1000);
+    </script>
 
 </body>
 </html>
