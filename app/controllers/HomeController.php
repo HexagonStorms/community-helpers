@@ -85,4 +85,33 @@ class HomeController extends BaseController {
 		return View::make('pages.my_account');
 	}
 
+	// ==============LogIn Controls==============//
+
+	public function showLogin()
+	{
+		return View::make('temp_users.login');
+	}
+
+	public function doLogin()
+	{
+		$email = Input::get('email');
+		$password = Input::get('password');
+
+		if(Auth::attempt(array('email' => $email, 'password' => $password)))
+		{
+			return Redirect::intended(action('UsersController@show', auth::user()->id));
+		}
+		else
+		{
+			Session::flash('errorMessage', 'Email or Password not found.');
+			return Redirect::action('HomeController@showLogin')->withInput();
+		}
+	}
+
+	public function doLogout()
+	{
+		Auth::logout();
+		return Redirect::action('UsersController@index');
+	}
+
 }
