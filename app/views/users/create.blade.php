@@ -21,6 +21,7 @@
                                                 <option value="NULL">Choose Account Type</option>
                                                 <option value="0">Giver / Looking for help</option>
                                                 <option value="1">Helper with parent</option>
+                                                {{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
                                             </select>
                                         </div>
 
@@ -28,21 +29,26 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 {{ Form::text('first_name', null, ['class' => 'form-control', 'placeholder' => 'First Name']) }}
+                                                {{ $errors->first('first_name', '<span class="help-block">:message</span>')}}
                                             </div>
                                             <div class="col-sm-6">
                                                 {{ Form::text('last_name', null, ['class' => 'form-control', 'placeholder' => 'Last Name']) }}
+                                                {{ $errors->first('last_name', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        {{ Form::text('date', null, ['class' => 'form-control', 'placeholder' => 'Birth Date: YYYY-MM-DD']) }}
+                                        {{ Form::text('birth_date', null, ['class' => 'form-control', 'placeholder' => 'Birth Date: YYYY-MM-DD']) }}
+                                        {{ $errors->first('birth_date', '<span class="help-block">:message</span>')}}
                                     </div>
                                     <div class="form-group">
                                         {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email']) }}
+                                        {{ $errors->first('email', '<span class="help-block">:message</span>')}}
                                     </div>
                                     <div class="form-group">
                                         {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
+                                        {{ $errors->first('password', '<span class="help-block">:message</span>')}}
                                     </div>
 
                                     <h2></h2>
@@ -52,17 +58,20 @@
 
                                     <div class="form-group">
                                         <label for="street">Street Address</label>
-                                        {{ Form::text('steet', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
+                                        {{ Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
+                                        {{ $errors->first('street', '<span class="help-block">:message</span>')}}
                                     </div>
                                 
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 {{ Form::text('apt_num', null, ['class' => 'form-control', 'placeholder' => 'Apartment Number #']) }}
+
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             {{ Form::text('city', null, ['class' => 'form-control', 'placeholder' => 'City']) }}
+                                            {{ $errors->first('city', '<span class="help-block">:message</span>')}}
                                         </div>
                                     </div>
 
@@ -122,20 +131,23 @@
                                                     <option value="WV">West Virginia</option>
                                                     <option value="WI">Wisconsin</option>
                                                     <option value="WY">Wyoming</option>
-                                                </select>               
+                                                </select> 
+                                                {{ $errors->first('state', '<span class="help-block">:message</span>')}}              
                                             </div>
                                         </div>
 
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 {{ Form::text('zip', null, ['class' => 'form-control', 'placeholder' => 'Zipcode']) }}
+                                                {{ $errors->first('zip', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
                                     </div> 		  
                                     
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <a href="/../account_dashboard"><button type="button" class="margin-save btn btn-primary btn-lg">Create account</button></a>
+                                            
+                                            {{ Form::submit('Create Account', ['class' => 'margin-save btn btn-primary btn-lg']) }}
                                         </div>
                                     </div>
                                 </div>
