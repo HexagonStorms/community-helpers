@@ -24,7 +24,11 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$users = User::with('jobs')->get();
+		$data = array(
+			'users' => $users
+		);
+		return View::make('users.create')->with($data);
 	}
 
 
@@ -73,7 +77,7 @@ class UsersController extends \BaseController {
 	public function show($id)
 	{
 		$user = User::findOrFail($id);
-		return View::make('temp_users.show')->with('user', $user);
+		return View::make('users.show_account')->with('user', $user);
 	}
 
 

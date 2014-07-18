@@ -23,11 +23,11 @@ Route::get('/account_dashboard', 'HomeController@account_dashboard');
 
 Route::get('/account_dashboard_helper', 'HomeController@account_dashboard_helper');
 
-Route::get('/account_ad_create', 'HomeController@account_ad_create');
-
 Route::get('/terms', 'HomeController@terms');
 
 Route::get('/contact', 'HomeController@contact');
+
+Route::get('/temp_users/users', 'HomeController@users');
 
 Route::get('/account', function()
 { 
@@ -37,8 +37,6 @@ Route::get('/account', function()
 Route::get('/account_settings', 'HomeController@account_settings');
 
 Route::get('/account_ads', 'HomeController@account_ads');
-
-Route::get('/account_credits', 'HomeController@account_credits');
 
 Route::get('/account_profile', 'HomeController@account_profile');
 
