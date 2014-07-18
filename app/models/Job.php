@@ -23,11 +23,19 @@ class Job extends Eloquent {
  //    	return $this->belongsToMany('User');
 	// }// end of helpers
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo('User');
+        return $this->belongsToMany('User', 'helpers_jobs_mapping');
     }// end of helpers
 
+    public function creator() {
+        return $this->belongsTo('User', 'user_id');
+    }
+
+    public function review()
+    {
+        //return $this->hasMany('Review');
+    }// end of helpers
 
     // public function renderBody()
     // {

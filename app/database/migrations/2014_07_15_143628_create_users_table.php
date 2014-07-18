@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration {
 			$table->string('city', 50);
 			$table->string('state', 2);
 			$table->string('zip', 5);
+			$table->string('remember_token', 100)->nullable();
 			$table->timestamps();
 		});
 	}

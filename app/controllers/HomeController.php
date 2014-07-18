@@ -40,6 +40,11 @@ class HomeController extends BaseController {
 		return View::make('pages.account_dashboard');
 	}
 
+	public function account_dashboard_helper()
+	{
+		return View::make('pages.account_dashboard_helper');
+	}
+
 	public function account_ad_create()
 	{
 		return View::make('pages.account_ad_create');
@@ -55,9 +60,9 @@ class HomeController extends BaseController {
 		return View::make('pages.contact');
 	}
 
-	public function account()
+	public function account_settings()
 	{
-		return View::make('pages.account');
+		return View::make('pages.account_settings');
 	}
 
 	public function account_ads()
@@ -83,6 +88,35 @@ class HomeController extends BaseController {
 	public function my_account()
 	{
 		return View::make('pages.my_account');
+	}
+
+	// ==============LogIn Controls==============//
+
+	public function showLogin()
+	{
+		return View::make('temp_users.login');
+	}
+
+	public function doLogin()
+	{
+		$email = Input::get('email');
+		$password = Input::get('password');
+
+		if(Auth::attempt(array('email' => $email, 'password' => $password)))
+		{
+			return Redirect::intended(action('UsersController@show', auth::user()->id));
+		}
+		else
+		{
+			Session::flash('errorMessage', 'Email or Password not found.');
+			return Redirect::action('HomeController@showLogin')->withInput();
+		}
+	}
+
+	public function doLogout()
+	{
+		Auth::logout();
+		return Redirect::action('UsersController@index');
 	}
 
 }
