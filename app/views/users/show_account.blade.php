@@ -107,6 +107,54 @@
                 </div>
             </div>
         </div>
+
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Jobs Listings</div>
+                <div class="panel-body">
+
+                    <!-- Active Jobs -->
+                    <!-- Job #1 -->
+                    <table class="table">
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>By</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                            <th>Due Date</th>
+                            <th>Apply</th>
+                        </tr>
+                        @foreach ($jobs as $job)
+                        <tr class="text-center">
+                            <td>{{ $job->category }}</td>
+                            <td>{{ $job->description }}</td>
+                            <td>{{ $job->price }}</td>
+
+                            @foreach ($job->users as $user)
+                                <td>{{ $user->first_name }} {{ $user->last_name }}</td>
+                                <td>{{ $user->street }}</td>
+                                <td>{{ $user->city }}</td>
+                                <td>{{ $user->state }}</td>
+                                <td>{{ $user->zip }} </td>
+                            @endforeach
+                            <td>{{ $job->required_date }}</td>
+                            <td><button class="btn btn-warning">Apply</button>
+                        </tr>
+                        @endforeach
+                        
+
+                        
+                    </table>
+
+                    <div class="col-sm-12 text-center">{{ $jobs->links() }}</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <!-- 
