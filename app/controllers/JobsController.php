@@ -134,9 +134,16 @@ class JobsController extends \BaseController {
 		$job = Job::findorFail($id);
         // if ($post->canManagePost() )
         // {
-            $job->delete();
-            Session::flash('successMessage', 'Post successfully deleted');
-            return Redirect::action('JobsController@index');
+		$job->users()->detach($id);
+
+		$job->review->each(function($review_model) {
+			$review_model->delete();
+		});
+
+		//$job->detach($id);
+        $job->delete();
+        Session::flash('successMessage', 'Post successfully deleted');
+        return Redirect::action('JobsController@index');
         //}
         //else
         //{

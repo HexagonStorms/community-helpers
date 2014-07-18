@@ -84,6 +84,7 @@ class JobsTableSeeder extends Seeder {
             $job->required_time = '18:00:45';
             $job->user_id = 1;
             $job->save();
+            sleep(1);
         } //end of for loop
 
     } //end of function run

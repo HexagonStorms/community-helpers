@@ -34,7 +34,7 @@ class Job extends Eloquent {
 
     public function review()
     {
-        //return $this->hasMany('Review');
+        return $this->hasMany('Review');
     }// end of helpers
 
     // public function renderBody()
