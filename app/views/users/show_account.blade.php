@@ -17,13 +17,16 @@
                             <div class="panel-body">
                                 <ul class="nav">              
                                     <li>
-                                        <a class="active" href="account_settings">Account Settings</a>
+                                        <a class="active" href="/../account_settings">Account Settings</a>
                                     </li>
                                     <li>
-                                        <a class="active" href="account_dashboard">Dashboard</a>
+                                        <a class="active" href="/../account_dashboard">Dashboard</a>
                                     </li>                       
                                     <li>    
-                                        <a class="active" href="account_profile">Edit Profile</a>
+                                        <a class="active" href="/../account_profile">Edit Profile</a>
+                                    </li>
+                                    <li>    
+                                        <a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
                                     </li>
                                 </ul>
                             </div>
