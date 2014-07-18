@@ -22,6 +22,9 @@
                                     <li>    
                                         <a class="active" href="account_profile">Edit Profile</a>
                                     </li>
+                                    <li>
+                                        <a class="active" href="#">View Profile</a>
+                                    </li>
                                 </ul>
 
                             </div>
