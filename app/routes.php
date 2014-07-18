@@ -30,7 +30,7 @@ Route::get('/contact', 'HomeController@contact');
 Route::get('/temp_users/users', 'HomeController@users');
 
 Route::get('/account', function()
-{ 
+{
     return Redirect::action('HomeController@account_settings');
 });
 
