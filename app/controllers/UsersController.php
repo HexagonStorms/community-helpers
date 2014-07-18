@@ -24,7 +24,11 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		$users = User::with('jobs')->get();
+		$data = array(
+			'users' => $users
+		);
+		return View::make('temp_users.create')->with($data);
 	}
 
 
