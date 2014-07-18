@@ -67,16 +67,17 @@
                 <div class="panel-heading">Active Jobs</div>
                 <div class="panel-body">
                     <table class="table">
-                        <th>Category</th>
-                        <th>Job</th>
-                        <th>Price</th>
-                        <th>
-                    
+                        <tr>
+                            <th>Category</th>
+                            <th>Job</th>
+                            <th>Price</th>
+                            <th>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 @stop

@@ -119,4 +119,8 @@ class HomeController extends BaseController {
 		return Redirect::action('UsersController@index');
 	}
 
+	public function users()
+	{
+		return View::make('temp_users.users');
+	}
 }
