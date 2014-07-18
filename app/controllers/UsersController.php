@@ -63,6 +63,8 @@ class UsersController extends \BaseController {
 			$user->zip = Input::get('zip');
 			$user->save();
 
+			Auth::loginUsingId($user->id);
+
 			return Redirect::action('UsersController@show', $user->id);
 		}
 	}
