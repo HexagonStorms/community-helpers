@@ -134,11 +134,11 @@ class JobsController extends \BaseController {
 		$job = Job::findorFail($id);
         // if ($post->canManagePost() )
         // {
-		$job->users()->detach($id);
+		//$job->users()->detach($id);
 
-		$job->review->each(function($review_model) {
-			$review_model->delete();
-		});
+		//$job->review->each(function($review_model) {
+		//	$review_model->delete();
+		//});
 
 		//$job->detach($id);
         $job->delete();
