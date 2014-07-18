@@ -14,7 +14,7 @@
         <h5> Needed By: {{{ $job->required_date }}}</h5>
 
         @foreach($job->users as $user)
-            {{ $user->first_name }} {{ $user->last_name }}
+            <h5>Associated With: {{ $user->first_name }} {{ $user->last_name }} </h5>
         @endforeach
 
         <hr>
