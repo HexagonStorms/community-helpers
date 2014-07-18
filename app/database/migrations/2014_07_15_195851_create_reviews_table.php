@@ -14,8 +14,9 @@ class CreateReviewsTable extends Migration {
 	{
 		Schema::create('reviews', function($table)
 		{
+			//$table->integer('review_id')->unsigned();
 		    $table->integer('job_id')->unsigned();
-		    $table->foreign('job_id')->references('id')->on('jobs');
+		    $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
 		    $table->integer('rating')->nullable();
 		    $table->text('comment')->nullable();
 		    $table->primary('job_id');
