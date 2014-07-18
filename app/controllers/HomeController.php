@@ -94,7 +94,7 @@ class HomeController extends BaseController {
 
 	public function showLogin()
 	{
-		return View::make('temp_users.login');
+		return View::make('login');
 	}
 
 	public function doLogin()
@@ -116,7 +116,11 @@ class HomeController extends BaseController {
 	public function doLogout()
 	{
 		Auth::logout();
-		return Redirect::action('UsersController@index');
+		return Redirect::action('HomeController@home');
 	}
 
+	public function users()
+	{
+		return View::make('temp_users.users');
+	}
 }
