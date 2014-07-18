@@ -127,25 +127,30 @@
                             <th>Description</th>
                             <th>Price</th>
                             <th>By</th>
-                            <th>Due Date</th>
                             <th>Address</th>
                             <th>City</th>
                             <th>State</th>
                             <th>Zip</th>
+                            <th>Due Date</th>
                             <th>Apply</th>
                         </tr>
+                        @foreach ($jobs as $job)
                         <tr class="text-center">
-                            <td><i class="fa fa-car"></i></td>
-                            <td>Walk the dogs, blah blah blah blah etc</td>
-                            <td>$10</td>
-                            <td>Maggie Cosign</td>
-                            <td>April 15th, 8pm</td>
-                            <td>112 East Pecan</td>
-                            <td>San Antonio</td>
-                            <td>TX</td>
-                            <td>17854</td>
+                            <td>{{ $job->category }}</td>
+                            <td>{{ $job->description }}</td>
+                            <td>{{ $job->price }}</td>
+
+                            @foreach ($job->users as $user)
+                                <td>{{ $user->first_name }} {{ $user->last_name }}</td>
+                                <td>{{ $user->street }}</td>
+                                <td>{{ $user->city }}</td>
+                                <td>{{ $user->state }}</td>
+                                <td>{{ $user->zip }} </td>
+                            @endforeach
+                            <td>{{ $job->required_date }}</td>
                             <td><button class="btn btn-warning">Apply</button>
                         </tr>
+                        @endforeach
                         
                         
                     </table>
