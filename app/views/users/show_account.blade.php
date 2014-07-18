@@ -40,13 +40,66 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 side-hr">
+                            <h4>First name</h4>
                             <p>{{{ $user->first_name }}}</p>
                         </div>
                         <div class="col-sm-6">
+                            <h4>Last name</h4>
                             <p>{{{ $user->last_name }}}</p>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 side-hr">
+                            <h4>Email</h4>
+                            <p>{{{ $user->email }}}</p>
+                        </div>
 
+                        <div class="col-sm-6">
+                            <h4>Birth Date</h4>
+                           <p>{{{ $user->birth_date }}}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 side-hr">
+                            <h4>Account Type</h4>
+                            <? if ($user->is_helper == 0) : ?>
+                            {{{ 'Giver' }}}
+                            <? else : ?>
+                            {{{ 'Helper' }}}
+                            <? endif; ?>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>User Type</h4>
+                            <? if ($user->is_helper == 0) : ?>
+                            {{{ 'Standard' }}}
+                            <? else : ?>
+                            {{{ 'Admin' }}}
+                            <? endif; ?>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 side-hr">
+                            <h4>Street</h4>
+                            <p>{{{ $user->street }}}</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <h4>City</h4>
+                            <p>{{{ $user->city }}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-sm-6 side-hr">
+                                <h4>State</h4>
+                                <p>{{{ $user->state }}}</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>Zip</h4>
+                                <p>{{{ $user->zip }}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,14 +107,6 @@
     </div>
 </div>
 <!-- 
-<p>{{{ $user->first_name }}}</p><br>
-<p>{{{ $user->last_name }}}</p><br>
-<p>{{{ $user->email }}}</p><br>
-<p>{{{ $user->birth_date }}}</p><br>
-<p>{{{ $user->is_helper }}}</p><br>
-<p>{{{ $user->is_admin }}}</p><br>
-<p>{{{ $user->street }}}</p><br>
-<p>{{{ $user->city }}}</p><br>
 <p>{{{ $user->state }}}</p><br>
 <p>{{{ $user->zip }}}</p><br> -->
 
