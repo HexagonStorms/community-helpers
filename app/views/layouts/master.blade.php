@@ -83,14 +83,14 @@
 
 
                             <a data-toggle="modal" data-target="#modalLogin"  href="#">Login</a> |
-                            <a href="/register">Register</a> |
+                            <a href="/users/create">Register</a> |
                             <a href="/listings">Listings</a> |
                             @if(Auth::check())
                             <a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a>
                             @else
-                            <a href="/account_dashboard">My account</a>
+                            <a href="/account_dashboard">My account</a>|
                             @endif
-                            <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Create Job</a>
+                            
 
                         </div>
                     </div>
