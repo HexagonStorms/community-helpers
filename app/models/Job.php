@@ -25,7 +25,7 @@ class Job extends Eloquent {
 
     public function users()
     {
-        return $this->belongsToMany('User');
+        return $this->belongsToMany('User', 'helpers_jobs_mapping');
     }// end of helpers
 
     public function creator() {

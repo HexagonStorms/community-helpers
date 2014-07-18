@@ -9,7 +9,7 @@ class JobsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$jobs = Job::with('user')->orderBy('created_at', 'desc')->paginate(4);
+		$jobs = Job::with('users')->orderBy('created_at', 'desc')->paginate(4);
 		$data = array(
 			'jobs' => $jobs
 		);
