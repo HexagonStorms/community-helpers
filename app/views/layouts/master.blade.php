@@ -79,6 +79,7 @@
                 <div class="nav navbar-nav navbar-right hidden-xs">
                     <div class="row">
                         <div class="pull-right">
+
                             @if(Auth::check())
                             <a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a> |
                             @else
@@ -90,7 +91,6 @@
                             <a href="/account_dashboard">My account</a> |
                             <a href="/logout">Logout</a>
                             @endif
-                            <a href="/account_ad_create" class="btn btn-warning post-ad-btn">Create Job</a>
                         </div>
                     </div>
                 </div>
