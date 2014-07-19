@@ -54,14 +54,14 @@
                                     <h2></h2>
 
                                     <br />
-                                    <h2> Address </h2>	
+                                    <h2> Address </h2>
 
                                     <div class="form-group">
                                         <label for="street">Street Address</label>
                                         {{ Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
                                         {{ $errors->first('street', '<span class="help-block">:message</span>')}}
                                     </div>
-                                
+
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
