@@ -9,7 +9,7 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::with('jobs')->get();
+		$users = User::with('')->get();
 		$data = array(
 			'users' => $users
 		);
@@ -24,11 +24,7 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		$users = User::with('jobs')->get();
-		$data = array(
-			'users' => $users
-		);
-		return View::make('users.create')->with($data);
+		return View::make('users.create');
 	}
 
 
@@ -60,7 +56,14 @@ class UsersController extends \BaseController {
 			$user->street = Input::get('street');
 			$user->city = Input::get('city');
 			$user->state = Input::get('state');
-			$user->zip = Input::get('zip');
+			$user->bio = Input::get('bio');
+			$user->user_pic_path = Input::get('user_pic_path');
+			$user->parent_email = Input::get('parent_email');
+			$user->parent_phone = Input::get('parent_phone');
+			$user->parent_first_name = Input::get('parent_first_name');
+			$user->parent_last_name = Input::get('parent_last_name');
+			$user->apt_num = Input::get('apt_num');
+			$user->gender = Input::get('gender');
 			$user->save();
 
 			Auth::loginUsingId($user->id);
