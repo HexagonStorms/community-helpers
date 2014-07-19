@@ -104,7 +104,7 @@ class HomeController extends BaseController {
 
 		if(Auth::attempt(array('email' => $email, 'password' => $password)))
 		{
-			return Redirect::intended(action('UsersController@dashboard', auth::user()->id));
+			return Redirect::intended(action('UsersController@dashboard_creator', auth::user()->id));
 		}
 		else
 		{

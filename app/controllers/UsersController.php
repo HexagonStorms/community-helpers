@@ -61,7 +61,7 @@ class UsersController extends \BaseController {
 
 			Auth::loginUsingId($user->id);
 
-			return Redirect::action('UsersController@dashboard', $user->id);
+			return Redirect::action('UsersController@dashboard_helper', $user->id);
 		}
 	}
 
@@ -83,9 +83,21 @@ class UsersController extends \BaseController {
 		return View::make('users.view_profile')->with($data);
 	}
 
-	public function dashboard($id)
+	public function dashboard_helper($id)
 	{
 		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
+		$user = User::findOrFail($id);
+		$data = array(
+			'jobs' => $jobs,
+			'user' => $user
+		);
+
+		return View::make('users.show_account')->with($data);
+	}
+
+	public function dashboard_creator($id)
+	{
+		$jobs = Job::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
