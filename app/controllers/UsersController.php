@@ -9,7 +9,7 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::with('jobs')->get();
+		$users = User::with('')->get();
 		$data = array(
 			'users' => $users
 		);
@@ -56,12 +56,19 @@ class UsersController extends \BaseController {
 			$user->street = Input::get('street');
 			$user->city = Input::get('city');
 			$user->state = Input::get('state');
-			$user->zip = Input::get('zip');
+			$user->bio = Input::get('bio');
+			$user->user_pic_path = Input::get('user_pic_path');
+			$user->parent_email = Input::get('parent_email');
+			$user->parent_phone = Input::get('parent_phone');
+			$user->parent_first_name = Input::get('parent_first_name');
+			$user->parent_last_name = Input::get('parent_last_name');
+			$user->apt_num = Input::get('apt_num');
+			$user->gender = Input::get('gender');
 			$user->save();
 
 			Auth::loginUsingId($user->id);
 
-			return Redirect::action('UsersController@dashboard', $user->id);
+			return Redirect::action('UsersController@dashboard_helper', $user->id);
 		}
 	}
 
@@ -83,9 +90,21 @@ class UsersController extends \BaseController {
 		return View::make('users.view_profile')->with($data);
 	}
 
-	public function dashboard($id)
+	public function dashboard_helper($id)
 	{
 		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
+		$user = User::findOrFail($id);
+		$data = array(
+			'jobs' => $jobs,
+			'user' => $user
+		);
+
+		return View::make('users.show_account')->with($data);
+	}
+
+	public function dashboard_creator($id)
+	{
+		$jobs = Job::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
@@ -105,7 +124,7 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		$user = User::find($id);
-		return View::make('temp_users.edit')->with('user', $user);
+		return View::make('users.edit')->with('user', $user);
 	}
 
 
