@@ -113,7 +113,7 @@ class JobsController extends \BaseController {
             $job->price = Input::get('price');
             $job->required_date = Input::get('required_date');
             $job->required_time = Input::get('required_time');
-            $job->user_id = 1;
+            $job->user_id = Auth::id();;
             $job->save();
             Session::flash('successMessage', 'Post successfully created');
             return Redirect::action('JobsController@show', $job->id);
