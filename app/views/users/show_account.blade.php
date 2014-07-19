@@ -159,14 +159,14 @@
 		@else
 		<div class="col-sm-9">
 			<div class="panel panel-default">
-				<div class="panel-heading">Welcome, FIRSTNAME LASTNAME!</div>
+				<div class="panel-heading">Welcome, {{ $user->first_name }} {{ $user->last_name }}!</div>
 				<div class="panel-body">
 
 
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
 								<h3 class="text-center">Total Jobs Created</h3>
-								<p>4</p>
+								<p>{{ $job_count }}</p>
 							</div>
 							<div class="col-sm-6 text-center">
 								<h3 class="text-center">Reviews Published</h3>
@@ -235,7 +235,7 @@
 								<td>{{ $job->description }}</td>
 								<td>${{ $job->price }}</td>
 								<td>{{ $job->required_date }}</td>
-								<td><button class="btn btn-warning btn-md">Edit</button></td> 
+								<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
 							</tr>
 						@endforeach
 					</table>
