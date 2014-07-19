@@ -66,7 +66,11 @@
 
 				<ul class="nav navbar-nav navbar-right visible-xs">
 					@if(Auth::check())
+					@if(Auth::user()->is_helper == True)
 					<li><a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a></li>
+					@elseif(Auth::user()->is_helper == False)
+					<li><a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a></li>
+					@endif
 					<li><a href="{{ action('UsersController@show', Auth::id()) }}">My account</a></li>
 					<li><a href="/logout">Logout</a></li>
 					@else
@@ -80,7 +84,11 @@
 						<div class="pull-right">
 
 							@if(Auth::check())
-							<a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+								@if(Auth::user()->is_helper == True)
+									<a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+								@elseif(Auth::user()->is_helper == False)
+									<a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+								@endif
 							<a href="{{ action('UsersController@show', Auth::id()) }}">My account</a> |
 							<a href="/logout">Logout</a>
 							@else
