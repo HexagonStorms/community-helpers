@@ -18,12 +18,7 @@ class Job extends Eloquent {
         'required_time' => 'required',
     ];
 
- //    public function helpers()
-	// {
- //    	return $this->belongsToMany('User');
-	// }// end of helpers
-
-    public function users()
+    public function helpers()
     {
         return $this->belongsToMany('User', 'helpers_jobs_mapping');
     }// end of helpers

@@ -11,13 +11,8 @@
         <h2>Category: {{ $job->category}}</h2>
         <h5>Description: {{ $job->description }}</h5>
         <h5>Cash: {{ $job->price }} </h5>
-        <h5> Needed By: {{{ $job->required_date }}}</h5>
-
-        @foreach($job->users as $user)
-            <h5>Associated With: {{ $user->first_name }} {{ $user->last_name }} </h5>
-        @endforeach
-
-        <hr>
+        <h5>Needed By: {{ $job->required_date }}</h5>
+        <h5>Created By: {{ $job->creator->first_name }} {{ $job->creator->last_name }}</h5>
     @endforeach
     {{ $jobs->links() }}
 

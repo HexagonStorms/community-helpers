@@ -9,7 +9,7 @@ class JobsController extends \BaseController {
 	 */
 	public function index()
 	{
-		$jobs = Job::with('users')->orderBy('created_at', 'desc')->paginate(4);
+		$jobs = Job::with('creator')->orderBy('required_date')->paginate(4);
 		$data = array(
 			'jobs' => $jobs
 		);
@@ -44,9 +44,7 @@ class JobsController extends \BaseController {
         } // if it fails
         else
         {
-            //return $purifier->purify($value);
             $job = new Job();
-            //$post->user_id = Auth::user()->id;
             $job->category = Input::get('category');
             $job->description = Input::get('description');
             $job->price = Input::get('price');
@@ -54,7 +52,7 @@ class JobsController extends \BaseController {
             $job->price = Input::get('price');
             $job->required_date = Input::get('required_date');
             $job->required_time = Input::get('required_time');
-            $job->user_id = 1;
+            $job->creator()->associate(Auth::user());
             $job->save();
             Session::flash('successMessage', 'Post successfully created');
             return Redirect::action('JobsController@index');

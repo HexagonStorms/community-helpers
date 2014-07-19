@@ -47,11 +47,15 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasManyThrough('Review', 'Job');
     }
 
-    public function jobs()
+    public function createdJobs()
     {
         return $this->hasMany('Job');
     }
 
+    public function appliedJobs()
+    {
+        return $this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted');
+    }
 
 	public function setStateAttribute ($value)
 	{
