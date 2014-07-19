@@ -104,11 +104,13 @@ class UsersController extends \BaseController {
 
 	public function dashboard_creator($id)
 	{
+		$job_count= Job::where('user_id', $id)->count();
 		$jobs = Job::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
-			'user' => $user
+			'user' => $user,
+			'job_count' => $job_count,
 		);
 
 		return View::make('users.show_account')->with($data);
