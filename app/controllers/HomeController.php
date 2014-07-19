@@ -103,10 +103,18 @@ class HomeController extends BaseController {
 		$password = Input::get('password');
 
 		if(Auth::attempt(array('email' => $email, 'password' => $password)))
+			
 		{
-			return Redirect::intended(action('UsersController@show', auth::user()->id));
-		}
-		else
+			$user = User::all();
+			if (User::find($user->is_helper) == TRUE) 
+			{
+				return Redirect::intended(action('UsersController@dashboard_helper', auth::user()->id));
+			}
+			elseif (User::find($user->is_helper) == FALSE) 
+			{
+				return Redirect::intended(action('UsersController@dashboard_creator', auth::user()->id));
+			}
+		} else
 		{
 			Session::flash('errorMessage', 'Email or Password not found.');
 			return Redirect::action('HomeController@showLogin')->withInput();
