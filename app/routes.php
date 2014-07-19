@@ -44,7 +44,9 @@ Route::get('/my_account', 'HomeController@my_account');
 
 Route::resource('jobs', 'JobsController');
 
-Route::get('users/dashboard/{id}', 'UsersController@dashboard');
+Route::get('users/dashboard_helper/{id}', 'UsersController@dashboard_helper');
+
+Route::get('users/dashboard_creator/{id}', 'UsersController@dashboard_creator');
 
 Route::resource('users', 'UsersController');
 
