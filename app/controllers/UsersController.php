@@ -78,13 +78,13 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$jobs = Job::with('users')->orderBy('created_at', 'desc')->paginate(4);
+		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
 			'user' => $user
 		);
-        
+
 		return View::make('users.show_account')->with($data);
 	}
 

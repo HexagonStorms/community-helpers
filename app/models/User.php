@@ -49,7 +49,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
     public function appliedJobs()
     {
-    	$this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted')
+        return $this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted');
     }
 
 

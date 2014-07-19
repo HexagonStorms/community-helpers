@@ -81,12 +81,11 @@ class JobsTableSeeder extends Seeder {
             $job->description = 'Water my lawn ' . $i;
             $job->price = 10.00;
             $job->is_complete = 0;
-            $job->required_date = '2014-07-20';
+            $job->required_date = '2014-07-'.$i;
             $job->required_time = '18:00:45';
-            //$job->user_id = 1;
             $job->user_id = rand(1, 3);
             $job->save();
-            //sleep(1);
+            sleep(1);
         } //end of for loop
 
     } //end of function run
