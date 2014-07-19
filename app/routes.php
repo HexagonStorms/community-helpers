@@ -36,8 +36,6 @@ Route::get('/account', function()
 
 Route::get('/account_settings', 'HomeController@account_settings');
 
-Route::get('/account_ads', 'HomeController@account_ads');
-
 Route::get('/account_profile', 'HomeController@account_profile');
 
 Route::get('/details', 'HomeController@details');
@@ -45,6 +43,8 @@ Route::get('/details', 'HomeController@details');
 Route::get('/my_account', 'HomeController@my_account');
 
 Route::resource('jobs', 'JobsController');
+
+Route::get('users/dashboard/{id}', 'UsersController@dashboard');
 
 Route::resource('users', 'UsersController');
 
