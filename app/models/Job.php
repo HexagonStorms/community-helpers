@@ -18,15 +18,10 @@ class Job extends Eloquent {
         'required_time' => 'required',
     ];
 
- //    public function helpers()
-	// {
- //    	return $this->belongsToMany('User');
-	// }// end of helpers
-
-    public function users()
+    public function helpers()
     {
         return $this->belongsToMany('User', 'helpers_jobs_mapping');
-    }// end of helpers
+    }
 
     public function creator() {
         return $this->belongsTo('User', 'user_id');
@@ -35,18 +30,5 @@ class Job extends Eloquent {
     public function review()
     {
         return $this->hasMany('Review');
-    }// end of helpers
-
-    // public function renderBody()
-    // {
-    //     $dirtyHTML = Parsedown::instance()->parse($this->description);
-    //     $config = HTMLPurifier_Config::createDefault();
-    //     $purifier = new HTMLPurifier($config);
-    //     return $purifier->purify($dirtyHTML);
-    // } //end of renderBody
-
-    // public function canManagePost()
-    // {
-    //     return Auth::check() && (Auth::user()->is_admin || Auth::user()->id == $this->user_id);
-    // }
+    }
 }

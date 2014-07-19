@@ -37,19 +37,19 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	protected $hidden = array('password', 'remember_token');
 
-	// public function jobsApplied()
-	// {
-	//     return $this->hasMany('Job')->withPivot('is_accepted');
-	// }
-
 	public function reviews()
     {
         return $this->hasManyThrough('Review', 'Job');
     }
 
-    public function jobs()
+    public function createdJobs()
     {
         return $this->hasMany('Job');
+    }
+
+    public function appliedJobs()
+    {
+    	$this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted')
     }
 
 
