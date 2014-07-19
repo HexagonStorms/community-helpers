@@ -7,12 +7,12 @@
     <br />
     <div class="row">
         <div class="col-sm-12">
-            <h1>Create an account</h1>
+            <h1>Update Account</h1>
             <hr />
             <div class="row">
                 <div class="col-sm-12">
-                    {{ Form::open(array('action' => 'UsersController@store', 'role' => 'form', 'files' => 'true') )}}
-                        <div class="row">  
+                    {{ Form::model($user, array('action' => array('UsersController@update', $user->id), 'method' => 'PUT', 'files' => true)) }}
+                        <div class="row">
                             <div class="col-sm-12" >
                                 <div class="well">
                                     <div class="form-group">
@@ -147,7 +147,7 @@
                                     <div class="row">
                                         <div class="col-sm-3">
                                             
-                                            {{ Form::submit('Create Account', ['class' => 'margin-save btn btn-primary btn-lg']) }}
+                                            {{ Form::submit('Update', ['class' => 'margin-save btn btn-primary btn-lg']) }}
                                         </div>
                                     </div>
                                 </div>

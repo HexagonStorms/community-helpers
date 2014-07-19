@@ -112,7 +112,7 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		$user = User::find($id);
-		return View::make('temp_users.edit')->with('user', $user);
+		return View::make('users.edit')->with('user', $user);
 	}
 
 
