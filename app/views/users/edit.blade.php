@@ -19,9 +19,15 @@
                                     <li>
                                         <a class="active" href="/../account_settings">Account Settings</a>
                                     </li>
+                                    @if($user->is_helper == True)
                                     <li>
-                                        <a class="active" href="{{ action('UsersController@dashboard', $user->id) }}">Dashboard</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard_helper', $user->id) }}">Dashboard</a>
                                     </li>
+                                    @elseif($user->is_helper == False)
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@dashboard_creator', $user->id) }}">Dashboard</a>
+                                    </li>
+                                    @endif
                                     <li>
                                         <a class="active" href="/../account_profile">Edit Profile</a>
                                     </li>

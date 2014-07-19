@@ -19,9 +19,15 @@
 									<li>
 										<a class="active" href="/../account_settings">Account Settings</a>
 									</li>
-									<li>
-										<a class="active" href="{{ action('UsersController@dashboard_helper', $user->id) }}">Dashboard</a>
-									</li>
+									 @if($user->is_helper == True)
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@dashboard_helper', $user->id) }}">Dashboard</a>
+                                    </li>
+                                    @elseif($user->is_helper == False)
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@dashboard_creator', $user->id) }}">Dashboard</a>
+                                    </li>
+                                    @endif
 									<li>
 										<a class="active" href="/../account_profile">Edit Profile</a>
 									</li>
@@ -35,7 +41,8 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- HELPER DASH
+		============================================================= -->
 		@if ($user->is_helper == TRUE)
 		<div class="col-sm-9">
 			<div class="panel panel-default">
@@ -157,6 +164,8 @@
 			</div>
 		</div>
 		@else
+		<!-- CREATOR DASH
+		============================================================= -->
 		<div class="col-sm-9">
 			<div class="panel panel-default">
 				<div class="panel-heading">Welcome, {{ $user->first_name }} {{ $user->last_name }}!</div>
@@ -166,7 +175,11 @@
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
 								<h3 class="text-center">Total Jobs Created</h3>
+								@if($job_count > 0)
 								<p>{{ $job_count }}</p>
+								@else
+								<p>0</p>
+								@endif
 							</div>
 							<div class="col-sm-6 text-center">
 								<h3 class="text-center">Reviews Published</h3>
