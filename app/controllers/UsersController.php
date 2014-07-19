@@ -68,7 +68,7 @@ class UsersController extends \BaseController {
 
 			Auth::loginUsingId($user->id);
 
-			return Redirect::action('UsersController@show', $user->id);
+			return Redirect::action('UsersController@dashboard', $user->id);
 		}
 	}
 
@@ -80,6 +80,17 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
+	{
+		
+		$user = User::findOrFail($id);
+		$data = array(
+			'user' => $user
+		);
+
+		return View::make('users.view_profile')->with($data);
+	}
+
+	public function dashboard($id)
 	{
 		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);

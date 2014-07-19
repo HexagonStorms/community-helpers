@@ -20,7 +20,7 @@
                                         <a class="active" href="/../account_settings">Account Settings</a>
                                     </li>
                                     <li>
-                                        <a class="active" href="/../account_dashboard">Dashboard</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard', $user->id) }}">Dashboard</a>
                                     </li>
                                     <li>
                                         <a class="active" href="/../account_profile">Edit Profile</a>
@@ -36,10 +36,42 @@
             </div>
         </div>
 
+
         <div class="col-sm-9">
             <div class="panel panel-default">
+                <div class="panel-heading">Welcome, {{{ $user->first_name }}} {{{ $user->last_name }}}!</div>
+                <div class="panel-body">
+
+                    <div class="row">
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Total Jobs Completed</h3>
+                                <p>4</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Money Earned</h3>
+                                <p>$30</p>
+                            </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Community Service Hours Earned</h3>
+                                <p>6</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Review Rating</h3>
+                                <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-sm-9">
+            <div class="panel panel-default">
                 <div class="panel-heading">
-                    Edit Profile
+                    Account Information
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -106,6 +138,58 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Active Jobs</div>
+                <div class="panel-body">
+
+                    <!-- Active Jobs -->
+                    <!-- Job #1 -->
+                    <table class="table">
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>By</th>
+                            <th>Due Date</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Zip</th>
+                        </tr>
+                        <tr class="text-center">
+                            <td><i class="fa fa-car"></i></td>
+                            <td>Do dishes Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et {...} </td>
+                            <td>$15</td>
+                            <td>Henry B.</td>
+                            <td>Wednesday, 4:00pm</td>
+                            
+                            <td>112 East Pecan</td>
+                            <td>San Antonio</td>
+                            <td>TX</td>
+                            <td>17854</td>
+                        </tr>
+                        
+                        <!-- Job #2 -->
+                        <tr class="text-center">
+                            <td><i class="fa fa-road"></i></td>
+                            <td>mow the lawn in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{...} </td>
+                            <td>$30</td>
+                            <td>Brandon V.</td>
+                            <td>Friday, 8:00pm</td>
+                            <td>112 East Pecan</td>
+                            <td>San Antonio</td>
+                            <td>TX</td>
+                            <td>17854</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <div class="col-sm-12">
@@ -117,16 +201,13 @@
                     <!-- Job #1 -->
                     <table class="table">
                         <tr>
-                            <th>Category</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>By</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip</th>
-                            <th>Due Date</th>
-                            <th>Apply</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Price</th>
+                            
+                            <th class="text-center">Address</th>
+                            <th class="text-center">Due Date</th>
+                            <th class="text-center">Apply</th>
                         </tr>
 
                         @foreach ($jobs as $job)
@@ -134,11 +215,9 @@
                                 <td>{{ $job->category }}</td>
                                 <td>{{ $job->description }}</td>
                                 <td>{{ $job->price }}</td>
-                                <td>{{ $job->creator->first_name }} {{ $job->creator->last_name }}</td>
+                                
                                 <td>{{ $job->creator->street }}</td>
-                                <td>{{ $job->creator->city }}</td>
-                                <td>{{ $job->creator->state }}</td>
-                                <td>{{ $job->creator->zip }} </td>
+                                
                                 <td>{{ $job->required_date }}</td>
                                 <td><button class="btn btn-warning">Apply</button>
                             </tr>

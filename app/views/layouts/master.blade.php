@@ -65,32 +65,29 @@
             <div class="collapse navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right visible-xs">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/listings">Listings</a></li>
                     @if(Auth::check())
-                    <li><a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a></li>
+                    <li><a href="{{ action('UsersController@dashboard', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a></li>
+                    <li><a href="{{ action('UsersController@show', Auth::id()) }}">My account</a></li>
+                    <li><a href="/logout">Logout</a></li>
                     @else
-                    <li><a href="/account_dashboard">My account</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/users/create">Register</a></li>
                     @endif
-                    <li><a href="/account_ad_create">Create Job</a></li>
+                    <li><a href="/account_ad_create">Listings</a></li>
                 </ul>
                 <div class="nav navbar-nav navbar-right hidden-xs">
                     <div class="row">
                         <div class="pull-right">
 
                             @if(Auth::check())
-                            <a href="/account_dashboard">Welcome {{ auth::user()->first_name}}</a> |
+                            <a href="{{ action('UsersController@dashboard', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+                            <a href="{{ action('UsersController@show', Auth::id()) }}">My account</a> |
+                            <a href="/logout">Logout</a>
                             @else
                             <a href="/login">Login</a> |
-                            @endif
                             <a href="/users/create">Register</a> |
-                            <a href="/listings">Listings</a> |
-                            @if(Auth::check())
-                            <a href="/account_dashboard">My account</a> |
-                            <a href="/logout">Logout</a>
                             @endif
+                            <a href="/listings">Listings</a>
                         </div>
                     </div>
                 </div>
