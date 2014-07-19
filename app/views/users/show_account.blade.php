@@ -36,7 +36,7 @@
             </div>
         </div>
 
-
+        @if ($user->is_helper == TRUE)
         <div class="col-sm-9">
             <div class="panel panel-default">
                 <div class="panel-heading">Welcome, {{{ $user->first_name }}} {{{ $user->last_name }}}!</div>
@@ -67,78 +67,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="col-sm-9">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Account Information
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-sm-6 side-hr">
-                            <h4>First name</h4>
-                            <p>{{{ $user->first_name }}}</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <h4>Last name</h4>
-                            <p>{{{ $user->last_name }}}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 side-hr">
-                            <h4>Email</h4>
-                            <p>{{{ $user->email }}}</p>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <h4>Birth Date</h4>
-                           <p>{{{ $user->birth_date }}}</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 side-hr">
-                            <h4>Account Type</h4>
-                            <? if ($user->is_helper == 0) : ?>
-                            {{{ 'Giver' }}}
-                            <? else : ?>
-                            {{{ 'Helper' }}}
-                            <? endif; ?>
-                        </div>
-                        <div class="col-sm-6">
-                            <h4>User Type</h4>
-                            <? if ($user->is_helper == 0) : ?>
-                            {{{ 'Standard' }}}
-                            <? else : ?>
-                            {{{ 'Admin' }}}
-                            <? endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6 side-hr">
-                            <h4>Street</h4>
-                            <p>{{{ $user->street }}}</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <h4>City</h4>
-                            <p>{{{ $user->city }}}</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                            <div class="col-sm-6 side-hr">
-                                <h4>State</h4>
-                                <p>{{{ $user->state }}}</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <h4>Zip</h4>
-                                <p>{{{ $user->zip }}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <div class="col-sm-12">
             <div class="panel panel-default">
@@ -228,6 +156,96 @@
                 </div>
             </div>
         </div>
+        @else
+        <div class="col-sm-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">Welcome, FIRSTNAME LASTNAME!</div>
+                <div class="panel-body">
+
+
+                    <div class="row">
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Total Jobs Created</h3>
+                                <p>4</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Reviews Published</h3>
+                                <p>3</p>
+                            </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                            <div class="col-sm-6 text-center side-hr">
+                                <h3 class="text-center">Views this month</h3>
+                                <p>6</p>
+                            </div>
+                            <div class="col-sm-6 text-center">
+                                <h3 class="text-center">Views all time</h3>
+                                <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+                            </div>
+                    </div>
+                    <br />
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+                <div class="panel-body">
+
+                     <div class="row">
+                        <div class="col-centered">
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-warning btn-lg">Create Job</button>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-info btn-lg">Manage Jobs</button>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-danger btn-lg">Rate Helpers</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Jobs Created</div>
+                <div class="panel-body">
+
+                    <!-- Created Jobs -->
+                    <table class="table">
+                        <tr>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        @foreach ($jobs as $job)
+                            <tr class="text-center"> 
+                                <td>{{ $job->category }}</td>
+                                <td>{{ $job->description }}</td>
+                                <td>${{ $job->price }}</td>
+                                <td>{{ $job->required_date }}</td>
+                                <td><button class="btn btn-warning btn-md">Edit</button></td> 
+                            </tr>
+                        @endforeach
+                    </table>
+
+                    <div class="text-center">{{ $jobs->links() }}</div>
+                </div>
+            </div>
+        </div>
+
+
+        @endif
 
     </div>
 </div>
