@@ -20,7 +20,7 @@
                                         <a class="active" href="/../account_settings">Account Settings</a>
                                     </li>
                                     <li>
-                                        <a class="active" href="/../account_dashboard">Dashboard</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard', $user->id) }}">Dashboard</a>
                                     </li>
                                     <li>
                                         <a class="active" href="/../account_profile">Edit Profile</a>
@@ -39,28 +39,28 @@
 
         <div class="col-sm-9">
             <div class="panel panel-default">
-                <div class="panel-heading">Welcome, FIRSTNAME LASTNAME!</div>
+                <div class="panel-heading">Welcome, {{{ $user->first_name }}} {{{ $user->last_name }}}!</div>
                 <div class="panel-body">
 
                     <div class="row">
                             <div class="col-sm-6 text-center side-hr">
-                                <h3 class="text-center">Total Jobs Created</h3>
+                                <h3 class="text-center">Total Jobs Completed</h3>
                                 <p>4</p>
                             </div>
                             <div class="col-sm-6 text-center">
-                                <h3 class="text-center">Reviews Published</h3>
-                                <p>3</p>
+                                <h3 class="text-center">Money Earned</h3>
+                                <p>$30</p>
                             </div>
                     </div>
                     <hr />
                     <div class="row">
                             <div class="col-sm-6 text-center side-hr">
-                                <h3 class="text-center">Views this month</h3>
-                                <p>121</p>
+                                <h3 class="text-center">Community Service Hours Earned</h3>
+                                <p>6</p>
                             </div>
                             <div class="col-sm-6 text-center">
-                                <h3 class="text-center">Views all time</h3>
-                                <p>345</p>
+                                <h3 class="text-center">Review Rating</h3>
+                                <p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
                             </div>
                     </div>
                     
@@ -201,16 +201,13 @@
                     <!-- Job #1 -->
                     <table class="table">
                         <tr>
-                            <th>Category</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>By</th>
-                            <th>Address</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip</th>
-                            <th>Due Date</th>
-                            <th>Apply</th>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Price</th>
+                            
+                            <th class="text-center">Address</th>
+                            <th class="text-center">Due Date</th>
+                            <th class="text-center">Apply</th>
                         </tr>
 
                         @foreach ($jobs as $job)
@@ -218,11 +215,9 @@
                                 <td>{{ $job->category }}</td>
                                 <td>{{ $job->description }}</td>
                                 <td>{{ $job->price }}</td>
-                                <td>{{ $job->creator->first_name }} {{ $job->creator->last_name }}</td>
+                                
                                 <td>{{ $job->creator->street }}</td>
-                                <td>{{ $job->creator->city }}</td>
-                                <td>{{ $job->creator->state }}</td>
-                                <td>{{ $job->creator->zip }} </td>
+                                
                                 <td>{{ $job->required_date }}</td>
                                 <td><button class="btn btn-warning">Apply</button>
                             </tr>
