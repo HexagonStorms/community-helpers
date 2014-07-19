@@ -4,9 +4,40 @@
 
 <hr class="topbar"/>
 <div class="container">
-    <br />
+
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-3">
+            <div class="sidebar-account">
+                <div class="row ">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                My account
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav">
+                                    <li>
+                                        <a class="active" href="/../account_settings">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@dashboard', $user->id) }}">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="/../account_profile">Edit Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="col-sm-9">
             <h1>Update Account</h1>
             <hr />
             <div class="row">
@@ -47,9 +78,30 @@
                                         {{ $errors->first('email', '<span class="help-block">:message</span>')}}
                                     </div>
                                     <div class="form-group">
-                                        {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Password']) }}
-                                        {{ $errors->first('password', '<span class="help-block">:message</span>')}}
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                {{ Form::text('parent_first_name', null, ['class' => 'form-control', 'placeholder' => 'Parent: First Name']) }}
+                                                {{ $errors->first('parent_first_name', '<span class="help-block">:message</span>')}}
+                                            </div>
+                                            <div class="col-sm-6">
+                                                {{ Form::text('parent_last_name', null, ['class' => 'form-control', 'placeholder' => 'Parent: Last Name']) }}
+                                                {{ $errors->first('parent_last_name', '<span class="help-block">:message</span>')}}
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                {{ Form::email('parent_email', null, ['class' => 'form-control', 'placeholder' => 'Parent: email']) }}
+                                                {{ $errors->first('parent_email', '<span class="help-block">:message</span>')}}
+                                            </div>
+                                            <div class="col-sm-6">
+                                                {{ Form::text('parent_phone', null, ['class' => 'form-control', 'placeholder' => 'Parent: Phone']) }}
+                                                {{ $errors->first('parent_phone', '<span class="help-block">:message</span>')}}
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                     <h2></h2>
 
