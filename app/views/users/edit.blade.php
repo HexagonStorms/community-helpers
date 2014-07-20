@@ -7,6 +7,7 @@
 
     <div class="row">
         <div class="col-sm-3">
+            <br><br><br><br>
             <div class="sidebar-account">
                 <div class="row ">
                     <div class="col-lg-12">
@@ -29,7 +30,7 @@
                                     </li>
                                     @endif
                                     <li>
-                                        <a class="active" href="/../account_profile">Edit Profile</a>
+                                        <a class="active" href="{{ action('UsersController@edit', $user->id) }}">Edit Profile</a>
                                     </li>
                                     <li>
                                         <a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
@@ -42,9 +43,8 @@
             </div>
         </div>
 
-        <br />
         <div class="col-sm-9">
-            <h1>Update Account</h1>
+            <h1 >Update Account</h1>
             <hr />
             <div class="row">
                 <div class="col-sm-12">
@@ -111,15 +111,14 @@
 
                                     <h2></h2>
 
-                                    <br />
-                                    <h2> Address </h2>	
+                                    <h2> Address </h2>
 
                                     <div class="form-group">
                                         <label for="street">Street Address</label>
                                         {{ Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
                                         {{ $errors->first('street', '<span class="help-block">:message</span>')}}
                                     </div>
-                                
+
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
