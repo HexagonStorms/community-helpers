@@ -29,7 +29,7 @@
                                     </li>
                                     @endif
 									<li>
-										<a class="active" href="/../account_profile">Edit Profile</a>
+										<a class="active" href="{{ action('UsersController@edit', $user->id) }}">Edit Profile</a>
 									</li>
 									<li>
 										<a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
