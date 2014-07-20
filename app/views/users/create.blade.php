@@ -17,12 +17,10 @@
 								<div class="well">
 									<div class="form-group">
 										<div class="form-group">
-											<select name="is_helper" class="form-control">
-												<option value="NULL">Choose Account Type</option>
-												<option value="0">Giver / Looking for help</option>
-												<option value="1">Helper with parent</option>
-												{{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
-											</select>
+                                {{ Form::label('is_helper','Helper') }}
+                                {{ Form::radio('is_helper','1','',array('class'=>'input-group-addon')) }}
+                                {{ Form::label('is_helper','Giver') }}
+                                {{ Form::radio('is_helper','0','',array('class'=>'nput-group-addon')) }}
 										</div>
 
 									<div class="form-group">
@@ -52,20 +50,19 @@
 									</div>
 
 									<h2></h2>
+                                    <br />
+                                    <h2> Address </h2>
 
-									<br />
-									<h2> Address </h2>	
+                                    <div class="form-group">
+                                        <label for="street">Street Address</label>
+                                        {{ Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
+                                        {{ $errors->first('street', '<span class="help-block">:message</span>')}}
+                                    </div>
 
-									<div class="form-group">
-										<label for="street">Street Address</label>
-										{{ Form::text('street', null, ['class' => 'form-control', 'placeholder' => 'Street Address']) }}
-										{{ $errors->first('street', '<span class="help-block">:message</span>')}}
-									</div>
-								
-									<div class="row">
-										<div class="col-sm-6">
-											<div class="form-group">
-												{{ Form::text('apt_num', null, ['class' => 'form-control', 'placeholder' => 'Apartment Number #']) }}
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                {{ Form::text('apt_num', null, ['class' => 'form-control', 'placeholder' => 'Apartment Number #']) }}
 
 											</div>
 										</div>

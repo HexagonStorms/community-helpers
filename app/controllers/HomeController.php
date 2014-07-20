@@ -105,12 +105,11 @@ class HomeController extends BaseController {
 		if(Auth::attempt(array('email' => $email, 'password' => $password)))
 			
 		{
-			$user = User::all();
-			if (User::find($user->is_helper) == TRUE) 
+			if (Auth::user()->is_helper == TRUE)
 			{
 				return Redirect::intended(action('UsersController@dashboard_helper', auth::user()->id));
 			}
-			elseif (User::find($user->is_helper) == FALSE) 
+			elseif (Auth::user()->is_helper== FALSE)
 			{
 				return Redirect::intended(action('UsersController@dashboard_creator', auth::user()->id));
 			}

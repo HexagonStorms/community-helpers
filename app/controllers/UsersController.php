@@ -51,11 +51,12 @@ class UsersController extends \BaseController {
 			$user->email = Input::get('email');
 			$user->password = Hash::make(Input::get('password'));
 			$user->birth_date = Input::get('birth_date');
-			$user->is_helper = Input::has('is_helper');
+			$user->is_helper = Input::get('is_helper');
 			$user->is_admin = Input::has('is_admin');
 			$user->street = Input::get('street');
 			$user->city = Input::get('city');
 			$user->state = Input::get('state');
+			$user->zip = Input::get('zip');
 			$user->bio = Input::get('bio');
 			$user->user_pic_path = Input::get('user_pic_path');
 			$user->parent_email = Input::get('parent_email');
@@ -104,11 +105,13 @@ class UsersController extends \BaseController {
 
 	public function dashboard_creator($id)
 	{
+		$job_count= Job::where('user_id', $id)->count();
 		$jobs = Job::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(4);
 		$user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
-			'user' => $user
+			'user' => $user,
+			'job_count' => $job_count,
 		);
 
 		return View::make('users.show_account')->with($data);
@@ -160,6 +163,14 @@ class UsersController extends \BaseController {
 			$user->city = Input::get('city');
 			$user->state = Input::get('state');
 			$user->zip = Input::get('zip');
+			$user->bio = Input::get('bio');
+			$user->user_pic_path = Input::get('user_pic_path');
+			$user->parent_email = Input::get('parent_email');
+			$user->parent_phone = Input::get('parent_phone');
+			$user->parent_first_name = Input::get('parent_first_name');
+			$user->parent_last_name = Input::get('parent_last_name');
+			$user->apt_num = Input::get('apt_num');
+			$user->gender = Input::get('gender');
 			$user->save();
 
 			return Redirect::action('UsersController@show', $user->id);
