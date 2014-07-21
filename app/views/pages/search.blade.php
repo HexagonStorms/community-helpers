@@ -75,9 +75,6 @@
 </div>
 
 <div class="container">
-
-
-
     <div class="row">
 
         <div class="col-sm-12 col-md-8">
@@ -89,10 +86,8 @@
             </div>
 
             <div class="row directory">
-
-
                 <div class="col-xs-12">
-                                        <div class="directory-block col-sm-4 col-xs-6">
+                    <div class="directory-block col-sm-4 col-xs-6">
                         <div class="row">
                             <div class="col-sm-3">
                                 <i class="fa fa-tree"></i>
@@ -177,13 +172,42 @@
                             <li class="list-group-item"><a href="typography">Help &amp; contact us</a></li>
                             <li class="list-group-item"><a href="typography">FAQ: Frequently asked questions</a></li>
                         </ul>
-
-
-
                     </div>
                 </div>
             </div>
+        </div>
 
+        <!-- Jobs Listing -->
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Jobs Listings</div>
+                <div class="panel-body">
+
+                    <!-- Headings -->
+                    <table class="table">
+                        <tr>
+                            <th class="text-center">Category</th>
+                            <th class="text-center">Description</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Due Date</th>
+                            <th class="text-center">Apply</th>
+                        </tr>
+
+                        <!-- Available Jobs -->
+                        @foreach ($jobs as $job)
+                            <tr class="text-center">
+                                <td>{{ $job->category }}</td>
+                                <td>{{ $job->description }}</td>
+                                <td>{{ $job->price }}</td>
+                                <td>{{ $job->required_date }}</td>
+                                <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>
+                            </tr>
+                        @endforeach
+                    </table>
+
+                    <div class="col-sm-12 text-center">{{ $jobs->links() }}</div>
+                </div>
+            </div>
         </div>
     </div>				
 </div>
