@@ -6,31 +6,72 @@
     <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
             <div class="well">
-                @if(Auth::user()->is_helper == TRUE)
-                    <h2>Available Job</h2>
-                @else 
-                    <h2>Posted Job #{{ $job->id}} </h2>
-                @endif
-                    <hr />
-            	
-            	<h2>Category: {{ $job->category}} </h2>
-                <h5>Description: {{ $job->description }} </h5>
-                <h5>Cash: {{ $job->price }} </h5>
-                <h5>Date Needed: {{{ $job->required_date }}} </h5>
-                <h5>Time: {{{ $job->required_time }}} </h5>
-                <h5>Created At: {{{ $job->created_at }}} </h5>
-                <h5>Created By: {{ $job->creator->first_name }} {{ $job->creator->last_name }}</h5>
 
+                <div class="row">
+                    <div class="col-sm-12">
+                        @if(Auth::user()->is_helper == TRUE)
+                            <h2>Available Job</h2>
+                        @else 
+                            <h2>Posted Job #{{ $job->id}} </h2>
+                        @endif
+                        <hr />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6>Category</h6> 
+                        <p>{{ $job->category}}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6>Description</h6> 
+                        <p>{{ $job->description }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h6>Price</h6> 
+                        <p>${{ $job->price }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h6>Due Date</h6> 
+                        <p>{{ $job->required_date }}</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h6>Time</h6> 
+                        <p>{{ $job->required_time }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h6>Created At</h6> 
+                        <p>{{ $job->created_at }}</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h6>By</h6> 
+                        <p>{{ $job->creator->first_name }} {{ $job->creator->last_name }}</p>
+                    </div>
+                </div>
+
+                <hr />
                 @if(Auth::user()->is_helper == FALSE)
                     <!-- For giver to delete job -->
                     {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
-                    <hr />
                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                     {{ Form::close() }}
                 @else
                     <!-- For helper to apply for job -->
                     {{ Form::open(array('action' => array('JobsController@apply', $job->id), 'method' => 'POST')) }}
-                        <button type="submit" class="btn btn-sm btn-succces">Apply</button>
+                        <button type="submit" class="btn btn-sm btn-warning">Apply</button>
                     {{ Form::close() }}
                 @endif
 
