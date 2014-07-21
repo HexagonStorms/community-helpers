@@ -54,7 +54,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
-                            {{ Form::label('required_date', 'Required Date:') }}
+                            {{ Form::label('required_date', 'Due Date:') }}
                             {{ Form::date('required_date', null, ['class' => 'form-control']) }}
                             {{ $errors->first('required_date', '<span class="help-block">:message</span>')}}
                         </div>
@@ -64,8 +64,8 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
-                            {{ Form::label('required_time', 'Required Time:') }}
-                            {{ Form::date('required_date', null, ['class' => 'form-control']) }}
+                            {{ Form::label('required_time', 'Time:') }}
+                            {{ Form::text('required_time', null, ['class' => 'form-control']) }}
                             {{ $errors->first('required_time', '<span class="help-block">:message</span>')}}
                         </div>
                     </div>
