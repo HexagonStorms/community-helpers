@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h6>Created At</h6> 
-                        <p>{{ date('d M Y a\t H:i a',strtotime($job->created_at)) }}</p>
+                        <p>{{ $job->created_at->format('d F Y') }}</p>
                     </div>
 
                     <div class="col-sm-6">
