@@ -26,6 +26,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-12">
+                            {{ Form::label('category', 'Category') }}
                             {{ Form::text('category', null, ['class' => 'form-control', 'placeholder' => 'Category']) }}
                             {{ $errors->first('category', '<span class="help-block">:message</span>')}}
                         </div>
@@ -34,6 +35,7 @@
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-12">
+                            {{ Form::label('description', 'Description') }}
                             {{ Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'E.g. Mow the lawn, Washes the dishes {...} ']) }}
                             {{ $errors->first('description', '<span class="help-block">:message</span>')}}
                         </div>
@@ -61,15 +63,6 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            {{ Form::label('is_complete', 'Has the job been complete?') }}
-                            {{ Form::checkbox('is_complete', FALSE, ['class' => 'form-control']) }}
-                            {{ $errors->first('first_name', '<span class="help-block">:message</span>')}}
-                        </div>
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-sm btn-primary">Save Job</button>
                 {{ Form::close() }}
             </div>
