@@ -12,9 +12,16 @@
     <h5>Date Needed: {{{ $job->required_date }}} </h5>
     <h5>Created By: {{ $job->creator->first_name }} {{ $job->creator->last_name }}</h5>
 
-    {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
-        <!--{{ Form::submit('Delete') }}-->
+    @if(Auth::user()->is_helper == FALSE)
+        <!-- For giver to delete job -->
+        {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
             <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-    {{ Form::close() }}
+        {{ Form::close() }}
+    @elseif(Auth::user()->is_helper == TRUE)
+        <!-- For helper to apply for job -->
+        {{ Form::open(array('action' => array('JobsController@apply', $job->id), 'method' => 'POST')) }}
+            <button type="submit" class="btn btn-sm btn-succces">Apply</button>
+        {{ Form::close() }}
+    @endif
 </body>
 </html>
