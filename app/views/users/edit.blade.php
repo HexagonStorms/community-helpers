@@ -53,14 +53,21 @@
                             <div class="col-sm-12" >
                                 <div class="well">
                                     <div class="form-group">
-                                        <div class="form-group">
-                                            <select name="is_helper" class="form-control">
-                                                <option value="NULL">Choose Account Type</option>
-                                                <option value="0">Giver / Looking for help</option>
-                                                <option value="1">Helper with parent</option>
-                                                {{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
-                                            </select>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                {{ Form::label('image', 'Add Image') }}<br>
+                                                {{ Form::file('image') }}
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <select name="is_helper" class="form-control">
+                                                    <option value="NULL">Choose Account Type</option>
+                                                    <option value="0">Giver / Looking for help</option>
+                                                    <option value="1">Helper with parent</option>
+                                                    {{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
+                                                </select>
+                                            </div>
                                         </div>
+                                    </div>
 
                                     <div class="form-group">
                                         <div class="row">
