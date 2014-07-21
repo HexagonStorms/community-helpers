@@ -98,9 +98,12 @@ class UsersController extends \BaseController {
 		foreach (Auth::user()->appliedJobs as $job) {
 			$jobIds[] = $job->id;
 		}
-
-		$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
-
+		if (!empty($jobsId)){
+			$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+		}
+		else{
+			$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
+		}
 		$data = array(
 			'jobs' => $jobs,
 			// 'user' => $user,
