@@ -41,19 +41,19 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h6>Due Date</h6> 
-                        <p>{{ $job->required_date }}</p>
+                        <p>{{ date("d F Y",strtotime($job->required_date)) }}</p>
                     </div>
 
                     <div class="col-sm-6">
                         <h6>Time</h6> 
-                        <p>{{ $job->required_time }}</p>
+                        <p>{{ date("g:ha",strtotime($job->required_time)) }}</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-sm-6">
                         <h6>Created At</h6> 
-                        <p>{{ $job->created_at }}</p>
+                        <p>{{ date('d M Y a\t H:i a',strtotime($job->created_at)) }}</p>
                     </div>
 
                     <div class="col-sm-6">
