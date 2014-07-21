@@ -12,9 +12,14 @@
     <h5>Date Needed: {{{ $job->required_date }}} </h5>
     <h5>Created By: {{ $job->creator->first_name }} {{ $job->creator->last_name }}</h5>
 
+    <!-- For giver to delete job -->
     {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
-        <!--{{ Form::submit('Delete') }}-->
-            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+    {{ Form::close() }}
+
+    <!-- For helper to apply for job -->
+    {{ Form::open(array('action' => array('JobsController@apply', $job->id), 'method' => 'POST')) }}
+        <button type="submit" class="btn btn-sm btn-succces">Apply</button>
     {{ Form::close() }}
 </body>
 </html>

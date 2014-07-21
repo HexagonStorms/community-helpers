@@ -19,11 +19,11 @@
 									<li>
 										<a class="active" href="/../account_settings">Account Settings</a>
 									</li>
-									 @if($user->is_helper == True)
+									 @if($user->is_helper == TRUE)
                                     <li>
                                         <a class="active" href="{{ action('UsersController@dashboard_helper', $user->id) }}">Dashboard</a>
                                     </li>
-                                    @elseif($user->is_helper == False)
+                                    @elseif($user->is_helper == FALSE)
                                     <li>
                                         <a class="active" href="{{ action('UsersController@dashboard_creator', $user->id) }}">Dashboard</a>
                                     </li>
@@ -70,7 +70,7 @@
 								<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
 							</div>
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
@@ -101,13 +101,13 @@
 							<td>$15</td>
 							<td>Henry B.</td>
 							<td>Wednesday, 4:00pm</td>
-							
+
 							<td>112 East Pecan</td>
 							<td>San Antonio</td>
 							<td>TX</td>
 							<td>17854</td>
 						</tr>
-						
+
 						<!-- Job #2 -->
 						<tr class="text-center">
 							<td><i class="fa fa-road"></i></td>
@@ -133,28 +133,24 @@
 				<div class="panel-body">
 
 					<!-- Active Jobs -->
-					<!-- Job #1 -->
 					<table class="table">
 						<tr>
 							<th class="text-center">Category</th>
 							<th class="text-center">Description</th>
 							<th class="text-center">Price</th>
-							
 							<th class="text-center">Address</th>
 							<th class="text-center">Due Date</th>
 							<th class="text-center">Apply</th>
 						</tr>
-
+						<!-- Avilable Jobs -->
 						@foreach ($jobs as $job)
 							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
-								
 								<td>{{ $job->creator->street }}</td>
-								
 								<td>{{ $job->required_date }}</td>
-								<td><button class="btn btn-warning">Apply</button>
+								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
 							</tr>
 						@endforeach
 					</table>
@@ -243,7 +239,7 @@
 
 						</tr>
 						@foreach ($jobs as $job)
-							<tr class="text-center"> 
+							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>${{ $job->price }}</td>

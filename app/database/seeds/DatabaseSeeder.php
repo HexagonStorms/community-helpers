@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UsersTableSeeder');
 		$this->call('JobsTableSeeder');
 		$this->call('ReviewsTableSeeder');
-		//$this->call('HelpersJobsSeeder');
 	}
 }
 
@@ -108,22 +107,3 @@ class ReviewsTableSeeder extends Seeder {
 
     } //end of function run
 }
-
-class HelpersJobsSeeder extends Seeder {
-
-    public function run()
-    {
-        DB::table('helpers_jobs_mapping')->delete();
-
-        for ($i = 1; $i <= 10; $i++)
-        {
-        	$helper_job = new HelperJobMapping();
-        	$helper_job->users_id = rand(1, 3);
-            $helper_job->jobs_id = $i;
-            $helper_job->is_accepted = 0;
-            $helper_job->save();
-        } //end of for loop
-
-    } //end of function run
-}
-
