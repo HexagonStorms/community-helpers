@@ -74,6 +74,22 @@ class JobsController extends \BaseController {
 
 
 	/**
+	 * on Post helper will apply to job
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function apply($id)
+	{
+		// Managing kids applying to jobs
+		$job = Job::findOrFail($id);
+		Auth::user()->appliedJobs()->attach($job->id, array('is_accepted' => false));
+        Session::flash('successMessage', 'Job Application submitted');
+        return Redirect::action('UsersController@dashboard_helper', Auth::id());
+	}
+
+
+	/**
 	 * Show the form for editing the specified resource.
 	 *
 	 * @param  int  $id
@@ -130,24 +146,9 @@ class JobsController extends \BaseController {
 	public function destroy($id)
 	{
 		$job = Job::findorFail($id);
-        // if ($post->canManagePost() )
-        // {
-		//$job->users()->detach($id);
-
-		//$job->review->each(function($review_model) {
-		//	$review_model->delete();
-		//});
-
-		//$job->detach($id);
         $job->delete();
         Session::flash('successMessage', 'Post successfully deleted');
         return Redirect::action('JobsController@index');
-        //}
-        //else
-        //{
-            //Session::flash('errorMessage', 'Access Denied');
-            //return Redirect::action('PostsController@index');
-        //}
 	}
 
 

@@ -82,20 +82,21 @@
 				<div class="nav navbar-nav navbar-right hidden-xs">
 					<div class="row">
 						<div class="pull-right">
-
 							@if(Auth::check())
 								@if(Auth::user()->is_helper == True)
-									<a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+									<span><a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> | </span>
 								@elseif(Auth::user()->is_helper == False)
-									<a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> |
+									<span><a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a> | </span>
 								@endif
-							<a href="{{ action('UsersController@show', Auth::id()) }}">My account</a> |
-							<a href="/logout">Logout</a>
+							<span><a href="{{ action('UsersController@show', Auth::id()) }}">My account</a> | </span>
 							@else
-							<a href="/login">Login</a> |
-							<a href="/users/create">Register</a> |
+							<span><a href="/login">Login</a> | </span>
+							<span><a href="/users/create">Register</a> | </span>
 							@endif
-							<a href="/listings">Listings</a>
+							<span><a href="/listings">Listings</a> | </span>
+							@if(Auth::check())
+							<span><a href="/logout">Logout</a></span>
+							@endif
 						</div>
 					</div>
 				</div>
