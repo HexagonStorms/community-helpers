@@ -43,36 +43,23 @@
                 <br>
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-sm-3">
-                            {{ Form::text('price', null, ['class' => 'form-control', 'placeholder' => 'Price']) }}
+                        <div class="col-sm-4">
+                            {{ Form::label('price', 'Price') }}
+                            ${{ Form::text('price', null, ['class' => 'form-control', 'placeholder' => 'Price']) }}
                             {{ $errors->first('price', '<span class="help-block">:message</span>')}}
                         </div>
-                    </div>
-                </div>
-                
-                <br>
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             {{ Form::label('required_date', 'Due Date:') }}
                             {{ Form::text('required_date', null, ['class' => 'form-control', 'placeholder' => 'YYYY-MM-DD']) }}
                             {{ $errors->first('required_date', '<span class="help-block">:message</span>')}}
                         </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-4">
                             {{ Form::label('required_time', 'Time:') }}
                             {{ Form::text('required_time', null, ['class' => 'form-control', 'placeholder' => 'HH:MM']) }}
                             {{ $errors->first('required_time', '<span class="help-block">:message</span>')}}
                         </div>
                     </div>
                 </div>
-                <br>
-                {{ Form::label('required_time', 'Required Time:') }}
-                {{ Form::text('required_time') }}
 
                 <div class="form-group">
                     <div class="row">

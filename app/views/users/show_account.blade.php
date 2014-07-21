@@ -238,7 +238,7 @@
 					 <div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
+								<a href="/jobs/create"><button type="button" class="btn btn-warning btn-lg">Create Job</button></a>
 							</div>
 
 							<div class="col-sm-4">
