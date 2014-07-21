@@ -8,6 +8,12 @@ a.navbar-brand small {
 border-right: 1px solid #999;
 }
 
+/* Color */
+
+a {
+  color: #2D8BC0;
+}
+
 /* Padding, Margin, and Border adjustments */
 
 .no-padding {
@@ -16,6 +22,11 @@ border-right: 1px solid #999;
 
 .no-margin {
   margin: 0px;
+}
+
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .show-border {
@@ -91,8 +102,6 @@ width: 75%;
     float: none;
     margin: 0 auto;
 }
-
-
 
 
 /* Ribbon Color Change */
