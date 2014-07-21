@@ -74,14 +74,11 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- Active Jobs -->
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Active Jobs</div>
 				<div class="panel-body">
-
-					<!-- Active Jobs -->
-					<!-- Job #1 -->
 					<table class="table">
 						<tr>
 							<th>Category</th>
@@ -126,13 +123,44 @@
 				</div>
 			</div>
 		</div>
+		<!-- Jobs Applied -->
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Jobs Applied</div>
+				<div class="panel-body">
 
+					<!-- Headings -->
+					<table class="table">
+						<tr>
+							<th class="text-center">Category</th>
+							<th class="text-center">Description</th>
+							<th class="text-center">Price</th>
+							<th class="text-center">Address</th>
+							<th class="text-center">Due Date</th>
+							<th class="text-center">Review</th>
+						</tr>
+
+						@foreach ($jobs as $job)
+								<tr class="text-center">
+								<td>{{ $job->category }}</td>
+								<td>{{ $job->description }}</td>
+								<td>{{ $job->price }}</td>
+								<td>{{ $job->creator->street }}</td>
+								<td>{{ $job->required_date }}</td>
+								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-primary btn-md">Review</a></td>
+							</tr>
+						@endforeach
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- Jobs Listing -->
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Jobs Listings</div>
 				<div class="panel-body">
 
-					<!-- Active Jobs -->
+					<!-- Headings -->
 					<table class="table">
 						<tr>
 							<th class="text-center">Category</th>
@@ -142,7 +170,8 @@
 							<th class="text-center">Due Date</th>
 							<th class="text-center">Apply</th>
 						</tr>
-						<!-- Avilable Jobs -->
+
+						<!-- Available Jobs -->
 						@foreach ($jobs as $job)
 							<tr class="text-center">
 								<td>{{ $job->category }}</td>
@@ -150,7 +179,7 @@
 								<td>{{ $job->price }}</td>
 								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
-								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
+								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
 							</tr>
 						@endforeach
 					</table>
