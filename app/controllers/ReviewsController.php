@@ -24,7 +24,7 @@ class ReviewsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('temp_reviews.create-edit');
 	}
 
 
@@ -35,7 +35,23 @@ class ReviewsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		$validator = Validator::make(Input::all(), Review::$rules);
+
+        if($validator->fails())
+        {
+            Session::flash('errorMessage', 'Review failed');
+            return Redirect::back()->withInput()->withErrors($validator);
+        } // if it fails
+        else
+        {
+            $review = new Review();
+            $review->job_id = Input::get('job_id');
+            $review->rating = Input::get('rating');
+            $review->comment = Input::get('comment');
+            $review->save();
+            Session::flash('successMessage', 'Post successfully created');
+            return Redirect::action('ReviewsController@index');
+        } //end of else
 	}
 
 
@@ -47,7 +63,14 @@ class ReviewsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		//$id=job_id;
+		$jobs = Job::with('creator')->get();
+		$review = Review::findorFail($job_id);
+		$data = array(
+			'jobs' => $jobs,
+			'review' => $review
+		);
+        return View::make('temp_reviews.show')->with($data);
 	}
 
 
@@ -59,7 +82,8 @@ class ReviewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$review = Review::find($id);
+        return View::make('temp_reviews.create-edit')->with('review', $review);
 	}
 
 
@@ -71,7 +95,25 @@ class ReviewsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		$validator = Validator::make(Input::all(), Review::$rules);
+
+        if($validator->fails())
+        {
+            Session::flash('errorMessage', 'Post failed');
+            return Redirect::back()->withInput()->withErrors($validator);
+        } // if it fails
+        else
+        {
+            //return $purifier->purify($value);
+            $job = Job::findOrFail($id);
+            $review = new Review();
+            $review->job_id = Input::get('job_id');
+            $review->rating = Input::get('rating');
+            $review->comment = Input::get('comment');
+            $review->save();
+            Session::flash('successMessage', 'Post successfully created');
+            return Redirect::action('ReviewsController@show', $review->id);
+        } //end of else
 	}
 
 
@@ -83,7 +125,19 @@ class ReviewsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$review = Review::findorFail($id);
+        // if ($post->canManagePost() )
+        // {
+		//$job->users()->detach($id);
+
+		//$job->review->each(function($review_model) {
+		//	$review_model->delete();
+		//});
+
+		//$job->detach($id);
+        $review->delete();
+        Session::flash('successMessage', 'Post successfully deleted');
+        return Redirect::action('ReviewsController@index');
 	}
 
 

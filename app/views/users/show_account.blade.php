@@ -19,20 +19,20 @@
 									<li>
 										<a class="active" href="/../account_settings">Account Settings</a>
 									</li>
-									 @if($user->is_helper == TRUE)
+									 @if(Auth::user()->is_helper == TRUE)
                                     <li>
-                                        <a class="active" href="{{ action('UsersController@dashboard_helper', $user->id) }}">Dashboard</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Dashboard</a>
                                     </li>
-                                    @elseif($user->is_helper == FALSE)
+                                    @elseif(Auth::user()->is_helper == FALSE)
                                     <li>
-                                        <a class="active" href="{{ action('UsersController@dashboard_creator', $user->id) }}">Dashboard</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Dashboard</a>
                                     </li>
                                     @endif
 									<li>
-										<a class="active" href="{{ action('UsersController@edit', $user->id) }}">Edit Profile</a>
+										<a class="active" href="{{ action('UsersController@edit', Auth::id()) }}">Edit Profile</a>
 									</li>
 									<li>
-										<a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
+										<a class="active" href="{{ action('UsersController@show', Auth::id()) }}">View Profile</a>
 									</li>
 								</ul>
 							</div>
@@ -43,10 +43,10 @@
 		</div>
 		<!-- HELPER DASH
 		============================================================= -->
-		@if ($user->is_helper == TRUE)
+		@if (Auth::user()->is_helper == TRUE)
 		<div class="col-sm-9">
 			<div class="panel panel-default">
-				<div class="panel-heading">Welcome, {{{ $user->first_name }}} {{{ $user->last_name }}}!</div>
+				<div class="panel-heading">Welcome, {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}!</div>
 				<div class="panel-body">
 
 					<div class="row">
@@ -140,7 +140,7 @@
 							<th class="text-center">Review</th>
 						</tr>
 
-						@foreach ($jobs as $job)
+						@foreach (Auth::user()->appliedJobs as $job)
 								<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
@@ -173,6 +173,7 @@
 
 						<!-- Available Jobs -->
 						@foreach ($jobs as $job)
+						@if (Auth::user()->appliedJobs != $job->id)
 							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
@@ -181,6 +182,7 @@
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
 							</tr>
+						@endif
 						@endforeach
 					</table>
 
@@ -193,7 +195,7 @@
 		============================================================= -->
 		<div class="col-sm-9">
 			<div class="panel panel-default">
-				<div class="panel-heading">Welcome, {{ $user->first_name }} {{ $user->last_name }}!</div>
+				<div class="panel-heading">Welcome, {{ Auth::user()->first_name }} {{ Auth::user()->last_name }}!</div>
 				<div class="panel-body">
 
 

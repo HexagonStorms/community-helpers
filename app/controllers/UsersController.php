@@ -82,7 +82,7 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		
+
 		$user = User::findOrFail($id);
 		$data = array(
 			'user' => $user
@@ -93,11 +93,18 @@ class UsersController extends \BaseController {
 
 	public function dashboard_helper($id)
 	{
-		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
-		$user = User::findOrFail($id);
+		$jobIds = array();
+
+		foreach (Auth::user()->appliedJobs as $job) {
+			$jobIds[] = $job->id;
+		}
+
+		$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+
 		$data = array(
 			'jobs' => $jobs,
-			'user' => $user
+			// 'user' => $user,
+			// 'jobsApplied' => $jobsApplied
 		);
 
 		return View::make('users.show_account')->with($data);
