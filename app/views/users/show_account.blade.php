@@ -16,7 +16,7 @@
 							</div>
 							<div class="panel-body">
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-offset-2 col-md-6">
 										@if(Auth::user()->user_pic_path)
 											<img src="{{ Auth::user()->user_pic_path }}" class="">
 										@else
@@ -159,7 +159,7 @@
 						</tr>
 
 						@foreach (Auth::user()->appliedJobs as $job)
-								<tr class="text-center">
+							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
@@ -199,6 +199,10 @@
 								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
+								<td><td><!-- Button trigger modal -->
+									<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+									  Launch demo modal
+									</button></td></td>
 							</tr>
 						@endif
 						@endforeach
@@ -262,15 +266,6 @@
 				</div>
 			</div>
 		</div>
-<!-- 
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Dashboard</div>
-				<div class="panel-body">
-
-				</div>
-			</div>
-		</div> -->
 
 		<div class="col-sm-12">
 			<div class="panel panel-default">
@@ -314,16 +309,16 @@
 
 					<!-- Created Jobs -->
 					<table class="table">
-						<tr>
-							<th>Category</th>
-							<th>Description</th>
-							<th>Price</th>
-							<th>Due Date</th>
-							<th>Actions</th>
-
-						</tr>
 						@if (!empty($jobs))
 							@foreach ($jobs as $job)
+								<tr>
+									<th>Category</th>
+									<th>Description</th>
+									<th>Price</th>
+									<th>Due Date</th>
+									<th>Actions</th>
+
+								</tr>
 								<tr class="text-center">
 									<td>{{ $job->category }}</td>
 									<td>{{ $job->description }}</td>
@@ -359,6 +354,25 @@
 
 
 		@endif
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
 
 	</div>
 </div>
