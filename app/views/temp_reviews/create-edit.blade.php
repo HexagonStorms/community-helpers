@@ -8,7 +8,7 @@
 
     @if (isset($job))
         <h1>Edit Review</h1>
-        {{ Form::model($job, array('action' => array('JobsController@update', $job->id), 'method' => 'PUT')) }}
+        {{ Form::model($job, array('action' => array('JobsController@update', $job->job_id), 'method' => 'PUT')) }}
     @else
         <h1>New Review</h1>
         {{ Form::open(array('action' => 'JobsController@store')) }}
