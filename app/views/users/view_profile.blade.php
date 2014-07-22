@@ -123,10 +123,13 @@
 			</div>
 		</div>
 
+		@if(Auth::user()->is_helper == TRUE)
+
 		<!-- Reviews -->
 			<div class="panel panel-default">
 				<div class="panel-heading">Reviews</div>
 				<div class="panel-body">
+
 
 					<table class="table">
 						<tr>
@@ -163,7 +166,9 @@
 				</div>
 			</div>
 
-		@if(Auth::user()->is_helper == FALSE)
+			@endif
+
+		@if(Auth::user()->is_helper == FALSE && Auth::user()->id != $user->id)
 	        <!-- For giver to select helper -->
 	        <!-- $helper_id = Job::with('helpers')->user_id; -->
 	        {{ Form::open(array('action' => array('JobsController@selectHelper', 1), 'method' => 'POST')) }}

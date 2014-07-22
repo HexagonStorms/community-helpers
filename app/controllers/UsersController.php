@@ -94,19 +94,17 @@ class UsersController extends \BaseController {
 		foreach ($user->appliedJobs as $job) {
 		 	$jobIds[] = $job->id;
 		}
-		$reviews = Review::with('job')->whereIn('job_id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
-		//$reviews = Job::with('job')->whereIn('id', $jobIds);//->findOrFail($id);
-		//Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
-		// $jobIds = array();
-
-		// //search all jobs for current job id
-		// foreach (Auth::user()->appliedJobs as $job) {
-		// 	$jobIds[] = $job->id;
-		// }
-		// //do not show jobs that have already been applied to
-		// if (!empty($jobsId)){
-		// 	$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
-		// }
+	
+		if (count($jobIds) > 0)
+		{
+			$reviews = Review::with('job')->whereIn('job_id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+		}
+		
+		else 
+		{
+			$reviews = [];
+		}
+		
 		$data = array(
 			'user' => $user,
 			'job' => $job,
