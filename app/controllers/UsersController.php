@@ -127,7 +127,11 @@ class UsersController extends \BaseController {
 	{
 		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
 		// $job_count= Job::where('user_id', $id)->count();
-		$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		if (Auth::user()->createdJobs()->count() > 0) {
+			$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		} else {
+			$jobs = [];
+		}
 		// $user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,

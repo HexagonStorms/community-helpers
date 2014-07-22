@@ -15,6 +15,15 @@
 								My account
 							</div>
 							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+										@if(Auth::user()->user_pic_path)
+											<img src="{{ Auth::user()->user_pic_path }}" class="">
+										@else
+											<img src="/img/user.jpg">
+										@endif
+									</div>
+								</div>
 								<ul class="nav">
 									<li>
 										<a class="active" href="/../account_settings">Account Settings</a>
@@ -48,7 +57,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Welcome, {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}!</div>
 				<div class="panel-body">
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-sm-6">
 							@if(Auth::user()->user_pic_path)
 								<img src="{{ Auth::user()->user_pic_path }}" class="">
@@ -56,7 +65,7 @@
 								<img src="/img/user.jpg">
 							@endif
 						</div>
-					</div>
+					</div> -->
 
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
@@ -233,22 +242,13 @@
 								<p><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
 							</div>
 					</div>
-					<br />
-
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Dashboard</div>
-				<div class="panel-body">
-
-					 <div class="row">
+					<br><br>
+					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
-							</div>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+<!-- 								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
+ -->							</div>
 
 							<div class="col-sm-4">
 								<button type="button" class="btn btn-info btn-lg">Manage Jobs</button>
@@ -262,6 +262,15 @@
 				</div>
 			</div>
 		</div>
+<!-- 
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Dashboard</div>
+				<div class="panel-body">
+
+				</div>
+			</div>
+		</div> -->
 
 		<div class="col-sm-12">
 			<div class="panel panel-default">
@@ -278,33 +287,37 @@
 							<th>Actions</th>
 
 						</tr>
-						@foreach ($jobs as $job)
-							<tr class="text-center">
-								<td>{{ $job->category }}</td>
-								<td>{{ $job->description }}</td>
-								<td>${{ $job->price }}</td>
-								<td>{{ $job->required_date }}</td>
-								<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
-							</tr>
-
-							<tr>
-								<th>Helper's Name</th>
-								<th>Birthdate</th>
-								<th>View Helper</th>
-								<th>Select Helper</th>
-							</tr>
-							@foreach ($job->helpers as $helper)
-							<tr>
-								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-								<td> {{ $helper->birth_date }}  </td>
-								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
-								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-warning btn-md">View</a></td>
-							</tr>
+						@if (!empty($jobs))
+							@foreach ($jobs as $job)
+								<tr class="text-center">
+									<td>{{ $job->category }}</td>
+									<td>{{ $job->description }}</td>
+									<td>${{ $job->price }}</td>
+									<td>{{ $job->required_date }}</td>
+									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
+								</tr>
+								@if ($job->helpers->count() > 0)
+								<tr>
+									<th>Helper's Name</th>
+									<th>Birthdate</th>
+									<th>View Helper</th>
+									<th>Select Helper</th>
+								</tr>
+								@foreach ($job->helpers as $helper)
+								<tr>
+									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
+									<td> {{ $helper->birth_date }}  </td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-warning btn-md">View</a></td>
+								</tr>
+								@endforeach
+								@endif
 							@endforeach
-						@endforeach
+						@endif
 					</table>
-
-					<div class="text-center">{{ $jobs->links() }}</div>
+					@if (!empty($jobs))
+						<div class="text-center">{{ $jobs->links() }}</div>
+					@endif
 				</div>
 			</div>
 		</div>
