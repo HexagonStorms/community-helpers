@@ -124,7 +124,6 @@
 		</div>
 
 		<!-- Reviews -->
-		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Reviews</div>
 				<div class="panel-body">
@@ -141,28 +140,28 @@
 						<tr>
 							<td>{{ $review->job->category }}</td>
 							<td>{{ $review->job->description }}</td>
-							<td>
+							<td class="text-center">
+								<class="col-sm-2">
 								@if ($review->rating == 5)
-                    				{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
                					@elseif ($review->rating == 4)
-                    				{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
                 				@elseif ($review->rating == 3)
-                    				{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
                 				@elseif ($review->rating == 2)
-                    				{{ '<i class="fa fa-star fa-lg"></i>'}}{{ '<i class="fa fa-star fa-lg"></i>'}}
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
                 				@else 
-                    				{{ '<i class="fa fa-star fa-lg"></i>'}}
+                    				{{ '<i class="fa fa-star"></i>'}}
                 				@endif
+                				</div>
                 			</td>
 							<td>{{ $review->comment }}</td>
 						</tr>
-						<hr />
            				@endforeach
 						
 					</table>
 				</div>
 			</div>
-		</div>
 
 		@if(Auth::user()->is_helper == FALSE)
 	        <!-- For giver to select helper -->
