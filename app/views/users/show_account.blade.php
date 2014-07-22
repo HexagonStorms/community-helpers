@@ -246,7 +246,7 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
 <!-- 								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
  -->							</div>
 

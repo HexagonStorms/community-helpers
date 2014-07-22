@@ -12,7 +12,7 @@
     <h5>Date Needed: {{{ $review->job->required_date }}} </h5>
     <h5>Created By: {{{ $review->job->creator->first_name }}} {{{ $review->job->creator->last_name }}} </h5> -->
     <h5>Rating: {{{ $review->rating }}}</h5>
-    <h5>Comments: {{{ $review->rating }}}</h5>
+    <h5>Comments: {{{ $review->comment }}}</h5>
 
 
     {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}

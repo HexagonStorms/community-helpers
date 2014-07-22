@@ -65,7 +65,7 @@ class ReviewsController extends \BaseController {
 	{
 		//$id=job_id;
 		$jobs = Job::with('creator')->get();
-		$review = Review::findorFail($job_id);
+		$review = Review::with('job')->findorFail($id);
 		$data = array(
 			'jobs' => $jobs,
 			'review' => $review
@@ -82,7 +82,7 @@ class ReviewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$review = Review::find($id);
+		$review = Job::with('review')->find($id);
         return View::make('temp_reviews.create-edit')->with('review', $review);
 	}
 
