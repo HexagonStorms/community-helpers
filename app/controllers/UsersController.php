@@ -90,8 +90,10 @@ class UsersController extends \BaseController {
 	{
 
 		$user = User::findOrFail($id);
+		$job = Job::findOrFail($id);
 		$data = array(
-			'user' => $user
+			'user' => $user,
+			'job' => $job
 		);
 
 		return View::make('users.view_profile')->with($data);
@@ -99,21 +101,23 @@ class UsersController extends \BaseController {
 
 	public function dashboard_helper($id)
 	{
+		//$jobsIds will hold all the ids in the jobs table
 		$jobIds = array();
 
+		//search all jobs for current job id
 		foreach (Auth::user()->appliedJobs as $job) {
 			$jobIds[] = $job->id;
 		}
+		//do not show jobs that have already been applied to
 		if (!empty($jobsId)){
 			$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
 		}
+		//show all jobs if user has not applied to any
 		else{
 			$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
 		}
 		$data = array(
 			'jobs' => $jobs,
-			// 'user' => $user,
-			// 'jobsApplied' => $jobsApplied
 		);
 
 		return View::make('users.show_account')->with($data);
@@ -121,13 +125,15 @@ class UsersController extends \BaseController {
 
 	public function dashboard_creator($id)
 	{
-		$job_count= Job::where('user_id', $id)->count();
-		$jobs = Job::where('user_id', $id)->orderBy('created_at', 'desc')->paginate(4);
-		$user = User::findOrFail($id);
+		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
+		// $job_count= Job::where('user_id', $id)->count();
+		$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		// $user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
-			'user' => $user,
-			'job_count' => $job_count,
+			// 'user' => $user,
+			// 'job_count' => $job_count,
+			// 'helpers' => $helpers
 		);
 
 		return View::make('users.show_account')->with($data);

@@ -211,8 +211,8 @@
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
 								<h3 class="text-center">Total Jobs Created</h3>
-								@if($job_count > 0)
-								<p>{{ $job_count }}</p>
+								@if(Auth::user()->createdJobs()->count() > 0)
+								<p>{{ Auth::user()->createdJobs()->count() }}</p>
 								@else
 								<p>0</p>
 								@endif
@@ -247,7 +247,7 @@
 					 <div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="/jobs/create"><button type="button" class="btn btn-warning btn-lg">Create Job</button></a>
+								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
 							</div>
 
 							<div class="col-sm-4">
@@ -286,6 +286,21 @@
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
 							</tr>
+
+							<tr>
+								<th>Helper's Name</th>
+								<th>Birthdate</th>
+								<th>View Helper</th>
+								<th>Select Helper</th>
+							</tr>
+							@foreach ($job->helpers as $helper)
+							<tr>
+								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
+								<td> {{ $helper->birth_date }}  </td>
+								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-warning btn-md">View</a></td>
+							</tr>
+							@endforeach
 						@endforeach
 					</table>
 
