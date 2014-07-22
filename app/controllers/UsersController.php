@@ -142,6 +142,23 @@ class UsersController extends \BaseController {
 	{
 		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
 		// $job_count= Job::where('user_id', $id)->count();
+		//$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		// DB::table('name')->where('name', '=', 'John')->get();
+		//$activeJobs = Auth::user()->createdJobs()->where('is_accepted', '=', '1' );
+
+		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
+        {
+            $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
+                 ->where('helpers_jobs_mapping.is_accepted', '=', 1);
+        })
+        ->lists('id');
+
+		$activeJobs = Job::whereIn('id', $activeJobIds)->get();
+
+		//Ben
+		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
+		//$appliedJobs = $query->get();
+
 		if (Auth::user()->createdJobs()->count() > 0) {
 			$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
 		} else {
@@ -150,7 +167,7 @@ class UsersController extends \BaseController {
 		// $user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
-			// 'user' => $user,
+			'activeJobs' => $activeJobs,
 			// 'job_count' => $job_count,
 			// 'helpers' => $helpers
 		);
