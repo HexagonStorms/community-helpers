@@ -7,7 +7,7 @@
 		<div class="col-md-4 col-md-offset-4 well">
 			<div class="row">
 				<div class="col-sm-12">
-			 		<img class="margin-auto img-responsive" src="/img/user.jpg"
+			 		<img class="margin-auto img-responsive" src="/img/user2.jpg"
                     alt="Blank user image">
             	</div>
             </div>
