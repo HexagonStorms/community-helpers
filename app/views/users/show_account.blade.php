@@ -281,11 +281,15 @@
 							<tr>
 								<th>Helper's Name</th>
 								<th>Birthdate</th>
+								<th>View Helper</th>
+								<th>Select Helper</th>
 							</tr>
 							@foreach ($job->helpers as $helper)
 							<tr>
 								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 								<td> {{ $helper->birth_date }}  </td>
+								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-warning btn-md">View</a></td>
 							</tr>
 							@endforeach
 						@endforeach

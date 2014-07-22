@@ -88,6 +88,24 @@ class JobsController extends \BaseController {
         return Redirect::action('UsersController@dashboard_helper', Auth::id());
 	}
 
+	/**
+	 * on Post giver will select helper to do job
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function selectHelper($job_id)
+	{
+		//grandma selects Bill to do the job
+		//$billyId;
+		$helper_id = Input::get('helper_id');
+		$selectedHelper = User::findOrFail($helper_id);
+		$job = Job::findOrFail($job_id);
+
+		$job->helpers()->sync(array($helper_id => array('is_accepted' => true)));
+        Session::flash('successMessage', 'Helper successfully selected');
+        return Redirect::action('UsersController@dashboard_creator', Auth::id());
+	}
 
 	/**
 	 * Show the form for editing the specified resource.

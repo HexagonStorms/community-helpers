@@ -113,7 +113,13 @@
 				</div>
 			</div>
 		</div>
-
-		
+		@if(Auth::user()->is_helper == FALSE)
+	        <!-- For giver to select helper -->
+	        <!-- $helper_id = Job::with('helpers')->user_id; -->
+	        {{ Form::open(array('action' => array('JobsController@selectHelper', 1), 'method' => 'POST')) }}
+	        	{{ Form::hidden('helper_id', $user->id) }}
+	            <button type="submit" class="btn btn-sm btn-success">Select Helper</button>
+	        {{ Form::close() }}
+        @endif
 
 @stop

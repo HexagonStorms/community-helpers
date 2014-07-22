@@ -84,8 +84,10 @@ class UsersController extends \BaseController {
 	{
 
 		$user = User::findOrFail($id);
+		$job = Job::findOrFail($id);
 		$data = array(
-			'user' => $user
+			'user' => $user,
+			'job' => $job
 		);
 
 		return View::make('users.view_profile')->with($data);
