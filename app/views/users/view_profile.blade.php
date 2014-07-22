@@ -49,14 +49,23 @@
 				</div>
 				<div class="panel-body">
 					<div class="row">
-						<div class="col-sm-6 side-hr">
+						<div class="col-sm-6">
+							@if(Auth::user()->user_pic_path)
+								<img src="{{ Auth::user()->user_pic_path }}" class="img-responsive img-circle">
+							@else
+								<img src="/img/user.jpg">
+							@endif
+						</div>
+					<div class="row">
+						<div class="col-sm-3">
 							<h4>First name</h4>
 							<p>{{{ $user->first_name }}}</p>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-3">
 							<h4>Last name</h4>
 							<p>{{{ $user->last_name }}}</p>
 						</div>
+					</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-6 side-hr">
