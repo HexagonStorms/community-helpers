@@ -250,7 +250,7 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
 <!-- 								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
  -->							</div>
 
@@ -263,6 +263,41 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">Active Jobs</div>
+				<div class="panel-body">
+
+					<!-- Created Jobs -->
+					<table class="table">
+						<tr>
+							<th>Category</th>
+							<th>Description</th>
+							<th>Price</th>
+							<th>Due Date</th>
+							<th>Helper's Name</th>
+							<th>View Helper</th>
+
+						</tr>
+						@foreach ($activeJobs as $job)
+							<tr class="text-center">
+								<td>{{ $job->category }}</td>
+								<td>{{ $job->description }}</td>
+								<td>${{ $job->price }}</td>
+								<td>{{ $job->required_date }}</td>
+								@foreach ($job->helpers as $helper)
+								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
+								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+								@endforeach
+							</tr>
+						@endforeach
+					</table>
+
+					<div class="text-center">{{ $jobs->links() }}</div>
 				</div>
 			</div>
 		</div>

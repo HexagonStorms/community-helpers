@@ -134,6 +134,47 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Reviews -->
+			<div class="panel panel-default">
+				<div class="panel-heading">Reviews</div>
+				<div class="panel-body">
+
+					<table class="table">
+						<tr>
+							<th>Category</th>
+							<th>Description</th>
+							<th>Rating</th>
+							<th>Comments</th>
+						</tr>
+
+						@foreach ($reviews as $review)
+						<tr>
+							<td>{{ $review->job->category }}</td>
+							<td>{{ $review->job->description }}</td>
+							<td class="text-center">
+								<class="col-sm-2">
+								@if ($review->rating == 5)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+               					@elseif ($review->rating == 4)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@elseif ($review->rating == 3)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@elseif ($review->rating == 2)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@else 
+                    				{{ '<i class="fa fa-star"></i>'}}
+                				@endif
+                				</div>
+                			</td>
+							<td>{{ $review->comment }}</td>
+						</tr>
+           				@endforeach
+						
+					</table>
+				</div>
+			</div>
+
 		@if(Auth::user()->is_helper == FALSE)
 	        <!-- For giver to select helper -->
 	        <!-- $helper_id = Job::with('helpers')->user_id; -->
@@ -142,5 +183,9 @@
 	            <button type="submit" class="btn btn-sm btn-success">Select Helper</button>
 	        {{ Form::close() }}
         @endif
+
+    	</div>
+    </div>
+</div>
 
 @stop

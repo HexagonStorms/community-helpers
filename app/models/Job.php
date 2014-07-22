@@ -20,7 +20,7 @@ class Job extends Eloquent {
 
     public function helpers()
     {
-        return $this->belongsToMany('User', 'helpers_jobs_mapping');
+        return $this->belongsToMany('User', 'helpers_jobs_mapping')->withPivot('is_accepted');
     }
 
     public function creator() {

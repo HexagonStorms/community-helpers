@@ -1,35 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create-Edit Reviews</title>
-</head>
-<body>
+@extends('layouts.master')
 
-    @if (isset($job))
-        <h1>Edit Review</h1>
-        {{ Form::model($job, array('action' => array('JobsController@update', $job->job_id), 'method' => 'PUT')) }}
-    @else
-        <h1>New Review</h1>
-        {{ Form::open(array('action' => 'JobsController@store')) }}
-    @endif
-    <!-- errors on page -->
-    {{ $errors->first('job_id', '<span class="help-block">:message</span>') }}
-    {{ $errors->first('rating', '<span class="help-block">:message</span>') }}
-    {{ $errors->first('comment', '<span class="help-block">:message</span>') }}
+@section('content')
 
-    <!-- new form  -->
-    {{ Form::label('job_id', 'Job ID') }}
-    {{ Form::text('job_id') }}
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<div class="well">
 
-    {{ Form::label('rating', 'Rating') }}
-    {{ Form::text('rating') }}
-    <br>
-    {{ Form::label('comment', 'Comment') }}
-    <br>
-    {{ Form::textarea('comment', null, array('cols' => '45', 'rows' => '10', 'placeholder' => 'Feedback on Helper')) }}
-    <br>
-    <button type="submit" class="btn btn-sm btn-primary">Save Review</button>
-    {{ Form::close() }}
-</body>
-</html>
+				<!-- Heading -->
+				<div class="row">
+					<div class="col-sm-12">
+						@if (isset($job))
+							<h2>Edit Review</h2>
+							<hr />
+							{{ Form::model($job, array('action' => array('ReviewsController@update', $job->id), 'method' => 'PUT')) }}
+						@else
+							<h2>New Review</h2>
+							<hr />
+							{{ Form::open(array('action' => 'ReviewsController@store')) }}
+						@endif
+					</div>
+				</div>
+
+				<!-- Job # + Rating  -->
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-6">
+							{{ Form::label('job_id', 'Job id') }}
+							{{ Form::text('job_id', null, ['class' => 'form-control', 'placeholder' => 'job_id']) }}
+							{{ $errors->first('job_id', '<span class="help-block">:message</span>')}}
+						</div>
+						<div class="col-sm-6">
+							{{ Form::label('rating', 'Rating') }}
+							{{ Form::text('rating', null, ['class' => 'form-control', 'placeholder' => 'Rating (1-5)']) }}
+							{{ $errors->first('rating', '<span class="help-block">:message</span>')}}
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="row">
+						<div class="col-sm-12">
+							{{ Form::label('comment', 'Comments') }}
+							${{ Form::textarea('comment', null, ['class' => 'form-control', 'placeholder' => 'Write your review here']) }}
+							{{ $errors->first('comment', '<span class="help-block">:message</span>')}}
+						</div>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-sm btn-danger">Save Review</button>
+				{{ Form::close() }}
+
+			</div>
+		</div>
+	</div>
+</div>
+
+@stop

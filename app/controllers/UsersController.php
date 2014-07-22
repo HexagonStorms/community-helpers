@@ -88,12 +88,29 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-
 		$user = User::findOrFail($id);
 		$job = Job::findOrFail($id);
+		$jobIds = array();
+		foreach ($user->appliedJobs as $job) {
+		 	$jobIds[] = $job->id;
+		}
+		$reviews = Review::with('job')->whereIn('job_id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+		//$reviews = Job::with('job')->whereIn('id', $jobIds);//->findOrFail($id);
+		//Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		// $jobIds = array();
+
+		// //search all jobs for current job id
+		// foreach (Auth::user()->appliedJobs as $job) {
+		// 	$jobIds[] = $job->id;
+		// }
+		// //do not show jobs that have already been applied to
+		// if (!empty($jobsId)){
+		// 	$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+		// }
 		$data = array(
 			'user' => $user,
-			'job' => $job
+			'job' => $job,
+			'reviews' => $reviews
 		);
 
 		return View::make('users.view_profile')->with($data);
@@ -127,6 +144,23 @@ class UsersController extends \BaseController {
 	{
 		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
 		// $job_count= Job::where('user_id', $id)->count();
+		//$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		// DB::table('name')->where('name', '=', 'John')->get();
+		//$activeJobs = Auth::user()->createdJobs()->where('is_accepted', '=', '1' );
+
+		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
+        {
+            $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
+                 ->where('helpers_jobs_mapping.is_accepted', '=', 1);
+        })
+        ->lists('id');
+
+		$activeJobs = Job::whereIn('id', $activeJobIds)->get();
+
+		//Ben
+		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
+		//$appliedJobs = $query->get();
+
 		if (Auth::user()->createdJobs()->count() > 0) {
 			$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
 		} else {
@@ -135,7 +169,7 @@ class UsersController extends \BaseController {
 		// $user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
-			// 'user' => $user,
+			'activeJobs' => $activeJobs,
 			// 'job_count' => $job_count,
 			// 'helpers' => $helpers
 		);
