@@ -82,7 +82,7 @@ class ReviewsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$review = Review::find($id);
+		$review = Job::with('review')->find($id);
         return View::make('temp_reviews.create-edit')->with('review', $review);
 	}
 
