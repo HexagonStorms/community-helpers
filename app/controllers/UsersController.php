@@ -67,6 +67,12 @@ class UsersController extends \BaseController {
 			$user->gender = Input::get('gender');
 			$user->save();
 
+			if (Input::hasFile('image') && Input::file('image')->isValid()){
+
+				$user->addUploadImage(Input::file('image'));
+				$user->save();
+			}
+
 			Auth::loginUsingId($user->id);
 
 			return Redirect::action('UsersController@dashboard_helper', $user->id);
@@ -121,14 +127,19 @@ class UsersController extends \BaseController {
 	{
 		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
 		// $job_count= Job::where('user_id', $id)->count();
-		$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		//$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
 		// DB::table('name')->where('name', '=', 'John')->get();
-		// $activeJobs = Auth::user()->createdJobs()->where('is_selected', '=', '1' );
+		$activeJobs = Auth::user()->createdJobs()->where('is_selected', '=', '1' );
 
-		$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
+		//Ben
+		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
+		//$appliedJobs = $query->get();
 
-		$appliedJobs = $query->get();
-
+		if (Auth::user()->createdJobs()->count() > 0) {
+			$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+		} else {
+			$jobs = [];
+		}
 		// $user = User::findOrFail($id);
 		$data = array(
 			'jobs' => $jobs,
@@ -180,7 +191,7 @@ class UsersController extends \BaseController {
 			$user->last_name = Input::get('last_name');
 			$user->email = Input::get('email');
 			$user->birth_date = Input::get('birth_date');
-			$user->is_helper = Input::has('is_helper');
+			$user->is_helper = Input::get('is_helper');
 			$user->is_admin = Input::has('is_admin');
 			$user->street = Input::get('street');
 			$user->city = Input::get('city');
@@ -195,6 +206,12 @@ class UsersController extends \BaseController {
 			$user->apt_num = Input::get('apt_num');
 			$user->gender = Input::get('gender');
 			$user->save();
+
+			if (Input::hasFile('image') && Input::file('image')->isValid()){
+
+				$user->addUploadImage(Input::file('image'));
+				$user->save();
+			}
 
 			return Redirect::action('UsersController@show', $user->id);
 		}

@@ -16,6 +16,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
+    protected $imgDir = 'img/img-upload';
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -35,49 +37,68 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'gender'=> 'max:1'
     ];
 
-    function makeThumbnails($updir, $img, $id,$MaxWe=300,$MaxHe=300)
+
+    public function addUploadImage($image)
     {
-        $arr_image_details = getimagesize($img); 
-        $width = $arr_image_details[0];
-        $height = $arr_image_details[1];
 
-        $percent = 100;
-        if($width > $MaxWe) $percent = floor(($MaxWe * 100) / $width);
+        $systemPath = public_path() . '/' . $this->imgDir . '/';
 
-        if(floor(($height * $percent)/100)>$MaxHe)  
-        $percent = (($MaxHe * 100) / $height);
+        $imageName = $this->id . '-' . $image->getClientOriginalName();
 
-        if($width > $height) {
-            $newWidth=$MaxWe;
-            $newHeight=round(($height*$percent)/100);
-        }else{
-            $newWidth=round(($width*$percent)/100);
-            $newHeight=$MaxHe;
-        }
+        $image->move($systemPath, $imageName);
 
-        if ($arr_image_details[2] == 1) {
-            $imgt = "ImageGIF";
-            $imgcreatefrom = "ImageCreateFromGIF";
-        }
-        if ($arr_image_details[2] == 2) {
-            $imgt = "ImageJPEG";
-            $imgcreatefrom = "ImageCreateFromJPEG";
-        }
-        if ($arr_image_details[2] == 3) {
-            $imgt = "ImagePNG";
-            $imgcreatefrom = "ImageCreateFromPNG";
-        }
+        $maxHeight = 100;
+        $maxWidth = 100;
 
+           $newHeight = 0;
+           $newWidth = 0;
 
-        if ($imgt) {
-            $old_image = $imgcreatefrom($img);
-            $new_image = imagecreatetruecolor($newWidth, $newHeight);
-            imagecopyresized($new_image, $old_image, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+           $inputFile = public_path() . "/img/img-upload/{$imageName}";
 
-            $imgt($new_image, $updir."/".$id."_profile.jpg");
+           $newImageName = substr($imageName, 0, strlen($imageName)-4) . "-small.jpg";
 
-            return "/".$updir."/".$id."_profile.jpg";
-        }
+           $outputFile = public_path() . "/img/img-upload/{$newImageName}";
+
+           // load the image to be manipulated
+           $image = new Imagick($inputFile);
+
+           // get the current image dimensions
+           $currentWidth = $image->getImageWidth(); 
+           $currentHeight = $image->getImageHeight();
+
+           // determine what the new height and width should be based on the type of photo
+           if ($currentWidth > $currentHeight)
+           {
+               // landscape photo
+               // width should be resized to max and height should be resized proportionally
+               $newWidth = $maxWidth;
+               $newHeight = ceil($currentHeight * ($newWidth / $currentWidth));
+           }
+           else if ($currentHeight > $currentWidth)
+           {
+               // portrait photo
+               // height should be resized to max and width should be resized proportionally
+               $newHeight = $maxHeight;
+               $newWidth = ceil($currentWidth * ($newHeight / $currentHeight));
+           }
+           else
+           {
+               // square photo
+               // resize image to max dimensions
+               $newHeight = $newWidth = $maxHeight;
+           }
+
+           // perform the image resize
+           $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);  
+
+           // write out the new image
+           $image->writeImage($outputFile);
+
+           // clear memory resources
+           $image->clear(); 
+           $image->destroy();
+
+        $this->user_pic_path = '/' . $this->imgDir . '/' . $newImageName;
     }
 
 	protected $hidden = array('password', 'remember_token');
