@@ -178,7 +178,21 @@
                         <!-- Available Jobs -->
                         @foreach ($jobs as $job)
                             <tr class="text-center">
-                                <td>{{ $job->category }}</td>
+                                <td class="text-center">
+                                    @if ( $job->category == 'Indoor')
+                                        <i class="fa fa-home fa-3x"></i></a></li>
+                                    @elseif ( $job->category == 'Landscaping')
+                                        <i class="fa fa-tree fa-3x"></i></a></li>
+                                    @elseif ( $job->category == 'Moving')
+                                        <i class="fa fa-truck fa-3x"></i></a></li>
+                                    @elseif ( $job->category == 'Outdoor')
+                                        <i class="fa fa-road fa-3x"></i></a></li>
+                                    @elseif ( $job->category == 'Pets')
+                                        <i class="fa fa-paw fa-3x"></i></a></li>
+                                    @elseif ( $job->category == 'Other')
+                                        <i class="fa fa-star fa-3x"></i></a></li>
+                                    @endif
+                                </td>
                                 <td>{{ $job->description }}</td>
                                 <td>${{ $job->price }}</td>
                                 <td>{{ date("d F Y",strtotime($job->required_date)) }}</td>
