@@ -163,44 +163,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- Jobs Listing -->
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Jobs Listings</div>
-				<div class="panel-body">
-
-					<!-- Headings -->
-					<table class="table">
-						<tr>
-							<th class="text-center">Category</th>
-							<th class="text-center">Description</th>
-							<th class="text-center">Price</th>
-							<th class="text-center">Address</th>
-							<th class="text-center">Due Date</th>
-							<th class="text-center">Action</th>
-						</tr>
-
-						<!-- Available Jobs -->
-						@foreach ($jobs as $job)
-							<tr class="text-center">
-								<td>{{ $job->category }}</td>
-								<td>{{ $job->description }}</td>
-								<td>{{ $job->price }}</td>
-								<td>{{ $job->creator->street }}</td>
-								<td>{{ $job->required_date }}</td>
-								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
-								<td><!-- Button trigger modal -->
-								<button class="btn btn-primary btn-lg modalToggle" data-jobid="{{{ $job->id }}}">
-								  Demo Modal
-								</button></td>
-							</tr>
-						@endforeach
-					</table>
-
-					<div class="col-sm-12 text-center">{{ $jobs->links() }}</div>
-				</div>
-			</div>
-		</div>
 		@else
 		<!-- CREATOR DASH
 		============================================================= -->
@@ -260,7 +222,7 @@
 				<div class="panel-heading">Active Jobs</div>
 				<div class="panel-body">
 
-					<!-- Created Jobs -->
+					<!-- Active Jobs -->
 					<table class="table">
 						<tr>
 							<th>Category</th>
@@ -345,114 +307,8 @@
 				</div>
 			</div>
 		</div>
-
-
 		@endif
-
-		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Available Job</h4>
-		      </div>
-		      <div class="modal-body">
-		        <div class="row">
-		            <div class="col-sm-12">
-		                <h6>Category</h6>
-		                <p id="jobCategory">Test</p>
-		            </div>
-		        </div>
-
-		        <div class="row">
-		            <div class="col-sm-12">
-		                <h6>Description</h6>
-		                <p id="jobDescription">Test2</p>
-		            </div>
-		        </div>
-
-		        <div class="row">
-		            <div class="col-sm-12">
-		                <h6>Price</h6>
-		                <p id="jobPrice">test3</p>
-		            </div>
-		        </div>
-
-		        <div class="row">
-		            <div class="col-sm-6">
-		                <h6>Due Date</h6>
-		                <p id="jobDueDate">New Date</p>
-		            </div>
-
-		            <div class="col-sm-6">
-		                <h6>Time</h6>
-		                <p id="jobTime">Its Time</p>
-		            </div>
-		        </div>
-
-		        <div class="row">
-		            <div class="col-sm-6">
-		                <h6>Created At</h6>
-		                <p id="jobCreatedAt">Date Created</p>
-		            </div>
-
-		            <div class="col-sm-6">
-		                <h6>By</h6>
-		                <p id="jobName">First Name Last Name</p>
-		            </div>
-		        </div>
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id="btn-apply" data-jobid="">Apply</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
 	</div>
 </div>
-
-@stop
-
-@section('bottomscript')
-
-<script type="text/javascript">
-	$(".modalToggle").on('click', function() {
-		var jobId = $(this).data('jobid');
-
-		$.get("/modal/" + jobId, {}, function(data) {
-			// set your values from the data object
-			$("#jobCategory").text(data.category);
-			$("#jobDescription").text(data.description);
-			$("#jobPrice").text(data.price);
-			$("#jobDueDate").text(data.required_date);
-			$("#jobTime").text(data.required_time);
-			$("#jobName").text(data.first_name+' '+data.last_name);
-			$("#btn-apply").data('jobid', data.job_id);
-			$("#myModal").modal();
-		});
-	});
-
-	$("#btn-apply").on('click', function() {
-
-		var jobId = $(this).data('jobid');
-
-		var toSend = {
-			'id': jobId
-		}
-
-		$.ajax({
-	        url: "/applymodal",
-	        type: "POST",
-	        data: toSend,
-	        dataType: "json",
-	        success: function() {
-	        	$("#myModal").modal('hide');
-	        	window.location.reload();
-	        }
-	    });
-	});
-</script>
 
 @stop
