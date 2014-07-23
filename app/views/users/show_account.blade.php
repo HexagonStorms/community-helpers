@@ -162,44 +162,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- Jobs Listing -->
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Jobs Listings</div>
-				<div class="panel-body">
-
-					<!-- Headings -->
-					<table class="table">
-						<tr>
-							<th class="text-center">Category</th>
-							<th class="text-center">Description</th>
-							<th class="text-center">Price</th>
-							<th class="text-center">Address</th>
-							<th class="text-center">Due Date</th>
-							<th class="text-center">Action</th>
-						</tr>
-
-						<!-- Available Jobs -->
-						@foreach ($jobs as $job)
-							<tr class="text-center">
-								<td>{{ $job->category }}</td>
-								<td>{{ $job->description }}</td>
-								<td>{{ $job->price }}</td>
-								<td>{{ $job->creator->street }}</td>
-								<td>{{ $job->required_date }}</td>
-								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
-								<td><td><!-- Button trigger modal -->
-									<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-									  Launch demo modal
-									</button></td></td>
-							</tr>
-						@endforeach
-					</table>
-
-					<div class="col-sm-12 text-center">{{ $jobs->links() }}</div>
-				</div>
-			</div>
-		</div>
+		
 		@else
 		<!-- CREATOR DASH
 		============================================================= -->
@@ -260,7 +223,7 @@
 				<div class="panel-heading">Active Jobs</div>
 				<div class="panel-body">
 
-					<!-- Created Jobs -->
+					<!-- Active Jobs -->
 					<table class="table">
 						<tr>
 							<th>Category</th>
