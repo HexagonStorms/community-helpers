@@ -135,7 +135,7 @@
 			</div>
 		</div>
 
-		@if(Auth::user()->is_helper == TRUE)
+		@if(Auth::user()->is_helper == TRUE && Auth::user()->id == $user->id)
 
 		<!-- Reviews -->
 			<div class="panel panel-default">
@@ -178,7 +178,7 @@
 				</div>
 			</div>
 
-			@endif
+		@endif
 
 		@if(Auth::user()->is_helper == FALSE && Auth::user()->id != $user->id)
 	        <!-- For giver to select helper -->
