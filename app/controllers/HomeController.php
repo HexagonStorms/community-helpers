@@ -22,14 +22,17 @@ class HomeController extends BaseController {
 
 	public function search()
 	{
-		$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(10);
-		$data = array(
-			'jobs' => $jobs,
-			// 'user' => $user,
-			// 'jobsApplied' => $jobsApplied
-		);
+		$jobs = Job::with('creator')->orderBy('required_date')->paginate(5);
 
-		return View::make('pages.search')->with($data);
+		if (Input::has('search')) 
+		{
+			$search = Input::get('search');
+			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->paginate(50);
+		}
+		$data = array(
+			'jobs' => $jobs
+		);
+        return View::make('pages.search')->with($data);
 	}
 	public function register()
 	{

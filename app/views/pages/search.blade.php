@@ -9,49 +9,16 @@
                 <br />
                 <p class="main_description">Search for jobs in your community</p>
 
-                <br /><br />
-                <div class="row">
-
-                    <div class="col-sm-8 col-sm-offset-2" style="text-align: center">
-                        <div class="row">
-
-                            <div class="col-sm-10 col-sm-offset-1">
-                                <div class="input-group">
-                                    <span class="input-group-addon input-group-addon-text">Find </span>
-
-                                    <input type="text" class="form-control col-sm-3" placeholder="e.g. mowing lawns, vacuuming ">
-                                    <div class=" input-group-addon hidden-xs">
-                                        <div class="btn-group" >
-                                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
-                                                All categories <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">Garage</a></li>
-                                                <li><a href="#">Indoor</a></li>
-                                                <li><a href="#">Landscaping</a></li>
-                                                <li><a href="#">Moving</a></li>
-                                                <li><a href="#">Outdoor</a></li>
-                                                <li><a href="#">Pets</a></li>
-                                               
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-                <br />
-                <br />
-                <div class="row">
-                    <div class="col-sm-12" style="text-align: center">
-                        <a href="listings" class="btn btn-primary search-btn">Search jobs</a>
-                    </div>
-                </div>                
+                <div class="well">
+                {{ Form::open(array('action' => 'HomeController@search', 'method' => 'GET')) }}
+                 <div class="input-group">
+                      <input name="search" placeholder="Search posts" type="text" class="form-control">
+                      <span class="input-group-btn">
+                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                {{ Form::close() }}
+                </div><!-- /input-group -->
+            </div><!-- /well -->
+            
                 <br />
                 <br />
                 <div class="row">
@@ -101,10 +68,10 @@
                     <div class="directory-block col-sm-4 col-xs-6">
                         <div class="row">
                             <div class="col-sm-3">
-                                <i class="fa fa-car"></i>
+                                <i class="fa fa-road"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Garage</h4><a/>
+                                <a href="#"><h4>Outdoor</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -115,7 +82,7 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Indoor Cleaning</h4><a/>
+                                <a href="#"><h4>Indoor</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -144,10 +111,10 @@
                     <div class="directory-block col-sm-4 col-xs-6">
                         <div class="row">
                             <div class="col-sm-3">
-                                <i class="fa fa-road"></i>
+                                <i class="fa fa-star"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Outdoor</h4><a/>
+                                <a href="#"><h4>Other</h4><a/>
                             </div>
                         </div>
                     </div>
