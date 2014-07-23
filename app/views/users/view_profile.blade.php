@@ -135,7 +135,9 @@
 			</div>
 		</div>
 
+
 		@if(Auth::user()->is_helper == FALSE && Auth::user()->id != $user->id)
+
 
 		<!-- Reviews -->
 			<div class="panel panel-default">
@@ -178,7 +180,7 @@
 				</div>
 			</div>
 
-			@endif
+		@endif
 
 
     	</div>
