@@ -116,23 +116,57 @@ class UsersController extends \BaseController {
 
 	public function dashboard_helper($id)
 	{
+		//to show active jobs that helper has been selected for
+		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
+        {
+            $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
+                 ->where('helpers_jobs_mapping.is_accepted', '=', 1);
+        })
+        ->lists('id');
+
+    	$activeJobs = [];
+
+        if (!empty($activeJobIds)) {
+        	$activeJobs = Job::whereIn('id', $activeJobIds)->get();
+        }
+
+
+        $appliedQuery = Auth::user()->appliedJobs();
+
+        if (!empty($activeJobIds)) {
+        	$appliedQuery->whereNotIn('id', $activeJobIds);
+        }
+
+        $appliedJobs = $appliedQuery->get();
+
 		//$jobsIds will hold all the ids in the jobs table
-		$jobIds = array();
+		$appliedJobIds = array();
 
 		//search all jobs for current job id
 		foreach (Auth::user()->appliedJobs as $job) {
-			$jobIds[] = $job->id;
+			$appliedJobIds[] = $job->id;
 		}
+
+
 		//do not show jobs that have already been applied to
-		if (count ($jobIds) > 0){
-			$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
+
+		$jobQuery = Job::with('creator');
+
+		if (count($activeJobIds) > 0){
+			$jobQuery->whereNotIn('id', $activeJobIds);
 		}
+
+		if (count($appliedJobIds) > 0) {
+			$jobQuery->whereNotIn('id', $appliedJobIds);
+		}
+
 		//show all jobs if user has not applied to any
-		else{
-			$jobs = Job::with('creator')->orderBy('created_at', 'desc')->paginate(4);
-		}
+		$jobs = $jobQuery->orderBy('created_at', 'desc')->paginate(4);
+
 		$data = array(
 			'jobs' => $jobs,
+			'activeJobs' => $activeJobs,
+			'appliedJobs' => $appliedJobs
 		);
 
 		return View::make('users.show_account')->with($data);

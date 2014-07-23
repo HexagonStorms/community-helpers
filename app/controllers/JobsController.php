@@ -55,7 +55,7 @@ class JobsController extends \BaseController {
             $job->creator()->associate(Auth::user());
             $job->save();
             Session::flash('successMessage', 'Post successfully created');
-            return Redirect::action('JobsController@index');
+            return Redirect::action('UsersController@dashboard_creator', Auth::id());
         } //end of else
 	}
 
