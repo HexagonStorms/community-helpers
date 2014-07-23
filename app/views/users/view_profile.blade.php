@@ -135,7 +135,9 @@
 			</div>
 		</div>
 
-		@if(Auth::user()->is_helper == TRUE && Auth::user()->id == $user->id)
+
+		@if(Auth::user()->is_helper == FALSE && Auth::user()->id != $user->id)
+
 
 		<!-- Reviews -->
 			<div class="panel panel-default">
@@ -173,21 +175,13 @@
 							<td>{{ $review->comment }}</td>
 						</tr>
            				@endforeach
-						
+
 					</table>
 				</div>
 			</div>
 
 		@endif
 
-		@if(Auth::user()->is_helper == FALSE && Auth::user()->id != $user->id)
-	        <!-- For giver to select helper -->
-	        <!-- $helper_id = Job::with('helpers')->user_id; -->
-	        {{ Form::open(array('action' => array('JobsController@selectHelper', 1), 'method' => 'POST')) }}
-	        	{{ Form::hidden('helper_id', $user->id) }}
-	            <button type="submit" class="btn btn-sm btn-success">Select Helper</button>
-	        {{ Form::close() }}
-        @endif
 
     	</div>
     </div>
