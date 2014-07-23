@@ -124,7 +124,7 @@ class UsersController extends \BaseController {
 			$jobIds[] = $job->id;
 		}
 		//do not show jobs that have already been applied to
-		if (!empty($jobsId)){
+		if (count ($jobIds) > 0){
 			$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
 		}
 		//show all jobs if user has not applied to any
@@ -140,12 +140,6 @@ class UsersController extends \BaseController {
 
 	public function dashboard_creator($id)
 	{
-		// $helpers = Job::with('helpers')->where('id', $jobIds)->get();
-		// $job_count= Job::where('user_id', $id)->count();
-		//$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
-		// DB::table('name')->where('name', '=', 'John')->get();
-		//$activeJobs = Auth::user()->createdJobs()->where('is_accepted', '=', '1' );
-
 		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
         {
             $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
@@ -153,14 +147,24 @@ class UsersController extends \BaseController {
         })
         ->lists('id');
 
-		$activeJobs = Job::whereIn('id', $activeJobIds)->get();
+        if (!empty($activeJobIds)) {
+        	$activeJobs = Job::whereIn('id', $activeJobIds)->get();
+        } else {
+        	$activeJobs = [];
+        }
 
 		//Ben
 		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
 		//$appliedJobs = $query->get();
 
 		if (Auth::user()->createdJobs()->count() > 0) {
-			$jobs = Auth::user()->createdJobs()->orderBy('created_at', 'desc')->paginate(4);
+			$query = Auth::user()->createdJobs();
+
+			if (!empty($activeJobIds)) {
+				$query->whereNotIn('id', $activeJobIds);
+			}
+
+			$jobs = $query->orderBy('created_at', 'desc')->paginate(4);
 		} else {
 			$jobs = [];
 		}

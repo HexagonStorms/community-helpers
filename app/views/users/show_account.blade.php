@@ -290,8 +290,8 @@
 								<td>${{ $job->price }}</td>
 								<td>{{ $job->required_date }}</td>
 								@foreach ($job->helpers as $helper)
-								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
 								@endforeach
 							</tr>
 						@endforeach
@@ -338,7 +338,13 @@
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 									<td> {{ $helper->birth_date }}  </td>
 									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
-									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-warning btn-md">View</a></td>
+									<td>
+										{{ Form::open(array('action' => array('JobsController@selectHelper', $job->id), 'method' => 'POST')) }}
+	        								{{ Form::hidden('helper_id', $helper->id) }}
+	            							<button type="submit" class="btn btn-sm btn-danger">Select Helper</button>
+	        							{{ Form::close() }}
+									</td>
+
 								</tr>
 								@endforeach
 								@endif
