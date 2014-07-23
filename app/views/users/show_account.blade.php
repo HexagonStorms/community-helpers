@@ -108,35 +108,25 @@
 							<th>City</th>
 							<th>State</th>
 							<th>Zip</th>
+							<th>Action</th>
 						</tr>
 						<tr class="text-center">
-							<td><i class="fa fa-car"></i></td>
-							<td>Do dishes Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et {...} </td>
-							<td>$15</td>
-							<td>Henry B.</td>
-							<td>Wednesday, 4:00pm</td>
-
-							<td>112 East Pecan</td>
-							<td>San Antonio</td>
-							<td>TX</td>
-							<td>17854</td>
+							@foreach ($activeJobs as $job)
+								<tr class="text-center">
+									<td>{{ $job->category }}</td>
+									<td>{{ $job->description }}</td>
+									<td>${{ $job->price }}</td>
+									<td>{{ $job->creator->first_name }} {{ $job->creator->last_name }}</td>
+									<td>{{ $job->required_date }}</td>
+									<td>{{ $job->creator->street }}</td>
+									<td>{{ $job->creator->city }}</td>
+									<td>{{ $job->creator->state }}</td>
+									<td>{{ $job->creator->zip }}</td>
+									<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-primary btn-md">Review</a></td>
+								</tr>
+							@endforeach
 						</tr>
 
-						<!-- Job #2 -->
-						<tr class="text-center">
-							<td><i class="fa fa-road"></i></td>
-							<td>mow the lawn in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{...} </td>
-							<td>$30</td>
-							<td>Brandon V.</td>
-							<td>Friday, 8:00pm</td>
-							<td>112 East Pecan</td>
-							<td>San Antonio</td>
-							<td>TX</td>
-							<td>17854</td>
-						</tr>
 					</table>
 				</div>
 			</div>
@@ -155,10 +145,10 @@
 							<th class="text-center">Price</th>
 							<th class="text-center">Address</th>
 							<th class="text-center">Due Date</th>
-							<th class="text-center">Review</th>
+							<th class="text-center">Action</th>
 						</tr>
 
-						@foreach (Auth::user()->appliedJobs as $job)
+						@foreach ($appliedJobs as $job)
 							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
@@ -186,25 +176,23 @@
 							<th class="text-center">Price</th>
 							<th class="text-center">Address</th>
 							<th class="text-center">Due Date</th>
-							<th class="text-center">Apply</th>
+							<th class="text-center">Action</th>
 						</tr>
 
 						<!-- Available Jobs -->
 						@foreach ($jobs as $job)
-						@if (Auth::user()->appliedJobs != $job->id)
 							<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
 								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
-								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
+								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
 								<td><td><!-- Button trigger modal -->
 									<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
 									  Launch demo modal
 									</button></td></td>
 							</tr>
-						@endif
 						@endforeach
 					</table>
 
