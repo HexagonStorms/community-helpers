@@ -24,16 +24,23 @@ class HomeController extends BaseController {
 	{
 		$jobs = Job::with('creator')->orderBy('required_date')->paginate(5);
 
-		if (Input::has('search')) 
+		if (Input::has('search') && Input::has('filter')) 
 		{
 			$search = Input::get('search');
+			$filter = Input::get('filter');
+			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->orWhere('category', $filter)->paginate(50);
+		} else if (Input::has('filter')) 
+		{
+			$filter = Input::get('filter');
 			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->paginate(50);
 		}
+
 		$data = array(
 			'jobs' => $jobs
 		);
         return View::make('pages.search')->with($data);
 	}
+
 	public function register()
 	{
 		return View::make('pages.register');

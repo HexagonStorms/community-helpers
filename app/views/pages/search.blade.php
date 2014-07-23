@@ -10,13 +10,29 @@
                 <p class="main_description">Search for jobs in your community</p>
 
                 <div class="well">
-                {{ Form::open(array('action' => 'HomeController@search', 'method' => 'GET')) }}
-                 <div class="input-group">
-                      <input name="search" placeholder="Search posts" type="text" class="form-control">
-                      <span class="input-group-btn">
-                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                {{ Form::close() }}
-                </div><!-- /input-group -->
+                    {{ Form::open(array('action' => 'HomeController@search', 'method' => 'GET')) }}
+                    <div class="input-group">
+                        <input name="search" placeholder="Search posts" type="text" class="form-control">
+                        <div class=" input-group-addon hidden-xs">
+                                                        <div class="btn-group" >
+                                                            <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
+                                                                Filter by category <span class="caret"></span>
+                                                            </button>
+                                                            <ul class="dropdown-menu" role="menu">
+                                                                <li><a href="#"> <i class="fa fa-home"></i> Indoor</a></li>
+                                                                <li><a href="#"><i class="fa fa-tree"></i> Landscaping</a></li>
+                                                                <li><a href="#"><i class="fa fa-truck"></i> Moving</a></li>
+                                                                <li><a href="#"><i class="fa fa-road"></i> Outdoor</a></li>
+                                                                <li><a href="#"><i class="fa fa-paw"></i> Pets</a></li>
+                                                                <li><a href="#"><i class="fa fa-star"></i> Other</a></li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        {{ Form::close() }}
+                    </div><!-- /input-group -->
             </div><!-- /well -->
             
                 <br />
@@ -165,8 +181,8 @@
                             <tr class="text-center">
                                 <td>{{ $job->category }}</td>
                                 <td>{{ $job->description }}</td>
-                                <td>{{ $job->price }}</td>
-                                <td>{{ $job->required_date }}</td>
+                                <td>${{ $job->price }}</td>
+                                <td>{{ date("d F Y",strtotime($job->required_date)) }}</td>
                                 <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>
                             </tr>
                         @endforeach
