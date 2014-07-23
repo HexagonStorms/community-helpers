@@ -93,7 +93,7 @@
 							<span><a href="/login">Login</a> | </span>
 							<span><a href="/users/create">Register</a> | </span>
 							@endif
-							<span><a href="/listings">Listings</a> | </span>
+							<span><a href="/search">Listings</a> | </span>
 							@if(Auth::check())
 							<span><a href="/logout">Logout</a></span>
 							@endif

@@ -10,6 +10,12 @@ class JobsController extends \BaseController {
 	public function index()
 	{
 		$jobs = Job::with('creator')->orderBy('required_date')->paginate(4);
+
+		if (Input::has('search')) 
+		{
+			$search = Input::get('search');
+			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->paginate(50);
+		}
 		$data = array(
 			'jobs' => $jobs
 		);
