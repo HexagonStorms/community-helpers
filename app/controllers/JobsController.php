@@ -10,6 +10,12 @@ class JobsController extends \BaseController {
 	public function index()
 	{
 		$jobs = Job::with('creator')->orderBy('required_date')->paginate(4);
+
+		if (Input::has('search')) 
+		{
+			$search = Input::get('search');
+			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->paginate(50);
+		}
 		$data = array(
 			'jobs' => $jobs
 		);
@@ -55,7 +61,7 @@ class JobsController extends \BaseController {
             $job->creator()->associate(Auth::user());
             $job->save();
             Session::flash('successMessage', 'Post successfully created');
-            return Redirect::action('JobsController@index');
+            return Redirect::action('UsersController@dashboard_creator', Auth::id());
         } //end of else
 	}
 

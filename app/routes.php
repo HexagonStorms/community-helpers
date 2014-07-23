@@ -49,6 +49,7 @@ Route::post('applymodal', 'JobsController@applyModal');
 
 Route::get('modal/{id}', 'JobsController@modal');
 //for givers to select a helper
+
 Route::resource('jobs', 'JobsController');
 
 Route::get('users/dashboard_helper/{id}', 'UsersController@dashboard_helper');
@@ -56,6 +57,8 @@ Route::get('users/dashboard_helper/{id}', 'UsersController@dashboard_helper');
 Route::get('users/dashboard_creator/{id}', 'UsersController@dashboard_creator');
 
 Route::resource('users', 'UsersController');
+
+//for givers to select a helper
 Route::post('users/{id}', 'JobsController@selectHelper');
 
 Route::resource('reviews', 'ReviewsController');
