@@ -172,7 +172,9 @@
                             <th class="text-center">Description</th>
                             <th class="text-center">Price</th>
                             <th class="text-center">Due Date</th>
-                            <th class="text-center">Apply</th>
+                            @if((Auth::check() && Auth::user()->is_helper == TRUE)|| Auth::guest())
+                                <th class="text-center">Apply</th>
+                            @endif
                         </tr>
 
                         <!-- Available Jobs -->
@@ -196,7 +198,12 @@
                                 <td>{{ $job->description }}</td>
                                 <td>${{ $job->price }}</td>
                                 <td>{{ date("d F Y",strtotime($job->required_date)) }}</td>
-                                <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>
+                                @if (Auth::check() && Auth::user()->is_helper == TRUE)
+                                    <td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
+                                @elseif (Auth::guest())
+                                    <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>
+                                @else
+                                @endif
                             </tr>
                         @endforeach
                     </table>
