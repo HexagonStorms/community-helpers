@@ -61,7 +61,6 @@
     <div class="row">
 
         <div class="col-sm-12 col-md-8">
-
             <div class="row directory">
                 <div class="col-sm-12 ">
                     <h2><span>Categories</span></h2>
@@ -76,7 +75,7 @@
                                 <i class="fa fa-tree"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Landscaping</h4></a>
+                                <a href="?filter=landscaping"><h4>Landscaping</h4></a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +86,7 @@
                                 <i class="fa fa-road"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Outdoor</h4><a/>
+                                <a href="?filter=outdoor"><h4>Outdoor</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -98,7 +97,7 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Indoor</h4><a/>
+                                <a href="?filter=indoor"><h4>Indoor</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -108,7 +107,7 @@
                                 <i class="fa fa-paw"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Pets</h4><a/>
+                                <a href="?filter=pets"><h4>Pets</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -119,7 +118,7 @@
                                 <i class="fa fa-truck"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Moving</h4><a/>
+                                <a href="?filter=moving"><h4>Moving</h4><a/>
                             </div>
                         </div>
                     </div>
@@ -130,7 +129,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="#"><h4>Other</h4><a/>
+                                <a href="?filter=other"><h4>Other</h4><a/>
                             </div>
                         </div>
                     </div>
