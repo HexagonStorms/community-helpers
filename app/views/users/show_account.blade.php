@@ -188,19 +188,11 @@
 								<td>{{ $job->price }}</td>
 								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
-<<<<<<< HEAD
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
 								<td><!-- Button trigger modal -->
 								<button class="btn btn-primary btn-lg modalToggle" data-jobid="{{{ $job->id }}}">
 								  Demo Modal
 								</button></td>
-=======
-								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
-								<td><td><!-- Button trigger modal -->
-									<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-									  Launch demo modal
-									</button></td></td>
->>>>>>> master
 							</tr>
 						@endforeach
 					</table>
@@ -265,8 +257,6 @@
 
 		<div class="col-sm-12">
 			<div class="panel panel-default">
-<<<<<<< HEAD
-=======
 				<div class="panel-heading">Active Jobs</div>
 				<div class="panel-body">
 
@@ -302,7 +292,6 @@
 
 		<div class="col-sm-12">
 			<div class="panel panel-default">
->>>>>>> master
 				<div class="panel-heading">Jobs Created</div>
 				<div class="panel-body">
 
