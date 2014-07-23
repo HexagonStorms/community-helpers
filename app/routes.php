@@ -45,6 +45,9 @@ Route::get('/my_account', 'HomeController@my_account');
 //for helpers to apply for jobs
 Route::post('temp_jobs.show{id}', 'JobsController@apply');
 
+Route::post('applymodal', 'JobsController@applyModal');
+
+Route::get('modal/{id}', 'JobsController@modal');
 //for givers to select a helper
 Route::resource('jobs', 'JobsController');
 
@@ -62,3 +65,27 @@ Route::get('/login', 'HomeController@showLogin');
 Route::post('/login', 'HomeController@doLogin');
 
 Route::get('/logout', 'HomeController@doLogout');
+
+Route::get('ajax', function () {
+    return View::make('ajax');
+});
+
+Route::post('ajax', function () {
+
+    $jobId = $job->id;
+    $jobCategory = $job->category;
+    $jobDescription = $job->description;
+    $jobPrice = $job->price;
+    $jobRequireDate = $job->required_date;
+
+    $error = false;
+    $message = "Successfully processed id: $id with name: $name.";
+
+    $result = array(
+        'error' => $error,
+        'message' => $message,
+    );
+
+    return Response::json($result);
+
+});

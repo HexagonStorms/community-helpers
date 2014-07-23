@@ -159,7 +159,7 @@
 						</tr>
 
 						@foreach (Auth::user()->appliedJobs as $job)
-							<tr class="text-center">
+								<tr class="text-center">
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
@@ -199,10 +199,10 @@
 								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">View</a></td>
-								<td><td><!-- Button trigger modal -->
-									<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-									  Launch demo modal
-									</button></td></td>
+								<td><!-- Button trigger modal -->
+								<button class="btn btn-primary btn-lg modalToggle" data-jobid="{{{ $job->id }}}">
+								  Demo Modal
+								</button></td>
 							</tr>
 						@endif
 						@endforeach
@@ -250,9 +250,8 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
-<!-- 								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
- -->							</div>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+							</div>
 
 							<div class="col-sm-4">
 								<button type="button" class="btn btn-info btn-lg">Manage Jobs</button>
@@ -263,41 +262,6 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Active Jobs</div>
-				<div class="panel-body">
-
-					<!-- Created Jobs -->
-					<table class="table">
-						<tr>
-							<th>Category</th>
-							<th>Description</th>
-							<th>Price</th>
-							<th>Due Date</th>
-							<th>Helper's Name</th>
-							<th>View Helper</th>
-
-						</tr>
-						@foreach ($activeJobs as $job)
-							<tr class="text-center">
-								<td>{{ $job->category }}</td>
-								<td>{{ $job->description }}</td>
-								<td>${{ $job->price }}</td>
-								<td>{{ $job->required_date }}</td>
-								@foreach ($job->helpers as $helper)
-								<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-								<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
-								@endforeach
-							</tr>
-						@endforeach
-					</table>
-
-					<div class="text-center">{{ $jobs->links() }}</div>
 				</div>
 			</div>
 		</div>
@@ -361,20 +325,104 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		        <h4 class="modal-title" id="myModalLabel">Available Job</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+		        <div class="row">
+		            <div class="col-sm-12">
+		                <h6>Category</h6>
+		                <p id="jobCategory">Test</p>
+		            </div>
+		        </div>
+
+		        <div class="row">
+		            <div class="col-sm-12">
+		                <h6>Description</h6>
+		                <p id="jobDescription">Test2</p>
+		            </div>
+		        </div>
+
+		        <div class="row">
+		            <div class="col-sm-12">
+		                <h6>Price</h6>
+		                <p id="jobPrice">test3</p>
+		            </div>
+		        </div>
+
+		        <div class="row">
+		            <div class="col-sm-6">
+		                <h6>Due Date</h6>
+		                <p id="jobDueDate">New Date</p>
+		            </div>
+
+		            <div class="col-sm-6">
+		                <h6>Time</h6>
+		                <p id="jobTime">Its Time</p>
+		            </div>
+		        </div>
+
+		        <div class="row">
+		            <div class="col-sm-6">
+		                <h6>Created At</h6>
+		                <p id="jobCreatedAt">Date Created</p>
+		            </div>
+
+		            <div class="col-sm-6">
+		                <h6>By</h6>
+		                <p id="jobName">First Name Last Name</p>
+		            </div>
+		        </div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <button type="button" class="btn btn-primary" id="btn-apply" data-jobid="">Apply</button>
 		      </div>
 		    </div>
 		  </div>
 		</div>
-
 	</div>
 </div>
+
+@stop
+
+@section('bottomscript')
+
+<script type="text/javascript">
+	$(".modalToggle").on('click', function() {
+		var jobId = $(this).data('jobid');
+
+		$.get("/modal/" + jobId, {}, function(data) {
+			// set your values from the data object
+			$("#jobCategory").text(data.category);
+			$("#jobDescription").text(data.description);
+			$("#jobPrice").text(data.price);
+			$("#jobDueDate").text(data.required_date);
+			$("#jobTime").text(data.required_time);
+			$("#jobName").text(data.first_name+' '+data.last_name);
+			$("#btn-apply").data('jobid', data.job_id);
+			$("#myModal").modal();
+		});
+	});
+
+	$("#btn-apply").on('click', function() {
+
+		var jobId = $(this).data('jobid');
+
+		var toSend = {
+			'id': jobId
+		}
+
+		$.ajax({
+	        url: "/applymodal",
+	        type: "POST",
+	        data: toSend,
+	        dataType: "json",
+	        success: function() {
+	        	$("#myModal").modal('hide');
+	        	window.location.reload();
+	        }
+	    });
+	});
+</script>
 
 @stop

@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <h6>Category</h6> 
-                        <p>{{ $job->category}}</p>
+                        <p id="jobCategory">{{ $job->category}}</p>
                     </div>
                 </div>
 

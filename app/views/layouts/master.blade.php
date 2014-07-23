@@ -236,7 +236,8 @@
 	<script>
 		$('.fade_message').delay(2000).fadeOut(1000);
 	</script>
-
+	
+	@yield('bottomscript')
 </body>
 </html>
 

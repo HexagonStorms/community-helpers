@@ -124,7 +124,7 @@ class UsersController extends \BaseController {
 			$jobIds[] = $job->id;
 		}
 		//do not show jobs that have already been applied to
-		if (!empty($jobsId)){
+		if (count($jobIds) > 0){
 			$jobs = Job::with('creator')->whereNotIn('id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
 		}
 		//show all jobs if user has not applied to any
