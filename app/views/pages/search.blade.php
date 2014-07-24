@@ -25,7 +25,6 @@
                                                                 <li><a href="#"><i class="fa fa-road"></i> Outdoor</a></li>
                                                                 <li><a href="#"><i class="fa fa-paw"></i> Pets</a></li>
                                                                 <li><a href="#"><i class="fa fa-star"></i> Other</a></li>
-                                                                
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -34,8 +33,6 @@
                         {{ Form::close() }}
                     </div><!-- /input-group -->
             </div><!-- /well -->
-            
-                <br />
                 <br />
                 <div class="row">
                     <div class="col-sm-12" style="text-align: center">
@@ -47,9 +44,6 @@
                             <div class="text-item" style="display: none;">Success! <strong>Paul</strong> just washed <strong>Michael M.</strong>'s car in <strong>La Vernia</strong></div>
                             <div class="text-item" style="display: none;">Hey, <strong>Georgia W.</strong> is looking for somebody to walk her dogs in <strong>San Antonio</strong></div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
