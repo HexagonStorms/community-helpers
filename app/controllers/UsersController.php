@@ -8,7 +8,7 @@ class UsersController extends \BaseController {
         parent::__construct();
 
         // run auth filter before all methods on this controller except index and show
-        $this->beforeFilter('auth', array('except' => array('show')));
+        $this->beforeFilter('auth', array('except' => array('show', 'create', 'store')));
     } // end __construct
 
 	/**
@@ -31,11 +31,6 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
-		$data = [
-			'first_name' => 'Josue',
-			'last_name' => 'Plaza'
-			];
-
 		return View::make('users.create');
 	}
 
@@ -79,20 +74,20 @@ class UsersController extends \BaseController {
 			$user->gender = Input::get('gender');
 			$user->save();
 
-			if (Input::hasFile('image') && Input::file('image')->isValid()){
-
+			if (Input::hasFile('image') && Input::file('image')->isValid())
+			{
 				$user->addUploadImage(Input::file('image'));
 				$user->save();
 			}
 
 			$data = array(
-				'first_name' => $user->first_name,
-				'last_name' => $user->last_name
+				'first_name' => "$user->first_name",
+				'last_name' => "$user->last_name"
 			);
 
 			Mail::send('emails.welcome', $data, function($message)
 			{
-	  			$message->to('josueplazamusic@gmail.com', "$user->first_name $user->last_name")->subject('Thank you for registering');
+	  			$message->to('josueplazamusic@gmail.com', 'New User')->subject('Thank you for registering');
 			});
 
 			Auth::loginUsingId($user->id);
