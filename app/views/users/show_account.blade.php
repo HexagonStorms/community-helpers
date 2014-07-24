@@ -241,7 +241,7 @@
 								<td>{{ $job->required_date }}</td>
 								@foreach ($job->helpers as $helper)
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-sm">View</a></td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
 								@endforeach
 							</tr>
 						@endforeach
@@ -274,7 +274,7 @@
 									<td>{{ $job->description }}</td>
 									<td>${{ $job->price }}</td>
 									<td>{{ $job->required_date }}</td>
-									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-sm">Edit</a></td>
+									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
 								</tr>
 								@if ($job->helpers->count() > 0)
 								<tr>
@@ -345,7 +345,7 @@
 	            </div>
 	          </div>
 	        </div>
-        @endif
+	        @endif
 		@endif
 	</div>
 </div>
@@ -373,7 +373,7 @@
         });
     });
 
-	$("#btn-select").on('click', function() {
+    $("#btn-select").on('click', function() {
 
         var helperId = $(this).data('helperid');
         var jobId = $(this).data('jobid');
@@ -383,16 +383,16 @@
             'job_id': jobId
         }
 
-       $.ajax({
-           url: "/selectmodal",
-           type: "POST",
-           data: toSend,
-           dataType: "json",
-           success: function() {
-               $("#myModal").modal('hide');
-               window.location.reload();
-           }
-       });
-   });
+        $.ajax({
+            url: "/selectmodal",
+            type: "POST",
+            data: toSend,
+            dataType: "json",
+            success: function() {
+                $("#myModal").modal('hide');
+                window.location.reload();
+            }
+        });
+    });
 </script>
 @stop

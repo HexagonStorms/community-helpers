@@ -142,7 +142,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-control" name="state">
+                                                <select class="form-control" name="state" id="state">
                                                     <option value="NULL">Choose State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
@@ -195,8 +195,8 @@
                                                     <option value="WV">West Virginia</option>
                                                     <option value="WI">Wisconsin</option>
                                                     <option value="WY">Wyoming</option>
-                                                </select> 
-                                                {{ $errors->first('state', '<span class="help-block">:message</span>')}}              
+                                                </select>
+                                                {{ $errors->first('state', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
 
@@ -206,11 +206,11 @@
                                                 {{ $errors->first('zip', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
-                                    </div> 		  
-                                    
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            
+
                                             {{ Form::submit('Update', ['class' => 'margin-save btn btn-primary btn-lg']) }}
                                         </div>
                                     </div>
