@@ -241,7 +241,7 @@
 								<td>{{ $job->required_date }}</td>
 								@foreach ($job->helpers as $helper)
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-sm">View</a></td>
 								@endforeach
 							</tr>
 						@endforeach
@@ -274,27 +274,19 @@
 									<td>{{ $job->description }}</td>
 									<td>${{ $job->price }}</td>
 									<td>{{ $job->required_date }}</td>
-									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
+									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-sm">Edit</a></td>
 								</tr>
 								@if ($job->helpers->count() > 0)
 								<tr>
 									<th>Helper's Name</th>
 									<th>Birthdate</th>
 									<th>View Helper</th>
-									<th>Select Helper</th>
 								</tr>
 								@foreach ($job->helpers as $helper)
 								<tr>
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 									<td> {{ $helper->birth_date }}  </td>
-									<td><button class="btn btn-primary btn-lg modalToggle2" data-helperid="{{{ $helper->id }}}">View</button></td>
-									<td>
-										{{ Form::open(array('action' => array('JobsController@selectHelper', $job->id), 'method' => 'POST')) }}
-	        								{{ Form::hidden('helper_id', $helper->id) }}
-	            							<button type="submit" class="btn btn-sm btn-danger">Select Helper</button>
-	        							{{ Form::close() }}
-									</td>
-
+									<td><button class="btn btn-primary btn-sm modalToggle2" data-helperid="{{{ $helper->id }}}" data-jobid="{{{ $job->id }}}">View</button></td>
 								</tr>
 								@endforeach
 								@endif
@@ -312,44 +304,36 @@
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Summary</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-            		<div class="col-sm-6">
-                        @if($helper->user_pic_path)
-                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
-                        @else
-                            <img id="helperPic" src="/img/user.jpg">
-                        @endif
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h4>First name</h4>
-                            <p id="helperFirst">Test</p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4>Last name</h4>
-                            <p id="helperLast">Test Last</p>
-                        </div>
-                    </div>
-                    <div class="row">
-						<div class="col-sm-3">
-							<h4>Birth Date</h4>
-						    <p id="helperBirth"> Test</p>
-						</div>
-						<div class="col-sm-3">
-							<h4>Gender</h4>
-							<p id="helperGender">Test Gender</p>
-						</div>
-                    </div>
-                </div>
-                <div class="row">
+              	<div class="modal-header">
+                	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                	<h4 class="modal-title" id="myModalLabel">Summary</h4>
+              	</div>
+              	<div class="modal-body">
+	                <div class="row">
+	                	<div class="row">
+		            		<div class="col-sm-offset-2 col-sm-4">
+		                        @if($helper->user_pic_path)
+		                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
+		                        @else
+		                            <img id="helperPic" src="/img/user.jpg">
+		                        @endif
+		                    </div>
+		                    <div class="col-sm-6">
+		                    	<h4><strong>Name</strong></h4>
+		                    	<p><span id="helperFirst"></span> <span id="helperLast"></span></p>
+
+		                    	<h4><strong>Age</strong></h4>
+		                    	<p id="helperBirth"></p>
+
+		                    	<h4><strong>Gender</strong></h4>
+		                    	<p id="helperGender"></p>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="container">
                 	<div class="col-sm-12">
-                		<h4>Bio</h4>
-                		<p id="helperBio">Test Bio</p>
+                		<h4><strong>Bio</strong></h4>
+                		<p id="helperBio"></p>
                 	</div>
                 </div>
               </div>
@@ -385,24 +369,26 @@
         });
     });
 
-    $("#btn-select").on('click', function() {
+	$("#btn-select").on('click', function() {
 
-        var helperId = $(this).data('helperid');
+       var helperId = $(this).data('helperid');
+       var jobId = $(this).data('jobid');
 
-        var toSend = {
-            'id': helperId
-        }
+       var toSend = {
+           'helper_id': helperId,
+           'job_id': jobId
+       }
 
-        $.ajax({
-            url: "/selectmodal",
-            type: "POST",
-            data: toSend,
-            dataType: "json",
-            success: function() {
-                $("#myModal").modal('hide');
-                window.location.reload();
-            }
-        });
-    });
+       $.ajax({
+           url: "/selectmodal",
+           type: "POST",
+           data: toSend,
+           dataType: "json",
+           success: function() {
+               $("#myModal").modal('hide');
+               window.location.reload();
+           }
+       });
+   });
 </script>
 @stop
