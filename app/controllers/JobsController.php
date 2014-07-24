@@ -175,5 +175,32 @@ class JobsController extends \BaseController {
         return Redirect::action('JobsController@index');
 	}
 
+	public function modal($id) {
 
+		$job = Job::findorFail($id);
+
+		$array = [
+			'category' => $job->category,
+			'description' => $job->description,
+			'price' => $job->price,
+			'required_date' => $job->required_date,
+			'required_time' => $job->required_time,
+			'first_name' => $job->creator->first_name,
+			'last_name' => $job->creator->last_name,
+			'job_id' => $job->id
+		];
+
+		return Response::json($array);
+	}
+
+	public function applyModal() {
+
+		// Managing kids applying to jobs
+		$id = Input::get('id');
+
+		$job = Job::findOrFail($id);
+		Auth::user()->appliedJobs()->attach($job->id, array('is_accepted' => false));
+
+	    return Response::json(['success' => true]);
+	}
 }

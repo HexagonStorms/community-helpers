@@ -150,6 +150,7 @@ class UsersController extends \BaseController {
 
 		//do not show jobs that have already been applied to
 
+
 		$jobQuery = Job::with('creator');
 
 		if (count($activeJobIds) > 0){
@@ -294,5 +295,22 @@ class UsersController extends \BaseController {
 		return Redirect::action('UsersController@index');
 	}
 
+	public function modal2($id) {
+
+		$helper = User::findorFail($id);
+
+		$array = [
+			'first_name' => $helper->first_name,
+			'last_name' => $helper->last_name,
+			'birth_date' => $helper->birth_date,
+			'gender' => $helper->gender,
+			'bio' => $helper->bio,
+			'user_pic_path' => $helper->user_pic_path,
+			'helper_id' => $helper->id
+		];
+
+		return Response::json($array);
+	}
 
 }
+

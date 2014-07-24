@@ -150,6 +150,7 @@
 
 						@foreach ($appliedJobs as $job)
 							<tr class="text-center">
+
 								<td>{{ $job->category }}</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
@@ -162,7 +163,6 @@
 				</div>
 			</div>
 		</div>
-		
 		@else
 		<!-- CREATOR DASH
 		============================================================= -->
@@ -201,9 +201,8 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
-<!-- 								<button type="button" class="btn btn-warning btn-lg">Create Job</button>
- -->							</div>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+							</div>
 
 							<div class="col-sm-4">
 								<button type="button" class="btn btn-info btn-lg">Manage Jobs</button>
@@ -288,7 +287,7 @@
 								<tr>
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 									<td> {{ $helper->birth_date }}  </td>
-									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+									<td><button class="btn btn-primary btn-lg modalToggle2" data-helperid="{{{ $helper->id }}}">View</button></td>
 									<td>
 										{{ Form::open(array('action' => array('JobsController@selectHelper', $job->id), 'method' => 'POST')) }}
 	        								{{ Form::hidden('helper_id', $helper->id) }}
@@ -308,30 +307,81 @@
 				</div>
 			</div>
 		</div>
-
-
 		@endif
 
 		<!-- Modal -->
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-		      </div>
-		      <div class="modal-body">
-		        ...
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
-
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Helper Info</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+            		<div class="col-sm-6">
+                        @if($helper->user_pic_path)
+                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
+                        @else
+                            <img id="helperPic" src="/img/user.jpg">
+                        @endif
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h4>First name</h4>
+                            <p id="helperFirst">Test</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>Last name</h4>
+                            <p id="helperLast">Test Last</p>
+                        </div>
+                    </div>
+                    <div class="row">
+						<div class="col-sm-3">
+							<h4>Birth Date</h4>
+						    <p id="helperBirth"> Test</p>
+						</div>
+						<div class="col-sm-3">
+							<h4>Gender</h4>
+							<p id="helperGender">Test Gender</p>
+						</div>
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-sm-12">
+                		<h4>Bio</h4>
+                		<p id="helperBio">Test Bio</p>
+                	</div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-select" data-helperid="">Select</button>
+              </div>
+            </div>
+          </div>
+        </div>
 	</div>
 </div>
 
+@stop
+
+@section('bottomscript')
+
+<script type="text/javascript">
+    $(".modalToggle2").on('click', function() {
+        var helperId = $(this).data('helperid');
+
+        $.get("/helpermodal/" + helperId, {}, function(data) {
+            // set your values from the data object
+            $("#helperFirst").text(data.first_name);
+            $("#helperLast").text(data.last_name);
+            $("#helperBirth").text(data.birth_date);
+            $("#helperGender").text(data.gender);
+            $("#helperBio").text(data.bio);
+            $("#helperPic").text(data.user_pic_path);
+            $("#btn-select").data('helper_id', data.helperid);
+            $("#myModal").modal();
+        });
+    });
 @stop
