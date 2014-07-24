@@ -2,13 +2,13 @@
 
 class UsersController extends \BaseController {
 
-	 public function __construct()
+	public function __construct()
     {
         // call base controller constructor
         parent::__construct();
 
         // run auth filter before all methods on this controller except index and show
-        $this->beforeFilter('auth', array('except' => array('index', 'show')));
+        $this->beforeFilter('auth', array('except' => array('show')));
     } // end __construct
 
 	/**
