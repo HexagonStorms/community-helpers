@@ -10,9 +10,7 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		$users = User::with('')->get();
-		$data = array(
-			'users' => $users
-		);
+
 		return View::make('temp_users.users')->with($data);
 	}
 
@@ -24,6 +22,11 @@ class UsersController extends \BaseController {
 	 */
 	public function create()
 	{
+		$data = [
+			'first_name' => 'Josue',
+			'last_name' => 'Plaza'
+			];
+
 		return View::make('users.create');
 	}
 
@@ -73,7 +76,18 @@ class UsersController extends \BaseController {
 				$user->save();
 			}
 
+			$data = array(
+				'first_name' => $user->first_name,
+				'last_name' => $user->last_name
+			);
+
+			Mail::send('emails.welcome', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', "$user->first_name $user->last_name")->subject('Thank you for registering');
+			});
+
 			Auth::loginUsingId($user->id);
+
 
 			return Redirect::action('UsersController@dashboard_helper', $user->id);
 		}
