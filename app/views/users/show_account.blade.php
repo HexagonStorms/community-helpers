@@ -301,49 +301,51 @@
 		</div>
 
 		<!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              	<div class="modal-header">
-                	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                	<h4 class="modal-title" id="myModalLabel">Summary</h4>
-              	</div>
-              	<div class="modal-body">
-	                <div class="row">
-	                	<div class="row">
-		            		<div class="col-sm-offset-2 col-sm-4">
-		                        @if($helper->user_pic_path)
-		                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
-		                        @else
-		                            <img id="helperPic" src="/img/user.jpg">
-		                        @endif
-		                    </div>
-		                    <div class="col-sm-6">
-		                    	<h4><strong>Name</strong></h4>
-		                    	<p><span id="helperFirst"></span> <span id="helperLast"></span></p>
+		@if ($job->helpers->count() > 0)
+	        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	          <div class="modal-dialog">
+	            <div class="modal-content">
+	              	<div class="modal-header">
+	                	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	                	<h4 class="modal-title" id="myModalLabel">Summary</h4>
+	              	</div>
+	              	<div class="modal-body">
+		                <div class="row">
+		                	<div class="row">
+			            		<div class="col-sm-offset-2 col-sm-4">
+			                        @if($helper->user_pic_path)
+			                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
+			                        @else
+			                            <img id="helperPic" src="/img/user.jpg">
+			                        @endif
+			                    </div>
+			                    <div class="col-sm-6">
+			                    	<h4><strong>Name</strong></h4>
+			                    	<p><span id="helperFirst"></span> <span id="helperLast"></span></p>
 
-		                    	<h4><strong>Age</strong></h4>
-		                    	<p id="helperBirth"></p>
+			                    	<h4><strong>Age</strong></h4>
+			                    	<p id="helperBirth"></p>
 
-		                    	<h4><strong>Gender</strong></h4>
-		                    	<p id="helperGender"></p>
-		                    </div>
+			                    	<h4><strong>Gender</strong></h4>
+			                    	<p id="helperGender"></p>
+			                    </div>
+			                </div>
 		                </div>
+		                <div class="container">
+	                	<div class="col-sm-12">
+	                		<h4><strong>Bio</strong></h4>
+	                		<p id="helperBio"></p>
+	                	</div>
 	                </div>
-	                <div class="container">
-                	<div class="col-sm-12">
-                		<h4><strong>Bio</strong></h4>
-                		<p id="helperBio"></p>
-                	</div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btn-select" data-helperid="" data-jobid="">Select</button>
-              </div>
-            </div>
-          </div>
-        </div>
+	              </div>
+	              <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	                <button type="button" class="btn btn-primary" id="btn-select" data-helperid="" data-jobid="">Select</button>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+        @endif
 		@endif
 	</div>
 </div>
