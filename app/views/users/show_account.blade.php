@@ -281,20 +281,12 @@
 									<th>Helper's Name</th>
 									<th>Birthdate</th>
 									<th>View Helper</th>
-									<th>Select Helper</th>
 								</tr>
 								@foreach ($job->helpers as $helper)
 								<tr>
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 									<td> {{ $helper->birth_date }}  </td>
-									<td><button class="btn btn-primary btn-lg modalToggle2" data-helperid="{{{ $helper->id }}}">View</button></td>
-									<td>
-										{{ Form::open(array('action' => array('JobsController@selectHelper', $job->id), 'method' => 'POST')) }}
-	        								{{ Form::hidden('helper_id', $helper->id) }}
-	            							<button type="submit" class="btn btn-sm btn-danger">Select Helper</button>
-	        							{{ Form::close() }}
-									</td>
-
+									<td><button class="btn btn-primary btn-sm modalToggle2" data-helperid="{{{ $helper->id }}}" data-jobid="{{{ $job->id }}}">View</button></td>
 								</tr>
 								@endforeach
 								@endif
@@ -355,7 +347,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btn-select" data-helperid="">Select</button>
+                <button type="button" class="btn btn-primary" id="btn-select" data-helperid="" data-jobid="">Select</button>
               </div>
             </div>
           </div>
@@ -371,6 +363,7 @@
 <script type="text/javascript">
     $(".modalToggle2").on('click', function() {
         var helperId = $(this).data('helperid');
+        var jobId = $(this).data('jobid');
 
         $.get("/helpermodal/" + helperId, {}, function(data) {
             // set your values from the data object
@@ -380,7 +373,8 @@
             $("#helperGender").text(data.gender);
             $("#helperBio").text(data.bio);
             $("#helperPic").text(data.user_pic_path);
-            $("#btn-select").data('helperId', data.helperid);
+            $("#btn-select").data('helperid', data.helper_id);
+            $("#btn-select").data('jobid', jobId);
             $("#myModal").modal();
         });
     });
@@ -388,9 +382,11 @@
     $("#btn-select").on('click', function() {
 
         var helperId = $(this).data('helperid');
+        var jobId = $(this).data('jobid');
 
         var toSend = {
-            'id': helperId
+            'helper_id': helperId,
+            'job_id': jobId
         }
 
         $.ajax({

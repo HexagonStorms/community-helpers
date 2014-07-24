@@ -48,9 +48,10 @@ Route::post('temp_jobs.show{id}', 'JobsController@apply');
 Route::post('applymodal', 'JobsController@applyModal');
 
 Route::get('modal/{id}', 'JobsController@modal');
-//for givers to select a helper
 
 Route::resource('jobs', 'JobsController');
+
+Route::post('selectmodal', 'JobsController@selectModal');
 
 Route::get('helpermodal/{id}', 'UsersController@modal2');
 

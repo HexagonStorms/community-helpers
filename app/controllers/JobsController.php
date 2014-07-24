@@ -203,4 +203,18 @@ class JobsController extends \BaseController {
 
 	    return Response::json(['success' => true]);
 	}
+
+	public function selectModal() {
+
+		$helper_id = Input::get('helper_id');
+		$selectedHelper = User::findOrFail($helper_id);
+
+		$jobId = Input::get('job_id');
+		$job = Job::findOrFail($jobId);
+
+		$job->helpers()->sync(array($helper_id => array('is_accepted' => true)));
+        Session::flash('successMessage', 'Helper successfully selected');
+
+	    return Response::json(['success' => true]);
+	}
 }
