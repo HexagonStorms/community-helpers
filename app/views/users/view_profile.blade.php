@@ -38,10 +38,10 @@
                                     </li>
                                     @endif
 									<li>
-										<a class="active" href="{{ action('UsersController@edit', $user->id) }}">Edit Profile</a>
+										<a class="active" href="{{ action('UsersController@edit', Auth::user()->id) }}">Edit Profile</a>
 									</li>
 									<li>
-										<a class="active" href="{{ action('UsersController@show', $user->id) }}">View Profile</a>
+										<a class="active" href="{{ action('UsersController@show', Auth::user()->id) }}">View Profile</a>
 									</li>
 								</ul>
 							</div>
@@ -60,7 +60,7 @@
 					<div class="row">
 						<div class="col-sm-6">
 							@if(Auth::user()->user_pic_path)
-								<img src="{{ Auth::user()->user_pic_path }}" class="img-responsive img-circle">
+								<img src="{{ $user->user_pic_path }}" class="img-responsive img-circle">
 							@else
 								<img src="/img/user.jpg">
 							@endif
