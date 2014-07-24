@@ -2,6 +2,15 @@
 
 class UsersController extends \BaseController {
 
+	public function __construct()
+    {
+        // call base controller constructor
+        parent::__construct();
+
+        // run auth filter before all methods on this controller except index and show
+        $this->beforeFilter('auth', array('except' => array('show', 'create', 'store')));
+    } // end __construct
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -10,9 +19,7 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		$users = User::with('')->get();
-		$data = array(
-			'users' => $users
-		);
+
 		return View::make('temp_users.users')->with($data);
 	}
 
@@ -67,13 +74,24 @@ class UsersController extends \BaseController {
 			$user->gender = Input::get('gender');
 			$user->save();
 
-			if (Input::hasFile('image') && Input::file('image')->isValid()){
-
+			if (Input::hasFile('image') && Input::file('image')->isValid())
+			{
 				$user->addUploadImage(Input::file('image'));
 				$user->save();
 			}
 
+			$data = array(
+				'first_name' => "$user->first_name",
+				'last_name' => "$user->last_name"
+			);
+
+			Mail::send('emails.welcome', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'New User')->subject('Thank you for registering');
+			});
+
 			Auth::loginUsingId($user->id);
+
 
 			return Redirect::action('UsersController@dashboard_helper', $user->id);
 		}

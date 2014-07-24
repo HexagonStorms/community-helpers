@@ -66,16 +66,17 @@
 
 				<ul class="nav navbar-nav navbar-right visible-xs">
 					@if(Auth::check())
-					@if(Auth::user()->is_helper == True)
-					<li><a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a></li>
-					@elseif(Auth::user()->is_helper == False)
-					<li><a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Welcome {{ auth::user()->first_name}}</a></li>
-					@endif
-					<li><a href="{{ action('UsersController@show', Auth::id()) }}">My account</a></li>
-					<li><a href="/logout">Logout</a></li>
-					@else
-					<li><a href="/login">Login</a></li>
-					<li><a href="/users/create">Register</a></li>
+						@if(Auth::user()->is_helper == True)
+							<li>Welcome {{ auth::user()->first_name}}</li>
+							<li><a href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Dashboard</a></li>
+						@elseif(Auth::user()->is_helper == False)
+							<li>Welcome {{ auth::user()->first_name}}</li>
+							<li><a href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Dashboard</a></li>
+						@endif
+						<li><a href="/logout">Logout</a></li>
+						@else
+							<li><a href="/login">Login</a></li>
+							<li><a href="/users/create">Register</a></li>
 					@endif
 					<li><a href="/account_ad_create">Listings</a></li>
 				</ul>
