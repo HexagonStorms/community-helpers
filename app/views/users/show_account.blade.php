@@ -313,7 +313,7 @@
 	                	<div class="row">
 		            		<div class="col-sm-offset-2 col-sm-4">
 		                        @if(!Auth::user()->user_pic_path)
-		                            <img id="helperPic" src="{{ $user->user_pic_path }}" class="img-responsive img-circle">
+		                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
 		                        @else
 		                            <img id="helperPic" src="/img/user.jpg">
 		                        @endif
