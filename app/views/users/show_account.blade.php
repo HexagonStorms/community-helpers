@@ -189,7 +189,7 @@
 					<hr />
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
-								<h3 class="text-center">Views this month</h3>
+								<h3 class="text-center">Views this Week</h3>
 								<p>6</p>
 							</div>
 							<div class="col-sm-6 text-center">
@@ -201,7 +201,7 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
 							</div>
 
 							<div class="col-sm-4">
@@ -224,14 +224,14 @@
 
 					<!-- Active Jobs -->
 					<table class="table">
-						<tr>
+						<tr><h1>
 							<th>Category</th>
 							<th>Description</th>
 							<th>Price</th>
 							<th>Due Date</th>
 							<th>Helper's Name</th>
 							<th>View Helper</th>
-
+							</h1>
 						</tr>
 						@foreach ($activeJobs as $job)
 							<tr class="text-center">
