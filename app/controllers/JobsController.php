@@ -91,6 +91,18 @@ class JobsController extends \BaseController {
 		$job = Job::findOrFail($id);
 		Auth::user()->appliedJobs()->attach($job->id, array('is_accepted' => false));
         Session::flash('successMessage', 'Job Application submitted');
+
+		$data = array(
+				'first_name' => "job creator first name",
+				'last_name' => "job creator last creator",
+				'job_listing' => "job applied for"
+			);
+
+        Mail::send('emails.newapplication', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'New Application')->subject('A helper has applied for your job');
+			});
+
         return Redirect::action('UsersController@dashboard_helper', Auth::id());
 	}
 
