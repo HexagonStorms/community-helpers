@@ -193,10 +193,9 @@
                                 <td>${{ $job->price }}</td>
                                 <td>{{ date("d F Y",strtotime($job->required_date)) }}</td>
                                 @if (Auth::check() && Auth::user()->is_helper == TRUE)
-                                    <td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
                                     <td><!-- Button trigger modal -->
-                                    <button class="btn btn-primary btn-lg modalToggle" data-jobid="{{{ $job->id }}}">
-                                      Demo Modal
+                                    <button class="btn btn-primary btn-sm modalToggle" data-jobid="{{{ $job->id }}}">
+                                      View
                                     </button></td>
                                 @elseif (Auth::guest())
                                     <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>
