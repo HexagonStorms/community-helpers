@@ -51,6 +51,8 @@ Route::get('modal/{id}', 'JobsController@modal');
 
 Route::resource('jobs', 'JobsController');
 
+Route::post('selectmodal', 'JobsController@selectModal');
+
 Route::get('helpermodal/{id}', 'UsersController@modal2');
 
 Route::get('users/dashboard_helper/{id}', 'UsersController@dashboard_helper');
