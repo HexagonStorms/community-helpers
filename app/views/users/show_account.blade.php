@@ -307,7 +307,6 @@
 				</div>
 			</div>
 		</div>
-		@endif
 
 		<!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -315,7 +314,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Helper Info</h4>
+                <h4 class="modal-title" id="myModalLabel">Summary</h4>
               </div>
               <div class="modal-body">
                 <div class="row">
@@ -361,6 +360,7 @@
             </div>
           </div>
         </div>
+		@endif
 	</div>
 </div>
 
@@ -380,8 +380,29 @@
             $("#helperGender").text(data.gender);
             $("#helperBio").text(data.bio);
             $("#helperPic").text(data.user_pic_path);
-            $("#btn-select").data('helper_id', data.helperid);
+            $("#btn-select").data('helperId', data.helperid);
             $("#myModal").modal();
         });
     });
+
+    $("#btn-select").on('click', function() {
+
+        var helperId = $(this).data('helperid');
+
+        var toSend = {
+            'id': helperId
+        }
+
+        $.ajax({
+            url: "/selectmodal",
+            type: "POST",
+            data: toSend,
+            dataType: "json",
+            success: function() {
+                $("#myModal").modal('hide');
+                window.location.reload();
+            }
+        });
+    });
+</script>
 @stop
