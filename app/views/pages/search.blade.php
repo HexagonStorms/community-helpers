@@ -176,17 +176,17 @@
                             <tr class="text-center">
                                 <td class="text-center">
                                     @if ( $job->category == 'Indoor')
-                                        <i class="fa fa-home fa-3x"></i></a></li>
+                                        <i class="fa fa-home fa-3x"></i>
                                     @elseif ( $job->category == 'Landscaping')
-                                        <i class="fa fa-tree fa-3x"></i></a></li>
+                                        <i class="fa fa-tree fa-3x"></i>
                                     @elseif ( $job->category == 'Moving')
-                                        <i class="fa fa-truck fa-3x"></i></a></li>
+                                        <i class="fa fa-truck fa-3x"></i>
                                     @elseif ( $job->category == 'Outdoor')
-                                        <i class="fa fa-road fa-3x"></i></a></li>
+                                        <i class="fa fa-road fa-3x"></i>
                                     @elseif ( $job->category == 'Pets')
-                                        <i class="fa fa-paw fa-3x"></i></a></li>
+                                        <i class="fa fa-paw fa-3x"></i>
                                     @elseif ( $job->category == 'Other')
-                                        <i class="fa fa-star fa-3x"></i></a></li>
+                                        <i class="fa fa-star fa-3x"></i>
                                     @endif
                                 </td>
                                 <td>{{ $job->description }}</td>
