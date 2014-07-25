@@ -27,7 +27,16 @@
 					<div class="row">
 						<div class="col-sm-12">
 							{{ Form::label('category', 'Category') }}
-							{{ Form::text('category', null, ['class' => 'form-control', 'placeholder' => 'Category']) }}
+							<select type="date" class="form-control" name="category">
+								<option value="NULL">Choose Category</option>
+								<option value="Indoor">Indoor</option>
+								<option value="Landscaping">Landscaping</option>
+								<option value="Moving">Moving</option>
+								<option value="Outdoor">Outdoor</option>
+								<option value="Pets">Pets</option>
+								<option value="Other">Other</option>
+							</select>
+							
 							{{ $errors->first('category', '<span class="help-block">:message</span>')}}
 						</div>
 					</div>
@@ -52,12 +61,12 @@
 						</div>
 						<div class="col-sm-4">
 							{{ Form::label('required_date', 'Due Date:') }}
-							{{ Form::text('required_date', null, ['class' => 'form-control', 'placeholder' => 'YYYY-MM-DD']) }}
+							<input type="date" class="form-control" name="required_date">
 							{{ $errors->first('required_date', '<span class="help-block">:message</span>')}}
 						</div>
 						<div class="col-sm-4">
 							{{ Form::label('required_time', 'Time:') }}
-							{{ Form::text('required_time', null, ['class' => 'form-control', 'placeholder' => 'HH:MM']) }}
+							<input type="time" class="form-control" name="required_time">
 							{{ $errors->first('required_time', '<span class="help-block">:message</span>')}}
 						</div>
 					</div>
@@ -69,5 +78,20 @@
 		</div>
 	</div>
 </div>
+
+@stop
+
+@section('bottomscript')
+
+@if (isset($job))
+<script>
+
+    var category = '{{ $job->category }}';
+
+   $("select option[value='" + category + "']").attr("selected","selected");
+
+</script>
+
+@endif
 
 @stop

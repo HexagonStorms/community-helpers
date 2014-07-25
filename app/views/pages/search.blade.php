@@ -176,27 +176,26 @@
                             <tr class="text-center">
                                 <td class="text-center">
                                     @if ( $job->category == 'Indoor')
-                                        <i class="fa fa-home fa-3x"></i></a></li>
+                                        <i class="fa fa-home fa-3x"></i>
                                     @elseif ( $job->category == 'Landscaping')
-                                        <i class="fa fa-tree fa-3x"></i></a></li>
+                                        <i class="fa fa-tree fa-3x"></i>
                                     @elseif ( $job->category == 'Moving')
-                                        <i class="fa fa-truck fa-3x"></i></a></li>
+                                        <i class="fa fa-truck fa-3x"></i>
                                     @elseif ( $job->category == 'Outdoor')
-                                        <i class="fa fa-road fa-3x"></i></a></li>
+                                        <i class="fa fa-road fa-3x"></i>
                                     @elseif ( $job->category == 'Pets')
-                                        <i class="fa fa-paw fa-3x"></i></a></li>
+                                        <i class="fa fa-paw fa-3x"></i>
                                     @elseif ( $job->category == 'Other')
-                                        <i class="fa fa-star fa-3x"></i></a></li>
+                                        <i class="fa fa-star fa-3x"></i>
                                     @endif
                                 </td>
                                 <td>{{ $job->description }}</td>
                                 <td>${{ $job->price }}</td>
                                 <td>{{ date("d F Y",strtotime($job->required_date)) }}</td>
                                 @if (Auth::check() && Auth::user()->is_helper == TRUE)
-                                    <td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-warning btn-md">Apply</a></td>
                                     <td><!-- Button trigger modal -->
-                                    <button class="btn btn-primary btn-lg modalToggle" data-jobid="{{{ $job->id }}}">
-                                      Demo Modal
+                                    <button class="btn btn-primary btn-sm modalToggle" data-jobid="{{{ $job->id }}}">
+                                      View
                                     </button></td>
                                 @elseif (Auth::guest())
                                     <td><a href="{{ action('HomeController@showLogin') }}" class="btn btn-warning btn-md">View</a></td>

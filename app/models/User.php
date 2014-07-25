@@ -4,6 +4,7 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
+use Carbon\Carbon;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
@@ -37,6 +38,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		'gender'=> 'max:1'
     ];
 
+
+    public function getDates() {
+      return array('created_at', 'updated_at', 'birth_date');
+    }
 
     public function addUploadImage($image)
     {
@@ -117,6 +122,34 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted');
     }
+
+  public static function appliedJobsIds()
+  {
+    // $activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
+    // {
+    //     $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
+    //          ->where ('jobs.user_id', '=', Auth::user()->id)
+    //          ->select('helpers_jobs_mapping.user_id');
+    // })
+    // ->lists('id');
+    // return $activeJobIds;
+
+      $activeJobIds = DB::table('jobs')
+        ->where('jobs.user_id', '=', Auth::user()->id)
+        ->join('helpers_jobs_mapping', 'helpers_jobs_mapping.job_id', '=', 'jobs.id')
+        ->select('helpers_jobs_mapping.user_id')
+        ->distinct()
+        ->get();
+
+      $jobIdArray = array();
+
+      foreach($activeJobIds as $job)
+      {
+        $jobIdArray[] = $job->user_id;
+      }
+      
+      return $jobIdArray;
+  }
 
 
 	public function setStateAttribute ($value)

@@ -16,6 +16,15 @@
                                 My account
                             </div>
                             <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-6">
+                                        @if(Auth::user()->user_pic_path)
+                                            <img src="{{ Auth::user()->user_pic_path }}" class="">
+                                        @else
+                                            <img src="/img/user.jpg">
+                                        @endif
+                                    </div>
+                                </div>
                                 <ul class="nav">
                                     <li>
                                         <a class="active" href="/../account_settings">Account Settings</a>
@@ -60,7 +69,7 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <select name="is_helper" class="form-control">
-                                                    <option value="NULL">Choose Account Type</option>
+                                                    <option value="{{ Auth::user()->is_helper }}">Choose Account Type</option>
                                                     <option value="0">Giver / Looking for help</option>
                                                     <option value="1">Helper with parent</option>
                                                     {{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
@@ -142,8 +151,8 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-control" name="state">
-                                                    <option value="NULL">Choose State</option>
+                                                <select class="form-control" name="state" id="state">
+                                                    <option value="{{ Auth::user()->state }}">Choose State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
                                                     <option value="AZ">Arizona</option>
@@ -195,8 +204,8 @@
                                                     <option value="WV">West Virginia</option>
                                                     <option value="WI">Wisconsin</option>
                                                     <option value="WY">Wyoming</option>
-                                                </select> 
-                                                {{ $errors->first('state', '<span class="help-block">:message</span>')}}              
+                                                </select>
+                                                {{ $errors->first('state', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
 
@@ -206,11 +215,11 @@
                                                 {{ $errors->first('zip', '<span class="help-block">:message</span>')}}
                                             </div>
                                         </div>
-                                    </div> 		  
-                                    
+                                    </div>
+
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            
+
                                             {{ Form::submit('Update', ['class' => 'margin-save btn btn-primary btn-lg']) }}
                                         </div>
                                     </div>
@@ -223,5 +232,21 @@
         </div>
     </div>
 </div>
+
+@stop
+
+@section('bottomscript')
+
+<script>
+
+    var state = '{{ $user->state }}';
+
+   $("select option[value='" + state + "']").attr("selected","selected");
+
+   var acctype = '{{ $user->is_helper }}'
+
+   $("select option[value='" + acctype + "']").attr("selected","selected");
+
+</script>
 
 @stop

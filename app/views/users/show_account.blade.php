@@ -113,7 +113,21 @@
 						<tr class="text-center">
 							@foreach ($activeJobs as $job)
 								<tr class="text-center">
-									<td>{{ $job->category }}</td>
+									<td class="text-center">
+		                                @if ( $job->category == 'Indoor')
+		                                    <i class="fa fa-home fa-3x"></i>
+		                                @elseif ( $job->category == 'Landscaping')
+		                                    <i class="fa fa-tree fa-3x"></i>
+		                                @elseif ( $job->category == 'Moving')
+		                                    <i class="fa fa-truck fa-3x"></i>
+		                                @elseif ( $job->category == 'Outdoor')
+		                                    <i class="fa fa-road fa-3x"></i>
+		                                @elseif ( $job->category == 'Pets')
+		                                    <i class="fa fa-paw fa-3x"></i>
+		                                @elseif ( $job->category == 'Other')
+		                                    <i class="fa fa-star fa-3x"></i>
+		                                @endif
+                               		</td>
 									<td>{{ $job->description }}</td>
 									<td>${{ $job->price }}</td>
 									<td>{{ $job->creator->first_name }} {{ $job->creator->last_name }}</td>
@@ -143,7 +157,6 @@
 							<th class="text-center">Category</th>
 							<th class="text-center">Description</th>
 							<th class="text-center">Price</th>
-							<th class="text-center">Address</th>
 							<th class="text-center">Due Date</th>
 							<th class="text-center">Action</th>
 						</tr>
@@ -151,10 +164,23 @@
 						@foreach ($appliedJobs as $job)
 							<tr class="text-center">
 
-								<td>{{ $job->category }}</td>
+								<td class="text-center">
+	                                @if ( $job->category == 'Indoor')
+	                                    <i class="fa fa-home fa-3x"></i>
+	                                @elseif ( $job->category == 'Landscaping')
+	                                    <i class="fa fa-tree fa-3x"></i>
+	                                @elseif ( $job->category == 'Moving')
+	                                    <i class="fa fa-truck fa-3x"></i>
+	                                @elseif ( $job->category == 'Outdoor')
+	                                    <i class="fa fa-road fa-3x"></i>
+	                                @elseif ( $job->category == 'Pets')
+	                                    <i class="fa fa-paw fa-3x"></i>
+	                                @elseif ( $job->category == 'Other')
+	                                    <i class="fa fa-star fa-3x"></i>
+	                                @endif
+                           		</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
-								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-primary btn-md">Review</a></td>
 							</tr>
@@ -189,7 +215,7 @@
 					<hr />
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
-								<h3 class="text-center">Views this month</h3>
+								<h3 class="text-center">Views this Week</h3>
 								<p>6</p>
 							</div>
 							<div class="col-sm-6 text-center">
@@ -201,7 +227,7 @@
 					<div class="row">
 						<div class="col-centered">
 							<div class="col-sm-4">
-								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-md">Create Job</a>
+								<a href="{{ action('JobsController@create') }}" class="btn btn-warning btn-lg">Create Job</a>
 							</div>
 
 							<div class="col-sm-4">
@@ -224,34 +250,48 @@
 
 					<!-- Active Jobs -->
 					<table class="table">
-						<tr>
+						<tr><h1>
 							<th>Category</th>
 							<th>Description</th>
 							<th>Price</th>
 							<th>Due Date</th>
 							<th>Helper's Name</th>
 							<th>View Helper</th>
-
+							</h1>
 						</tr>
 						@foreach ($activeJobs as $job)
 							<tr class="text-center">
-								<td>{{ $job->category }}</td>
+								<td class="text-center">
+	                                @if ( $job->category == 'Indoor')
+	                                    <i class="fa fa-home fa-3x"></i>
+	                                @elseif ( $job->category == 'Landscaping')
+	                                    <i class="fa fa-tree fa-3x"></i>
+	                                @elseif ( $job->category == 'Moving')
+	                                    <i class="fa fa-truck fa-3x"></i>
+	                                @elseif ( $job->category == 'Outdoor')
+	                                    <i class="fa fa-road fa-3x"></i>
+	                                @elseif ( $job->category == 'Pets')
+	                                    <i class="fa fa-paw fa-3x"></i>
+	                                @elseif ( $job->category == 'Other')
+	                                    <i class="fa fa-star fa-3x"></i>
+	                                @endif
+                           		</td>
 								<td>{{ $job->description }}</td>
 								<td>${{ $job->price }}</td>
 								<td>{{ $job->required_date }}</td>
 								@foreach ($job->helpers as $helper)
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-md">View</a></td>
+									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-sm">View</a></td>
 								@endforeach
 							</tr>
 						@endforeach
 					</table>
-
-					<div class="text-center">{{ $jobs->links() }}</div>
+					@if (!empty($jobs))
+						<div class="text-center">{{ $jobs->links() }}</div>
+					@endif
 				</div>
 			</div>
 		</div>
-
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Jobs Created</div>
@@ -269,23 +309,37 @@
 									<th>Actions</th>
 
 								</tr>
-								<tr class="text-center">
-									<td>{{ $job->category }}</td>
+								<tr>
+									<td>
+		                                @if ( $job->category == 'Indoor')
+		                                    <i class="fa fa-home fa-3x"></i>
+		                                @elseif ( $job->category == 'Landscaping')
+		                                    <i class="fa fa-tree fa-3x"></i>
+		                                @elseif ( $job->category == 'Moving')
+		                                    <i class="fa fa-truck fa-3x"></i>
+		                                @elseif ( $job->category == 'Outdoor')
+		                                    <i class="fa fa-road fa-3x"></i>
+		                                @elseif ( $job->category == 'Pets')
+		                                    <i class="fa fa-paw fa-3x"></i>
+		                                @elseif ( $job->category == 'Other')
+		                                    <i class="fa fa-star fa-3x"></i>
+		                                @endif
+                               		</td>
 									<td>{{ $job->description }}</td>
 									<td>${{ $job->price }}</td>
 									<td>{{ $job->required_date }}</td>
-									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-md">Edit</a></td>
+									<td><a href="{{ action('JobsController@edit', $job->id) }}" class="btn btn-warning btn-sm">Edit</a></td>
 								</tr>
 								@if ($job->helpers->count() > 0)
 								<tr>
 									<th>Helper's Name</th>
-									<th>Birthdate</th>
+									<th>Age</th>
 									<th>View Helper</th>
 								</tr>
 								@foreach ($job->helpers as $helper)
 								<tr>
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-									<td> {{ $helper->birth_date }}  </td>
+									<td> {{ $helper->birth_date->age }}  </td>
 									<td><button class="btn btn-primary btn-sm modalToggle2" data-helperid="{{{ $helper->id }}}" data-jobid="{{{ $job->id }}}">View</button></td>
 								</tr>
 								@endforeach
@@ -301,47 +355,45 @@
 		</div>
 
 		<!-- Modal -->
+		@if (isset($jobs) && isset($helper))
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Summary</h4>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-            		<div class="col-sm-6">
-                        @if($helper->user_pic_path)
-                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
-                        @else
-                            <img id="helperPic" src="/img/user.jpg">
-                        @endif
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h4>First name</h4>
-                            <p id="helperFirst">Test</p>
-                        </div>
-                        <div class="col-sm-3">
-                            <h4>Last name</h4>
-                            <p id="helperLast">Test Last</p>
-                        </div>
-                    </div>
-                    <div class="row">
-						<div class="col-sm-3">
-							<h4>Birth Date</h4>
-						    <p id="helperBirth"> Test</p>
-						</div>
-						<div class="col-sm-3">
-							<h4>Gender</h4>
-							<p id="helperGender">Test Gender</p>
-						</div>
-                    </div>
-                </div>
-                <div class="row">
-                	<div class="col-sm-12">
-                		<h4>Bio</h4>
-                		<p id="helperBio">Test Bio</p>
+              	<div class="modal-header">
+                	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                	<h4 class="modal-title" id="myModalLabel">Summary</h4>
+              	</div>
+              	<div class="modal-body">
+	                <div class="row">
+	                	<div class="row">
+		            		<div class="col-sm-offset-2 col-sm-4">
+		                        @if($helper->user_pic_path)
+		                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
+		                        @else
+		                            <img id="helperPic" src="/img/user.jpg">
+		                        @endif
+		                    </div>
+		                    <div class="col-sm-6">
+		                    	<h4><strong>Name</strong></h4>
+		                    	<p><span id="helperFirst"></span> <span id="helperLast"></span></p>
+
+		                    	<h4><strong>Age</strong></h4>
+		                    	<p id="helperBirth"></p>
+		                    	@if (isset($helper->gender))
+		                    	<h4><strong>Gender</strong></h4>
+		                    	<p id="helperGender"></p>
+		                    	@endif
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="container">
+                	<div class="col-sm-6">
+                		<h4><strong>Bio</strong></h4>
+                		@if (!isset($helper->bio))
+                		<p>Hi my name is {{ $helper->first_name }}.  I am exicted to show you I can do.  I work hard, love getting things done and I am here to help.  Please feel free to select me for any job you need.</p>
+                		@else
+                		<p id="helperBio"></p>
+                		@endif
                 	</div>
                 </div>
               </div>
@@ -353,6 +405,7 @@
           </div>
         </div>
 		@endif
+	@endif
 	</div>
 </div>
 
@@ -379,7 +432,7 @@
         });
     });
 
-    $("#btn-select").on('click', function() {
+	$("#btn-select").on('click', function() {
 
         var helperId = $(this).data('helperid');
         var jobId = $(this).data('jobid');
@@ -389,16 +442,16 @@
             'job_id': jobId
         }
 
-        $.ajax({
-            url: "/selectmodal",
-            type: "POST",
-            data: toSend,
-            dataType: "json",
-            success: function() {
-                $("#myModal").modal('hide');
-                window.location.reload();
-            }
-        });
-    });
+       $.ajax({
+           url: "/selectmodal",
+           type: "POST",
+           data: toSend,
+           dataType: "json",
+           success: function() {
+               $("#myModal").modal('hide');
+               window.location.reload();
+           }
+       });
+   });
 </script>
 @stop

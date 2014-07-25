@@ -91,6 +91,19 @@ class JobsController extends \BaseController {
 		$job = Job::findOrFail($id);
 		Auth::user()->appliedJobs()->attach($job->id, array('is_accepted' => false));
         Session::flash('successMessage', 'Job Application submitted');
+
+        // Email to creator
+		$data = array(
+				'first_name' => "job creator first name",
+				'last_name' => "job creator last creator",
+				'job_listing' => "job applied for"
+			);
+
+        Mail::send('emails.newapplication', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'New Application')->subject('A helper has applied for your job');
+			});
+
         return Redirect::action('UsersController@dashboard_helper', Auth::id());
 	}
 
@@ -110,6 +123,19 @@ class JobsController extends \BaseController {
 
 		$job->helpers()->sync(array($helper_id => array('is_accepted' => true)));
         Session::flash('successMessage', 'Helper successfully selected');
+
+        // Email to helper
+        $data = array(
+				'first_name' => "job creator first name",
+				'last_name' => "job creator last creator",
+				'job_listing' => "job applied for"
+			);
+
+        Mail::send('emails.selecthelper', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'Application Accepted')->subject('You have been selected for a job!');
+			});
+
         return Redirect::action('UsersController@dashboard_creator', Auth::id());
 	}
 
@@ -201,6 +227,18 @@ class JobsController extends \BaseController {
 		$job = Job::findOrFail($id);
 		Auth::user()->appliedJobs()->attach($job->id, array('is_accepted' => false));
 
+		// Email to creator
+		$data = array(
+				'first_name' => "job creator first name",
+				'last_name' => "job creator last creator",
+				'job_listing' => "job applied for"
+			);
+
+        Mail::send('emails.newapplication', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'New Application')->subject('A helper has applied for your job');
+			});
+
 	    return Response::json(['success' => true]);
 	}
 
@@ -214,6 +252,18 @@ class JobsController extends \BaseController {
 
 		$job->helpers()->sync(array($helper_id => array('is_accepted' => true)));
         Session::flash('successMessage', 'Helper successfully selected');
+
+        // Email to helper
+        $data = array(
+			'first_name' => "job creator first name",
+			'last_name' => "job creator last creator",
+			'job_listing' => "job applied for"
+		);
+
+        Mail::send('emails.selecthelper', $data, function($message)
+		{
+  			$message->to('josueplazamusic@gmail.com', 'Application Accepted')->subject('You have been selected for a job!');
+		});
 
 	    return Response::json(['success' => true]);
 	}

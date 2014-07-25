@@ -9,6 +9,7 @@ class UsersController extends \BaseController {
 
         // run auth filter before all methods on this controller except index and show
         $this->beforeFilter('auth', array('except' => array('show', 'create', 'store')));
+        $this->beforeFilter('canViewUser', array('only' => array('show')));
     } // end __construct
 
 	/**
@@ -19,9 +20,7 @@ class UsersController extends \BaseController {
 	public function index()
 	{
 		$users = User::with('')->get();
-		$data = array(
-			'users' => $users
-		);
+
 		return View::make('temp_users.users')->with($data);
 	}
 
@@ -76,13 +75,24 @@ class UsersController extends \BaseController {
 			$user->gender = Input::get('gender');
 			$user->save();
 
-			if (Input::hasFile('image') && Input::file('image')->isValid()){
-
+			if (Input::hasFile('image') && Input::file('image')->isValid())
+			{
 				$user->addUploadImage(Input::file('image'));
 				$user->save();
 			}
 
+			$data = array(
+				'first_name' => "$user->first_name",
+				'last_name' => "$user->last_name"
+			);
+
+			Mail::send('emails.welcome', $data, function($message)
+			{
+	  			$message->to('josueplazamusic@gmail.com', 'New User')->subject('Thank you for registering');
+			});
+
 			Auth::loginUsingId($user->id);
+
 
 			return Redirect::action('UsersController@dashboard_helper', $user->id);
 		}
@@ -187,19 +197,16 @@ class UsersController extends \BaseController {
 		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
         {
             $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
-                 ->where('helpers_jobs_mapping.is_accepted', '=', 1);
+                 ->where('helpers_jobs_mapping.is_accepted', '=', 1)
+                 ->where ('jobs.user_id', '=', Auth::user()->id);
         })
         ->lists('id');
 
-        if (!empty($activeJobIds)) {
+        if (!empty($activeJobIds) && Auth::user()->createdJobs()  ) {
         	$activeJobs = Job::whereIn('id', $activeJobIds)->get();
         } else {
         	$activeJobs = [];
         }
-
-		//Ben
-		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
-		//$appliedJobs = $query->get();
 
 		if (Auth::user()->createdJobs()->count() > 0) {
 			$query = Auth::user()->createdJobs();
@@ -270,7 +277,14 @@ class UsersController extends \BaseController {
 			$user->state = Input::get('state');
 			$user->zip = Input::get('zip');
 			$user->bio = Input::get('bio');
-			$user->user_pic_path = Input::get('user_pic_path');
+			if (isset(Auth::user()->user_pic_path)) {
+				if (Input::hasFile('image'))
+				{
+				    $user->user_pic_path = Input::get('user_pic_path');
+				}
+			} else {
+				$user->user_pic_path = Input::get('user_pic_path');
+			}
 			$user->parent_email = Input::get('parent_email');
 			$user->parent_phone = Input::get('parent_phone');
 			$user->parent_first_name = Input::get('parent_first_name');
@@ -311,7 +325,7 @@ class UsersController extends \BaseController {
 		$array = [
 			'first_name' => $helper->first_name,
 			'last_name' => $helper->last_name,
-			'birth_date' => $helper->birth_date,
+			'birth_date' => $helper->birth_date->age,
 			'gender' => $helper->gender,
 			'bio' => $helper->bio,
 			'user_pic_path' => $helper->user_pic_path,

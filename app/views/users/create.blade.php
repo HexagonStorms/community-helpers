@@ -35,9 +35,8 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="form-group">
-										{{ Form::text('birth_date', null, ['class' => 'form-control', 'placeholder' => 'Birth Date: YYYY-MM-DD']) }}
+										<input type="date" class="form-control" name="birth_date">
 										{{ $errors->first('birth_date', '<span class="help-block">:message</span>')}}
 									</div>
 									<div class="form-group">

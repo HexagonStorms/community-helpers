@@ -17,14 +17,20 @@
                                     <li>
                                         <a class="active" href="account_settings">Account Settings</a>
                                     </li>
+                                    @if(Auth::user()->is_helper == TRUE)
                                     <li>
-                                        <a class="active" href="account_dashboard">Dashboard</a>
-                                    </li>                       
-                                    <li>    
-                                        <a class="active" href="account_profile">Edit Profile</a>
+                                        <a class="active" href="{{ action('UsersController@dashboard_helper', Auth::id()) }}">Dashboard</a>
                                     </li>
-                                    <li>    
-                                        <a class="active" href="#">View Profile</a>
+                                    @elseif(Auth::user()->is_helper == FALSE)
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@dashboard_creator', Auth::id()) }}">Dashboard</a>
+                                    </li>
+                                    @endif                      
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@edit', Auth::id()) }}">Edit Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="active" href="{{ action('UsersController@show', Auth::id()) }}">View Profile</a>
                                     </li>
                                 </ul>
 
