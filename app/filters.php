@@ -51,7 +51,8 @@ Route::filter('auth', function()
 Route::filter('canViewUser', function() {
 	$userId = Request::segment(2);
 	$ids = Auth::user()->appliedJobsIds();
-	var_dump($ids);
+	// var_dump($ids);
+	// exit();
 
 	if(Auth::user()->id == $userId || (Auth::user()->is_helper == 0 && in_array($userId, $ids)))
 	{
