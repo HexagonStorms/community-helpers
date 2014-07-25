@@ -311,8 +311,8 @@
 									<th>Actions</th>
 
 								</tr>
-								<tr class="text-center">
-									<td class="text-center">
+								<tr>
+									<td>
 		                                @if ( $job->category == 'Indoor')
 		                                    <i class="fa fa-home fa-3x"></i>
 		                                @elseif ( $job->category == 'Landscaping')
