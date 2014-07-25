@@ -281,7 +281,14 @@ class UsersController extends \BaseController {
 			$user->state = Input::get('state');
 			$user->zip = Input::get('zip');
 			$user->bio = Input::get('bio');
-			$user->user_pic_path = Input::get('user_pic_path');
+			if (isset(Auth::user()->user_pic_path)) {
+				if (Input::hasFile('image'))
+				{
+				    $user->user_pic_path = Input::get('user_pic_path');
+				}
+			} else {
+				$user->user_pic_path = Input::get('user_pic_path');
+			}
 			$user->parent_email = Input::get('parent_email');
 			$user->parent_phone = Input::get('parent_phone');
 			$user->parent_first_name = Input::get('parent_first_name');
