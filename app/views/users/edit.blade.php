@@ -16,6 +16,15 @@
                                 My account
                             </div>
                             <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-offset-2 col-md-6">
+                                        @if(Auth::user()->user_pic_path)
+                                            <img src="{{ Auth::user()->user_pic_path }}" class="">
+                                        @else
+                                            <img src="/img/user.jpg">
+                                        @endif
+                                    </div>
+                                </div>
                                 <ul class="nav">
                                     <li>
                                         <a class="active" href="/../account_settings">Account Settings</a>
@@ -60,7 +69,7 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <select name="is_helper" class="form-control">
-                                                    <option value="NULL">Choose Account Type</option>
+                                                    <option value="{{ Auth::user()->is_helper }}">Choose Account Type</option>
                                                     <option value="0">Giver / Looking for help</option>
                                                     <option value="1">Helper with parent</option>
                                                     {{ $errors->first('is_helper', '<span class="help-block">:message</span>')}}
@@ -142,8 +151,8 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-control" name="state">
-                                                    <option value="NULL">Choose State</option>
+                                                <select class="form-control" name="state" id="state">
+                                                    <option value="{{ Auth::user()->state }}">Choose State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
                                                     <option value="AZ">Arizona</option>
