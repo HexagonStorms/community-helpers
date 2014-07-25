@@ -187,7 +187,7 @@
                                                     <option value="SC">South Carolina</option>
                                                     <option value="SD">South Dakota</option>
                                                     <option value="TN">Tennessee</option>
-                                                    <option value="TX" selected>Texas</option>
+                                                    <option value="TX">Texas</option>
                                                     <option value="UT">Utah</option>
                                                     <option value="VT">Vermont</option>
                                                     <option value="VA">Virginia</option>
@@ -228,7 +228,18 @@
 
 @section('bottomscript')
 
+<script>
 
-$('option').attr('selected')
+    var state = '{{ $user->state }}';
+
+   $("select option[value='" + state + "']").attr("selected","selected");
+
+   var acctype = '{{ $user->is_helper }}'
+
+   $("select option[value='" + acctype + "']").attr("selected","selected");
+
+
+
+</script>
 
 @stop
