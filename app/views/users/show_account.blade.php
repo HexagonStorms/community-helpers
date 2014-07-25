@@ -246,8 +246,9 @@
 							</tr>
 						@endforeach
 					</table>
-
-					<div class="text-center">{{ $jobs->links() }}</div>
+					@if (!empty($jobs))
+						<div class="text-center">{{ $jobs->links() }}</div>
+					@endif
 				</div>
 			</div>
 		</div>
@@ -301,6 +302,7 @@
 		</div>
 
 		<!-- Modal -->
+		@if (!empty($jobs) && ($job->helpers->count() > 0) )
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -345,6 +347,7 @@
           </div>
         </div>
 		@endif
+	@endif
 	</div>
 </div>
 

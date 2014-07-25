@@ -196,11 +196,12 @@ class UsersController extends \BaseController {
 		$activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
         {
             $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
-                 ->where('helpers_jobs_mapping.is_accepted', '=', 1);
+                 ->where('helpers_jobs_mapping.is_accepted', '=', 1)
+                 ->where ('jobs.user_id', '=', Auth::user()->id);
         })
         ->lists('id');
 
-        if (!empty($activeJobIds)) {
+        if (!empty($activeJobIds) && Auth::user()->createdJobs()  ) {
         	$activeJobs = Job::whereIn('id', $activeJobIds)->get();
         } else {
         	$activeJobs = [];
