@@ -9,6 +9,7 @@ class UsersController extends \BaseController {
 
         // run auth filter before all methods on this controller except index and show
         $this->beforeFilter('auth', array('except' => array('show', 'create', 'store')));
+        $this->beforeFilter('canViewUser', array('only' => array('show')));
     } // end __construct
 
 	/**
