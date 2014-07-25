@@ -7,7 +7,7 @@ class JobsController extends \BaseController {
         // call base controller constructor
         parent::__construct();
 
-        // run auth filter before all methods on this controller except index and show
+        // run auth filter before all methods on this controller except index
         $this->beforeFilter('auth', array('except' => array('index')));
     } // end __construct
 

@@ -2,6 +2,15 @@
 
 class ReviewsController extends \BaseController {
 
+	public function __construct()
+    {
+        // call base controller constructor
+        parent::__construct();
+
+        // run auth filter before all methods on this controller except index
+        $this->beforeFilter('auth', array('except' => array('index')));
+    } // end __construct
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -126,15 +135,6 @@ class ReviewsController extends \BaseController {
 	public function destroy($id)
 	{
 		$review = Review::findorFail($id);
-        // if ($post->canManagePost() )
-        // {
-		//$job->users()->detach($id);
-
-		//$job->review->each(function($review_model) {
-		//	$review_model->delete();
-		//});
-
-		//$job->detach($id);
         $review->delete();
         Session::flash('successMessage', 'Post successfully deleted');
         return Redirect::action('ReviewsController@index');
