@@ -80,3 +80,15 @@
 </div>
 
 @stop
+
+@section('bottomscript')
+
+<script>
+
+    var category = '{{ $job->category }}';
+
+   $("select option[value='" + category + "']").attr("selected","selected");
+
+</script>
+
+@stop

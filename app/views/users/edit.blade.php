@@ -234,3 +234,19 @@
 </div>
 
 @stop
+
+@section('bottomscript')
+
+<script>
+
+    var state = '{{ $user->state }}';
+
+   $("select option[value='" + state + "']").attr("selected","selected");
+
+   var acctype = '{{ $user->is_helper }}'
+
+   $("select option[value='" + acctype + "']").attr("selected","selected");
+
+</script>
+
+@stop
