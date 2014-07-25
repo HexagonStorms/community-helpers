@@ -155,7 +155,77 @@
 
 						@foreach ($reviews as $review)
 						<tr>
-							<td>{{ $review->job->category }}</td>
+							<td class="text-center">
+                                @if ( $review->job->category == 'Indoor')
+                                    <i class="fa fa-home fa-3x"></i>
+                                @elseif ( $review->job->category == 'Landscaping')
+                                    <i class="fa fa-tree fa-3x"></i>
+                                @elseif ( $review->job->category == 'Moving')
+                                    <i class="fa fa-truck fa-3x"></i>
+                                @elseif ( $review->job->category == 'Outdoor')
+                                    <i class="fa fa-road fa-3x"></i>
+                                @elseif ( $review->job->category == 'Pets')
+                                    <i class="fa fa-paw fa-3x"></i>
+                                @elseif ( $review->job->category == 'Other')
+                                    <i class="fa fa-star fa-3x"></i>
+                                @endif
+                            </td>
+							<td>{{ $review->job->description }}</td>
+							<td class="text-center">
+								<class="col-sm-2">
+								@if ($review->rating == 5)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+               					@elseif ($review->rating == 4)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@elseif ($review->rating == 3)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@elseif ($review->rating == 2)
+                    				{{ '<i class="fa fa-star"></i>'}}{{ '<i class="fa fa-star"></i>'}}
+                				@else 
+                    				{{ '<i class="fa fa-star"></i>'}}
+                				@endif
+                				</div>
+                			</td>
+							<td>{{ $review->comment }}</td>
+						</tr>
+           				@endforeach
+
+					</table>
+				</div>
+			</div>
+
+		@elseif (Auth::user()->is_helper == TRUE && Auth::user()->id == $user->id)
+		<!-- Reviews -->
+			<div class="panel panel-default">
+				<div class="panel-heading">Reviews</div>
+				<div class="panel-body">
+
+
+					<table class="table">
+						<tr>
+							<th>Category</th>
+							<th>Description</th>
+							<th>Rating</th>
+							<th>Comments</th>
+						</tr>
+
+						@foreach ($reviews as $review)
+						<tr>
+							<td class="text-center">
+                                @if ( $review->job->category == 'Indoor')
+                                    <i class="fa fa-home fa-3x"></i>
+                                @elseif ( $review->job->category == 'Landscaping')
+                                    <i class="fa fa-tree fa-3x"></i>
+                                @elseif ( $review->job->category == 'Moving')
+                                    <i class="fa fa-truck fa-3x"></i>
+                                @elseif ( $review->job->category == 'Outdoor')
+                                    <i class="fa fa-road fa-3x"></i>
+                                @elseif ( $review->job->category == 'Pets')
+                                    <i class="fa fa-paw fa-3x"></i>
+                                @elseif ( $review->job->category == 'Other')
+                                    <i class="fa fa-star fa-3x"></i>
+                                @endif
+                            </td>
 							<td>{{ $review->job->description }}</td>
 							<td class="text-center">
 								<class="col-sm-2">
