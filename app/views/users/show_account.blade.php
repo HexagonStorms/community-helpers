@@ -157,7 +157,6 @@
 							<th class="text-center">Category</th>
 							<th class="text-center">Description</th>
 							<th class="text-center">Price</th>
-							<th class="text-center">Address</th>
 							<th class="text-center">Due Date</th>
 							<th class="text-center">Action</th>
 						</tr>
@@ -182,7 +181,6 @@
                            		</td>
 								<td>{{ $job->description }}</td>
 								<td>{{ $job->price }}</td>
-								<td>{{ $job->creator->street }}</td>
 								<td>{{ $job->required_date }}</td>
 								<td><a href="{{ action('JobsController@show', $job->id) }}" class="btn btn-primary btn-md">Review</a></td>
 							</tr>
@@ -335,13 +333,13 @@
 								@if ($job->helpers->count() > 0)
 								<tr>
 									<th>Helper's Name</th>
-									<th>Birthdate</th>
+									<th>Age</th>
 									<th>View Helper</th>
 								</tr>
 								@foreach ($job->helpers as $helper)
 								<tr>
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
-									<td> {{ $helper->birth_date }}  </td>
+									<td> {{ $helper->birth_date->age }}  </td>
 									<td><button class="btn btn-primary btn-sm modalToggle2" data-helperid="{{{ $helper->id }}}" data-jobid="{{{ $job->id }}}">View</button></td>
 								</tr>
 								@endforeach

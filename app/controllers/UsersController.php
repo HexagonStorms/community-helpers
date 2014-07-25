@@ -329,7 +329,7 @@ class UsersController extends \BaseController {
 		$array = [
 			'first_name' => $helper->first_name,
 			'last_name' => $helper->last_name,
-			'birth_date' => $helper->birth_date,
+			'birth_date' => $helper->birth_date->age,
 			'gender' => $helper->gender,
 			'bio' => $helper->bio,
 			'user_pic_path' => $helper->user_pic_path,
