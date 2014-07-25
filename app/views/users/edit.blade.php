@@ -238,8 +238,6 @@
 
    $("select option[value='" + acctype + "']").attr("selected","selected");
 
-
-
 </script>
 
 @stop
