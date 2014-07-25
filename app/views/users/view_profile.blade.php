@@ -85,8 +85,14 @@
 						</div>
 
 						<div class="col-sm-6">
-							<h4>Birth Date</h4>
-						   <p>{{{ $user->birth_date }}}</p>
+							<? if (auth::user()->is_helper == 0) : ?>
+								<h4>Age</h4>
+								{{{ $user->birth_date->age }}}
+							<? else : ?>
+								<h4>Age</h4>
+								{{{ $user->birth_date->age }}}
+							<? endif; ?>
+
 						</div>
 					</div>
 					</div>
