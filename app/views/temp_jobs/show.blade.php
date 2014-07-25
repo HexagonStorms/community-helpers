@@ -68,11 +68,6 @@
                     {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                     {{ Form::close() }}
-                @else
-                    <!-- For helper to apply for job -->
-                    {{ Form::open(array('action' => array('JobsController@apply', $job->id), 'method' => 'POST')) }}
-                        <button type="submit" class="btn btn-sm btn-warning">Apply</button>
-                    {{ Form::close() }}
                 @endif
 
             </div>
