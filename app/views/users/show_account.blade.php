@@ -294,7 +294,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">Jobs Created</div>
@@ -312,8 +311,8 @@
 									<th>Actions</th>
 
 								</tr>
-								<tr class="text-center">
-									<td class="text-center">
+								<tr>
+									<td>
 		                                @if ( $job->category == 'Indoor')
 		                                    <i class="fa fa-home fa-3x"></i>
 		                                @elseif ( $job->category == 'Landscaping')
@@ -382,16 +381,21 @@
 
 		                    	<h4><strong>Age</strong></h4>
 		                    	<p id="helperBirth"></p>
-
+		                    	@if (isset($helper->gender))
 		                    	<h4><strong>Gender</strong></h4>
 		                    	<p id="helperGender"></p>
+		                    	@endif
 		                    </div>
 		                </div>
 	                </div>
 	                <div class="container">
-                	<div class="col-sm-12">
+                	<div class="col-sm-6">
                 		<h4><strong>Bio</strong></h4>
+                		@if (!isset($helper->bio))
+                		<p>Hi my name is {{ $helper->first_name }}.  I am exicted to show you I can do.  I work hard, love getting things done and I am here to help.  Please feel free to select me for any job you need.</p>
+                		@else
                 		<p id="helperBio"></p>
+                		@endif
                 	</div>
                 </div>
               </div>
