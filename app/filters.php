@@ -48,6 +48,21 @@ Route::filter('auth', function()
 	}
 });
 
+Route::filter('canViewUser', function() {
+	$userId = Request::segment(2);
+	$ids = Auth::user()->appliedJobsIds();
+	var_dump($ids);
+
+	if(Auth::user()->id == $userId || (Auth::user()->is_helper == 0 && in_array($userId, $ids)))
+	{
+		// carry on
+	}
+	else
+	{
+		return Redirect::action('UsersController@show', Auth::user()->id);
+	}
+});
+
 
 Route::filter('auth.basic', function()
 {

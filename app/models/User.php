@@ -118,6 +118,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->belongsToMany('Job', 'helpers_jobs_mapping')->withPivot('is_accepted');
     }
 
+  public function appliedJobsIds()
+  {
+    $activeJobIds = DB::table('jobs')->join('helpers_jobs_mapping', function($join)
+    {
+        $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
+             ->where ('jobs.user_id', '=', Auth::user()->id);
+    })
+    ->lists('id');
+    return $activeJobIds;
+  }
+
 
 	public function setStateAttribute ($value)
 	{
