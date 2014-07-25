@@ -155,7 +155,21 @@
 
 						@foreach ($reviews as $review)
 						<tr>
-							<td>{{ $review->job->category }}</td>
+							<td class="text-center">
+                                @if ( $review->job->category == 'Indoor')
+                                    <i class="fa fa-home fa-3x"></i>
+                                @elseif ( $review->job->category == 'Landscaping')
+                                    <i class="fa fa-tree fa-3x"></i>
+                                @elseif ( $review->job->category == 'Moving')
+                                    <i class="fa fa-truck fa-3x"></i>
+                                @elseif ( $review->job->category == 'Outdoor')
+                                    <i class="fa fa-road fa-3x"></i>
+                                @elseif ( $review->job->category == 'Pets')
+                                    <i class="fa fa-paw fa-3x"></i>
+                                @elseif ( $review->job->category == 'Other')
+                                    <i class="fa fa-star fa-3x"></i>
+                                @endif
+                            </td>
 							<td>{{ $review->job->description }}</td>
 							<td class="text-center">
 								<class="col-sm-2">
