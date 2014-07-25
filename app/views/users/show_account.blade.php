@@ -263,7 +263,21 @@
 						</tr>
 						@foreach ($activeJobs as $job)
 							<tr class="text-center">
-								<td>{{ $job->category }}</td>
+								<td class="text-center">
+                                    @if ( $job->category == 'Indoor')
+                                        <i class="fa fa-home fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Landscaping')
+                                        <i class="fa fa-tree fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Moving')
+                                        <i class="fa fa-truck fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Outdoor')
+                                        <i class="fa fa-road fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Pets')
+                                        <i class="fa fa-paw fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Other')
+                                        <i class="fa fa-star fa-3x"></i></a>
+                                    @endif
+                                </td>
 								<td>{{ $job->description }}</td>
 								<td>${{ $job->price }}</td>
 								<td>{{ $job->required_date }}</td>
@@ -299,7 +313,21 @@
 
 								</tr>
 								<tr class="text-center">
-									<td>{{ $job->category }}</td>
+									<td class="text-center">
+                                    @if ( $job->category == 'Indoor')
+                                        <i class="fa fa-home fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Landscaping')
+                                        <i class="fa fa-tree fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Moving')
+                                        <i class="fa fa-truck fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Outdoor')
+                                        <i class="fa fa-road fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Pets')
+                                        <i class="fa fa-paw fa-3x"></i></a>
+                                    @elseif ( $job->category == 'Other')
+                                        <i class="fa fa-star fa-3x"></i></a>
+                                    @endif
+                                </td>
 									<td>{{ $job->description }}</td>
 									<td>${{ $job->price }}</td>
 									<td>{{ $job->required_date }}</td>
