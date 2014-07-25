@@ -255,15 +255,15 @@ class JobsController extends \BaseController {
 
         // Email to helper
         $data = array(
-				'first_name' => "job creator first name",
-				'last_name' => "job creator last creator",
-				'job_listing' => "job applied for"
-			);
+			'first_name' => "job creator first name",
+			'last_name' => "job creator last creator",
+			'job_listing' => "job applied for"
+		);
 
         Mail::send('emails.selecthelper', $data, function($message)
-			{
-	  			$message->to('josueplazamusic@gmail.com', 'Application Accepted')->subject('You have been selected for a job!');
-			});
+		{
+  			$message->to('josueplazamusic@gmail.com', 'Application Accepted')->subject('You have been selected for a job!');
+		});
 
 	    return Response::json(['success' => true]);
 	}
