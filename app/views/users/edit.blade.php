@@ -142,7 +142,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <select class="form-control" name="state" id="state">
+                                                <select class="form-control" name="state">
                                                     <option value="NULL">Choose State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
@@ -223,5 +223,21 @@
         </div>
     </div>
 </div>
+
+@stop
+
+@section('bottomscript')
+
+<script>
+
+    var state = '{{ $user->state }}';
+
+   $("select option[value='" + state + "']").attr("selected","selected");
+
+   var acctype = '{{ $user->is_helper }}'
+
+   $("select option[value='" + acctype + "']").attr("selected","selected");
+
+</script>
 
 @stop

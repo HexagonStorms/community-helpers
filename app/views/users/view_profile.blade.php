@@ -109,18 +109,20 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-sm-6 side-hr">
-							<h4>Street</h4>
-							<p>{{{ $user->street }}}</p>
-						</div>
-						<div class="col-sm-6">
-							<h4>City</h4>
-							<p>{{{ $user->city }}}</p>
-						</div>
-					</div>
+					@if(Auth::user()->is_helper == TRUE)
 
-					<div class="row">
+						<div class="row">
+							<div class="col-sm-6 side-hr">
+								<h4>Street</h4>
+								<p>{{{ $user->street }}}</p>
+							</div>
+							<div class="col-sm-6">
+								<h4>City</h4>
+								<p>{{{ $user->city }}}</p>
+							</div>
+						</div>
+
+						<div class="row">
 							<div class="col-sm-6 side-hr">
 								<h4>State</h4>
 								<p>{{{ $user->state }}}</p>
@@ -130,6 +132,9 @@
 								<p>{{{ $user->zip }}}</p>
 							</div>
 						</div>
+
+					@endif
+
 					</div>
 				</div>
 			</div>
@@ -249,10 +254,7 @@
 					</table>
 				</div>
 			</div>
-
 		@endif
-
-
     	</div>
     </div>
 </div>
