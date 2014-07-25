@@ -123,18 +123,19 @@
 						</div>
 
 						<div class="row">
-								<div class="col-sm-6 side-hr">
-									<h4>State</h4>
-									<p>{{{ $user->state }}}</p>
-								</div>
-								<div class="col-sm-6">
-									<h4>Zip</h4>
-									<p>{{{ $user->zip }}}</p>
-								</div>
+							<div class="col-sm-6 side-hr">
+								<h4>State</h4>
+								<p>{{{ $user->state }}}</p>
+							</div>
+							<div class="col-sm-6">
+								<h4>Zip</h4>
+								<p>{{{ $user->zip }}}</p>
 							</div>
 						</div>
 
 					@endif
+
+					</div>
 				</div>
 			</div>
 		</div>
@@ -253,10 +254,7 @@
 					</table>
 				</div>
 			</div>
-
 		@endif
-
-
     	</div>
     </div>
 </div>
