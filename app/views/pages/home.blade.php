@@ -61,7 +61,7 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Senior Citizens</h3>
                             <img class="adjustable-width" src="/css/images/seniors.png" />
-                            <p>If you need jobs around the house completed, let the youth in the community work for you. Post jobs in our easy-to-use listings page. Set the desired due date, time, and price you're willing to pay for the work. You'll be able to review applicated from helpers who apply for your job by browsing their work history, reviews made from other givers, and more. Once you choose a helper, sit back and wait for them to complete the work!</p>
+                            <p>If you need jobs around the house completed, let the youth in the community work for you. Post jobs in our easy-to-use listings page. Set the desired due date, time, and price you're willing to pay for the work. You'll be able to review applications from helpers who apply for your job by browsing their work history, reviews made from other givers, and more. Once you choose a helper, sit back and wait for them to complete the work!</p>
                         </div>
                 </div>
             </div>
@@ -76,15 +76,10 @@
                 <h2> Strengthening Communities</h2>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img class="adjustable-width" src="/css/images/strength.jpg" />
+                        <img class="adjustable-width" src="/css/images/str_comm.png" />
                     </div>
                     <div class="col-sm-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Community-Helpers give residents a better opportunity to connect with neighbors, parents, and senior citizens. By encouraging members to participate, volunteer, and work, we are developing a better environment where our children can grasp the importance of hard work. Organizations can come together and hire many helpers to improve the park, or clean up a highway. Children are also encouraged to get out of the house more and contribute to their community in a way that is beneficial for both parties. What are you waiting for? <a href="/register">Sign up</a> and start helping today!</p>
                     </div>
                 </div>
             </div>
@@ -102,7 +97,7 @@
                         <!-- Frank -->
                         <div class="col-sm-4 text-center">
                             
-                            <img class="adjustable-width-75 img-circle" src="/css/images/frank.jpg" />
+                            <img class="adjustable-width-75 img-circle" src="/css/images/Frank1_250.png" />
                             <br /><br />
                             <div class="row">
                                     <div class="col-sm-4"><span class="fa fa-linkedin-square fa-3x"></span></div>
