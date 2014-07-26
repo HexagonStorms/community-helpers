@@ -57,16 +57,6 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Welcome, {{{ Auth::user()->first_name }}} {{{ Auth::user()->last_name }}}!</div>
 				<div class="panel-body">
-					<!-- <div class="row">
-						<div class="col-sm-6">
-							@if(Auth::user()->user_pic_path)
-								<img src="{{ Auth::user()->user_pic_path }}" class="">
-							@else
-								<img src="/img/user.jpg">
-							@endif
-						</div>
-					</div> -->
-
 					<div class="row">
 							<div class="col-sm-6 text-center side-hr">
 								<h3 class="text-center">Total Jobs Completed</h3>
