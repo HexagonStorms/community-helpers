@@ -55,7 +55,7 @@
 
 				<a href="/" class="navbar-brand ">
 					<span class="logo"><strong>Community-</strong><span class="handwriting">Helpers.com</span><br />
-					<small>Putting the youth to help out in your community</small></span>
+					<small>Encouraging the youth to help the community</small></span>
 				</a>
 
 			</div>

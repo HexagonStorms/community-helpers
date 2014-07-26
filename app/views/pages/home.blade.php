@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Senior Citizens</h3>
-                            <img class="adjustable-width" src="/css/images/dishes.jpg" />
+                            <img class="adjustable-width" src="/css/images/seniors.png" />
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
