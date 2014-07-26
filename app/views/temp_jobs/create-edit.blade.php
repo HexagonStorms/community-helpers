@@ -61,12 +61,12 @@
 						</div>
 						<div class="col-sm-4">
 							{{ Form::label('required_date', 'Due Date:') }}
-							<input type="date" class="form-control" name="required_date">
+							<input type="date" class="form-control" name="required_date" value="{{ $job->required_date }}">
 							{{ $errors->first('required_date', '<span class="help-block">:message</span>')}}
 						</div>
 						<div class="col-sm-4">
 							{{ Form::label('required_time', 'Time:') }}
-							<input type="time" class="form-control" name="required_time">
+							<input type="time" class="form-control" name="required_time" value="{{ $job->required_time }}">
 							{{ $errors->first('required_time', '<span class="help-block">:message</span>')}}
 						</div>
 					</div>
@@ -89,6 +89,14 @@
     var category = '{{ $job->category }}';
 
    $("select option[value='" + category + "']").attr("selected","selected");
+
+   // var date ='{{ $job->required_date }}';
+
+   // $("input[name='required_date']").attr("value",date);
+
+   // var time ='{{ $job->required_time }}';
+
+   // $("input[name='required_time']").attr("value",time);
 
 </script>
 
