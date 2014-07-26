@@ -90,6 +90,14 @@
 
    $("select option[value='" + category + "']").attr("selected","selected");
 
+   var date ='{{ $job->required_date }}';
+
+   $("input[name='required_date']").attr("value",date);
+
+   var time ='{{ $job->required_time }}';
+
+   $("input[name='required_time']").attr("value",time);
+
 </script>
 
 @endif

@@ -80,7 +80,7 @@
                                 <i class="fa fa-road"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="?filter=outdoor"><h4>Outdoor</h4><a/>
+                                <a href="?filter=outdoor"><h4>Outdoor</h4></a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +91,7 @@
                                 <i class="fa fa-home"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="?filter=indoor"><h4>Indoor</h4><a/>
+                                <a href="?filter=indoor"><h4>Indoor</h4></a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                 <i class="fa fa-paw"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="?filter=pets"><h4>Pets</h4><a/>
+                                <a href="?filter=pets"><h4>Pets</h4></a>
                             </div>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                                 <i class="fa fa-truck"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="?filter=moving"><h4>Moving</h4><a/>
+                                <a href="?filter=moving"><h4>Moving</h4></a>
                             </div>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                                 <i class="fa fa-star"></i>
                             </div>
                             <div class="col-sm-9">
-                                <a href="?filter=other"><h4>Other</h4><a/>
+                                <a href="?filter=other"><h4>Other</h4></a>
                             </div>
                         </div>
                     </div>
@@ -142,11 +142,11 @@
                         <div class="panel-heading">Help guide</div>
 
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="typography">Staying Safe</a></li>
-                            <li class="list-group-item"><a href="typography">Applying for jobs guide</a></li>
-                            <li class="list-group-item"><a href="typography">Posting jobs guide</a></li>
-                            <li class="list-group-item"><a href="typography">Help &amp; contact us</a></li>
-                            <li class="list-group-item"><a href="typography">FAQ: Frequently asked questions</a></li>
+                            <li class="list-group-item"><a href="#">Staying Safe</a></li>
+                            <li class="list-group-item"><a href="#">Applying for jobs guide</a></li>
+                            <li class="list-group-item"><a href="#">Posting jobs guide</a></li>
+                            <li class="list-group-item"><a href="#">Help &amp; contact us</a></li>
+                            <li class="list-group-item"><a href="#">FAQ: Frequently asked questions</a></li>
                         </ul>
                     </div>
                 </div>
