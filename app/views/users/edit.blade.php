@@ -92,7 +92,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        {{ Form::text('birth_date', null, ['class' => 'form-control', 'placeholder' => 'Birth Date: YYYY-MM-DD']) }}
+                                        {{$user->modified_birth_date}}
+                                        <input type="date" class="form-control" name="birth_date" id="birth_date" value="{{ $modified_birth_date }}">
                                         {{ $errors->first('birth_date', '<span class="help-block">:message</span>')}}
                                     </div>
                                     <div class="form-group">
@@ -244,7 +245,7 @@
 @stop
 
 @section('bottomscript')
-
+@if (isset($user))
 <script>
 
     var state = '{{ $user->state }}';
@@ -255,6 +256,8 @@
 
    $("select option[value='" + acctype + "']").attr("selected","selected");
 
+
 </script>
+@endif
 
 @stop
