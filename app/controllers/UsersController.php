@@ -93,8 +93,14 @@ class UsersController extends \BaseController {
 
 			Auth::loginUsingId($user->id);
 
+			if (Auth::user()->is_helper == 1) {
 
-			return Redirect::action('UsersController@dashboard_helper', $user->id);
+				return Redirect::action('UsersController@dashboard_helper', $user->id);
+
+			} else {
+
+				return Redirect::action('UsersController@dashboard_creator', $user->id);
+			}
 		}
 	}
 

@@ -16,13 +16,12 @@
 							<div class="col-sm-12" >
 								<div class="well">
 									<div class="form-group">
-										<div class="form-group">
-                                {{ Form::label('is_helper','Helper') }}
-                                {{ Form::radio('is_helper','1','',array('class'=>'input-group-addon')) }}
-                                {{ Form::label('is_helper','Giver') }}
-                                {{ Form::radio('is_helper','0','',array('class'=>'nput-group-addon')) }}
-										</div>
-
+										<select class="form-control" name="is_helper">
+											<option value="null">Choose Your Role</option>
+											<option value="0">Creator</option>
+											<option value="1">Helper</option>
+										</select>
+									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6">
