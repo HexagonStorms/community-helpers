@@ -88,6 +88,4 @@ require app_path().'/filters.php';
 | Add Description frank
 |
 */
-Form::macro('datetime', function($input_name, $value = '') {
-    return '<input type="datetime-local" name="' . $input_name . '"/>';
-});
+require app_path().'/misc/form_macro.php';

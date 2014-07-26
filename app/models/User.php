@@ -171,4 +171,5 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		$this->attributes['last_name'] = ucwords(strtolower($value));
 	}
+
 }

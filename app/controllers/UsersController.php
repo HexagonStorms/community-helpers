@@ -240,7 +240,13 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		$user = User::find($id);
-		return View::make('users.edit')->with('user', $user);
+		$modified_birth_date = date("Y-m-d", strtotime($user->birth_date));
+
+		$data = array(
+			'user' => $user,
+			'modified_birth_date' => $modified_birth_date
+		);
+		return View::make('users.edit')->with($data);
 	}
 
 
