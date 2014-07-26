@@ -2,6 +2,15 @@
 
 class JobsController extends \BaseController {
 
+	public function __construct()
+    {
+        // call base controller constructor
+        parent::__construct();
+
+        // run auth filter before all methods on this controller except index
+        $this->beforeFilter('auth', array('except' => array('index')));
+    } // end __construct
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -11,7 +20,7 @@ class JobsController extends \BaseController {
 	{
 		$jobs = Job::with('creator')->orderBy('required_date')->paginate(4);
 
-		if (Input::has('search')) 
+		if (Input::has('search'))
 		{
 			$search = Input::get('search');
 			$jobs = Job::where('description', 'LIKE', '%' . $search . '%')->paginate(50);

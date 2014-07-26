@@ -113,17 +113,17 @@ class UsersController extends \BaseController {
 		foreach ($user->appliedJobs as $job) {
 		 	$jobIds[] = $job->id;
 		}
-	
+
 		if (count($jobIds) > 0)
 		{
 			$reviews = Review::with('job')->whereIn('job_id', $jobIds)->orderBy('created_at', 'desc')->paginate(4);
 		}
-		
-		else 
+
+		else
 		{
 			$reviews = [];
 		}
-		
+
 		$data = array(
 			'user' => $user,
 			'job' => $job,
@@ -207,10 +207,6 @@ class UsersController extends \BaseController {
         } else {
         	$activeJobs = [];
         }
-
-		//Ben
-		//$query = Job::with('helpers')->get()->helpers()->wherePivot('is_accepted', true);
-		//$appliedJobs = $query->get();
 
 		if (Auth::user()->createdJobs()->count() > 0) {
 			$query = Auth::user()->createdJobs();
