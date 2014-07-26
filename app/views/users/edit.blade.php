@@ -99,6 +99,7 @@
                                         {{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email']) }}
                                         {{ $errors->first('email', '<span class="help-block">:message</span>')}}
                                     </div>
+                                    @if (Auth::user()->is_helper == 1)
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-sm-6">
@@ -123,7 +124,14 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    @endif
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                {{ Form::textarea('bio', null, ['class' => 'form-control', 'placeholder' => 'Bio: Introduce Yourself']) }}
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <h2></h2>
 
