@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
                         <h2>COMMUNITY HELPERS</H2>
-                        <p>Community-Helpers is an online service that connects seniors who need odd-jobs done around their house to the youth in their community who want to earn some money.</p>
+                        <p>Community-Helpers is an online service that connects seniors who need odd-jobs done around their home to the youth in their community who want to earn money.</p>
                         <div class="row">
                             <div class="col-sm-6">
                                 <a href="register"><button type="button" class="btn btn-warning">Register</button></a>
@@ -37,7 +37,7 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Parents</h3>
                             <img class="adjustable-width" src="/css/images/community.jpg" />
-                            <p>Your kids are safe with Community Helpers.  All of our jobs in the listings are cross-checked against the <a href="https://records.txdps.state.tx.us/sexoffender/" alt="sex offender database" target="_blank">sex offenders database</a>.  If the address of the job listing matches the database, it will not be allowed to post on our listing and that user will be removed. We strive to do everything to keep your kids safe.  If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
+                            <p>Your kids are safe with Community Helpers.  Coming soon, all of our jobs in the listings will be cross-checked against the <a href="https://records.txdps.state.tx.us/sexoffender/" alt="sex offender database" target="_blank">sex offenders database</a>.  If the address of the job listing matches the database, it will not be allowed to post on our listing and that user will be removed. We strive to do everything to keep your kids safe.  If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Youth</h3>
@@ -101,7 +101,7 @@
                                     <div class="col-sm-4"><a href="https://twitter.com/fpigeonjr"><span class="fa fa-twitter-square fa-3x"></span></a></div>
                             </div>
 
-                            <p><strong>Frank Pigeon</strong> is an IT Specialist at AMEDDC&S with over 15 years of IT experience. Frank is a U.S. Army veteran, has a Bachelor's Degree in Management (CIS), and is excited to take on new challenges that combine his creativity and business sense.</p>
+                            <p><strong>Frank Pigeon</strong> is serving at Joint Base San Antonio, Ft. Sam Houston as an IT Specialist. Frank is a U.S. Army veteran, has a Bachelor's Degree in Management, (CIS), and is excited to take on new challenges that combine his creativity and business sense.</p>
                         </div>
 
                         <!-- Jon -->
