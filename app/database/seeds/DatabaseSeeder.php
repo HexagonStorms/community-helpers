@@ -1,7 +1,6 @@
 <?php
 
 class DatabaseSeeder extends Seeder {
-
 	/**
 	 * Run the database seeds.
 	 *
@@ -22,48 +21,90 @@ class UsersTableSeeder extends Seeder{
 	public function run()
 	{
 		DB::table('users')->delete();
-
+		$faker = Faker\Factory::create();
 		$user = new User();
-		$user->first_name = 'Jon';
-		$user->last_name = 'Rob';
+		$user->first_name = 'Admin';
+		$user->last_name = 'Joe';
 		$user->email = 'admin@email.com';
 		$user->password = Hash::make('password');
 		$user->birth_date = '1980-04-19';
 		$user->is_helper = '0';
 		$user->is_admin = '1';
-		$user->street = "123 Any Street";
-		$user->city = 'Houston';
-		$user->state = 'TX';
-		$user->zip = '78209';
+		$user->street = $faker->streetAddress;
+		$user->city = $faker->city;
+		$user->state = $faker->state;
+		$user->zip = $faker->postcode;
 		$user->save();
 
 		$user = new User();
-		$user->first_name = 'Joe';
-		$user->last_name = 'Smith';
+		$user->first_name = 'Johnny';
+		$user->last_name = 'Helper';
 		$user->email = 'helper@email.com';
 		$user->password = Hash::make('password');
-		$user->birth_date = '1999-04-19';
+		$user->birth_date = '2001-02-19';
+		$user->gender = 'M';
+		$user->bio = "My name is Johnny and I am hard worker. I am saving up to buy a new bicycle";
 		$user->is_helper = '1';
 		$user->is_admin = '0';
-		$user->street = "123 New Street";
+		$user->street = $faker->streetAddress;
 		$user->city = 'San Antonio';
 		$user->state = 'TX';
-		$user->zip = '78209';
+		$user->zip = $faker->postcode;
+		$user->parent_email = $faker->freeEmail;
+		$user->parent_phone = $faker->cellNumber;
+		$user->parent_first_name = $faker->firstName;
+		$user->parent_last_name = $faker->lastName;
 		$user->save();
 
 		$user = new User();
-		$user->first_name = 'Dan';
-		$user->last_name = 'Jones';
+		$user->first_name = 'Grandma';
+		$user->last_name = 'Peggy';
 		$user->email = 'creator@email.com';
 		$user->password = Hash::make('password');
-		$user->birth_date = '1997-04-19';
+		$user->birth_date = '1946-04-19';
 		$user->is_helper = '0';
 		$user->is_admin = '0';
-		$user->street = "123 Another Street";
+		$user->street = $faker->streetAddress;
 		$user->city = 'San Antonio';
 		$user->state = 'TX';
-		$user->zip = '78209';
+		$user->zip = $faker->postcode;
 		$user->save();
+
+		for ($i = 0; $i < 25; $i++)
+		{
+		  	$user = new User();
+			$user->first_name = $faker->firstName;
+			$user->last_name = $faker->firstName;
+			$user->email = $faker->freeEmail;
+			$user->password = Hash::make('password');
+			$user->birth_date = rand(0, 1) ? $faker->dateTimeBetween('-50 years', '-80 years') : $faker->dateTimeBetween('-10 years', '-18 years');
+			$user->gender = rand(0, 1) ? 'male' : 'female';
+			$user->bio = $faker->sentence(100);
+			if ($user->birth_date->dateTimeBetween('-50 years', '-80 years'))
+			{
+				$user->is_helper = 0;
+			}
+			else
+			{
+				$user->is_helper = 1;
+			}
+			$user->is_admin = '0';
+			$user->street = $faker->streetAddress;
+			$user->city = $faker->city;
+			$user->state = $faker->state;
+			$user->zip = $faker->postcode;
+			if ($user->is_helper = 1)
+			{
+				$user->parent_email = $faker->freeEmail;
+				$user->parent_phone = $faker->cellNumber;
+				$user->parent_first_name = $faker->firstName;
+				$user->parent_last_name = $faker->lastName;
+			}
+
+			$user->save();
+		}
+
+
 	}
 }
 

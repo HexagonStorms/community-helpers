@@ -92,7 +92,7 @@
 
                         <!-- Frank -->
                         <div class="col-sm-4 text-center">
-                            
+
                             <img class="adjustable-width-75 img-circle" src="/css/images/frank.jpg" />
                             <br /><br />
                             <div class="row">
@@ -101,12 +101,12 @@
                                     <div class="col-sm-4"><a href="https://twitter.com/fpigeonjr"><span class="fa fa-twitter-square fa-3x"></span></a></div>
                             </div>
 
-                            <p><strong>Frank Pigeon</strong> is serving at Joint Base San Antonio, Ft. Sam Houston as an IT Specialist. Frank is a U.S. Army veteran, has a Bachelor's Degree in Management, (CIS), and is excited to take on new challenges that combine his creativity and business sense.</p>
+                            <p><strong>Frank Pigeon</strong> is serving at Joint Base San Antonio, Ft. Sam Houston as an IT Specialist. Frank has over 15 years experience in the IT field. Frank is a U.S. Army veteran, has a Bachelor's Degree in Management, (CIS), and is excited to take on new challenges that combine his creativity and business sense.</p>
                         </div>
 
                         <!-- Jon -->
                         <div class="col-sm-4 text-center">
-                            
+
                             <img class="adjustable-width-75 img-circle" src="/css/images/jon.jpg" />
                             <br /><br />
                             <div class="row">
@@ -121,7 +121,7 @@
 
                         <!-- Josue -->
                         <div class="col-sm-4 text-center">
-                            
+
                             <img class="adjustable-width-75 img-circle" src="/css/images/Josue_Codeup_1_250.png" />
                             <br /><br />
                             <div class="row">
