@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12">
-                        <iframe width="100%" height="315" src="//www.youtube.com/embed/3MehcITS9zo?list=UU2fUqVn-mjtHP-_fXlQhpDQ" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="315" src="//www.youtube.com/embed/3MehcITS9zo" frameborder="0" allowfullscreen></iframe>
 
 
                     </div>

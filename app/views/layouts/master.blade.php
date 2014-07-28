@@ -42,7 +42,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<!-- Navigation Bar (Left) -->
+	<!-- Navigation Bar (Mobile) -->
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container">
 
@@ -61,7 +61,7 @@
 			</div>
 
 
-			<!-- Navigation Bar (Right) -->
+			<!-- Navigation Bar (Desktop) -->
 			<div class="collapse navbar-collapse">
 
 				<ul class="nav navbar-nav navbar-right visible-xs">
@@ -95,9 +95,9 @@
 							<span><a href="/users/create">Register</a> | </span>
 							@endif
 							<span><a href="/search">Listings</a> | </span>
-							<span><a href="/#">About</a> | </span>
+							<span><a href="/#">About</a></span>
 							@if(Auth::check())
-							<span><a href="/logout">Logout</a></span>
+							<span><a href="/logout"> | Logout</a></span>
 							@endif
 						</div>
 					</div>
