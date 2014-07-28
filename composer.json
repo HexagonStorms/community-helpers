@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"guzzlehttp/guzzle": "~4.0",
-		"nesbot/Carbon": "*"
+		"nesbot/Carbon": "*",
+		"fzaninotto/faker": "1.5.*@dev"
 	},
 	"autoload": {
 		"classmap": [
