@@ -107,7 +107,7 @@
 						</div>
 						<div class="col-sm-6">
 							<h4>User Type</h4>
-							<? if ($user->is_helper == 0) : ?>
+							<? if ($user->is_admin == 0) : ?>
 							{{{ 'Standard' }}}
 							<? else : ?>
 							{{{ 'Admin' }}}
