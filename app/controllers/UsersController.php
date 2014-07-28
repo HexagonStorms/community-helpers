@@ -83,12 +83,13 @@ class UsersController extends \BaseController {
 
 			$data = array(
 				'first_name' => "$user->first_name",
-				'last_name' => "$user->last_name"
+				'last_name' => "$user->last_name",
+				'email' => "$user->email"
 			);
 
-			Mail::send('emails.welcome', $data, function($message)
+			Mail::send('emails.welcome', $data, function($message) use ($user)
 			{
-	  			$message->to('josueplazamusic@gmail.com', 'New User')->subject('Thank you for registering');
+	  			$message->to( $user->email, 'New User')->subject('Thank you for registering');
 			});
 
 			Auth::loginUsingId($user->id);
