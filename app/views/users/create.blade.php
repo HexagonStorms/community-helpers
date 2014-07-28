@@ -18,8 +18,8 @@
 									<div class="form-group">
 										<select class="form-control" name="is_helper">
 											<option value="null">Choose Your Role</option>
-											<option value="0">Creator</option>
-											<option value="1">Helper</option>
+											<option value="0">Giver - I need some help</option>
+											<option value="1">Helper - I am here to help</option>
 										</select>
 									</div>
 									<div class="form-group">
