@@ -51,12 +51,7 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Youth</h3>
                             <img class="adjustable-width" src="/css/images/teen.jpg" />
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Our company knows that our helpers are our most important clients and we want  to make sure they have all the support they need to complete their jobs and they are recieving great experiences at each new opportunity.  We have safety guidelines to make sure both helper and creator are being honest and fair with expectations and that they can come to or support team for any reason.</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Senior Citizens</h3>
@@ -117,16 +112,15 @@
                         <!-- Jon -->
                         <div class="col-sm-4 text-center">
                             
-                            <img class="adjustable-width-75 img-circle" src="/css/images/jon.jpg" />
+                            <img class="adjustable-width-75 img-circle" src="/css/images/jon_head.png" />
                             <br /><br />
                             <div class="row">
-                                    <div class="col-sm-4"><span class="fa fa-linkedin-square fa-3x"></span></div>
-                                    <div class="col-sm-4"><span class="fa fa-github-square fa-3x"></span></div>
-                                    <div class="col-sm-4"><span class="fa fa-twitter-square fa-3x"></span></div>
+                                    <div class="col-sm-4"><a href="https://www.linkedin.com/in/jonathanbrobinson"><span class="fa fa-linkedin-square fa-3x"></span></a></div>
+                                    <div class="col-sm-4"><a href="https://github.com/jonbrobinson"><span class="fa fa-github-square fa-3x"></span></a></div>
+                                    <div class="col-sm-4"><a href="https://twitter.com/jonbrobinson"><span class="fa fa-twitter-square fa-3x"></span></a></div>
                             </div>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p><strong>Jonathan Robinson</strong> is a Full Stack Web Developer with a solid foundation of front-end and back-end programming. Before developing Jonathan worked as a sales rep for a Fortune 500 company and worked in a high school school helping students find community service activites.</p>
                         </div>
 
                         <!-- Josue -->
