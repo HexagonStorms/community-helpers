@@ -78,7 +78,7 @@
 
 
                     <h2 class="listings-top">Something urgent?</h2>
-                    <p>We prides ourselves in customer service excellence. Our customer service representatives are available Monday–Friday from 7 a.m.–7 p.m. CST at <strong>0800-555-5555</strong> or via direct support at <strong>example@example.com</strong></p>
+                    <p>We prides ourselves in customer service excellence. Our customer service representatives are available Monday–Friday from 7 a.m.–7 p.m. CST at <strong>800-GET-HELP</strong> or via direct support at <strong>support@community-help.com</strong></p>
 
                 </div>
 
@@ -92,17 +92,16 @@
         <div class="col-md-3 col-xs-12 pull-right">
 
             <h2>Our Headquarters</h2>
-            928 Wolf Pen Road<br />
-            Concord, CA 94520<br />
-            London - United Kingdom<br />
-            Zip Code CA 94520<br />
+            10th Floor, Suite 101
+            112 W Pecan St<br />
+            San Antonio, TX 78205<br />
             <br />
             <br />
-            US: +650-430-1309<br />
+            US: +210-430-1309<br />
             UK: +44-430-1309<br />
             <br />
-            <a href="mailto:info@example.com">info@example.com</a><br />
-            <a href="mailto:info@example.com">support@example.co.uk</a><br />			
+            <a href="mailto:info@community-help.com">info@community-help.com</a><br />
+            <a href="mailto:info@community-help.com">support@community-help.com</a><br />			
             <br /><br />
             <h2>Business Hours</h2>
             <strong>Weekday:</strong> 8am to 6pm<br />
