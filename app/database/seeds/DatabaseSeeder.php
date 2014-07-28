@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder{
 		$user = new User();
 		$user->first_name = 'Johnny';
 		$user->last_name = 'Helper';
-		$user->email = 'helper@email.com';
+		$user->email = 'johnnyhelper@email.com';
 		$user->password = Hash::make('password');
 		$user->birth_date = '2001-02-19';
 		$user->gender = 'M';
@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder{
 		$user = new User();
 		$user->first_name = 'Grandma';
 		$user->last_name = 'Peggy';
-		$user->email = 'creator@email.com';
+		$user->email = 'grandma@codeup.com';
 		$user->password = Hash::make('password');
 		$user->birth_date = '1946-04-19';
 		$user->is_helper = '0';
@@ -141,17 +141,26 @@ class JobsTableSeeder extends Seeder {
         	'5' => 'Moving',
         	'6' => 'Other'
         ];
-        $catDesc = [
+        $landscaping = [
         	'1' => 'Mow the grass',
-        	'2' => 'Shovel snow from driveway',
-        	'3' => 'Vacuum three rooms',
-        	'4' => 'Walk the dog',
-        	'5' => 'Move some books into the garage',
-        	'6' => 'Replace light bulbs',
-        	'7' => 'Take out the trash',
-        	'8' => 'Wash the car',
-        	'9' => 'Dust the blinds',
-        	'10' => 'Pull weeds from the front yard'
+        	'2' => 'Pull weeds'
+        	'3' => 'Plant garden seeds',
+        	'4' => 'Trim the bushes',
+        	'5' => 'Water the lawn',
+        ];
+        $indoor = [
+        	'1' => 'Vacuum the front room',
+        	'2' => 'Clean the windows'
+        	'3' => 'Dust the blinds',
+        	'4' => 'Replace the light bulbs',
+        	'5' => 'Take out the trash'
+        ];
+        $outdoor = [
+        	'1' => 'Vacuum the front room',
+        	'2' => 'Clean the windows'
+        	'3' => 'Dust the blinds',
+        	'4' => 'Replace the light bulbs',
+        	'5' => 'Take out the trash'
         ];
 
         for ($i = 1; $i <= 30; $i++)
