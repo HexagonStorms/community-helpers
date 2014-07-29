@@ -10,7 +10,7 @@
                     <div class="col-sm-6 col-xs-12">
                         <h2>COMMUNITY HELPERS</H2>
                         <p>Community Helpers is an online service that connects seniors (givers) who need odd-jobs done around their home to the youth (helpers) in their community who want to earn money.</p>
-                        <p>We invision a world where communities are strong, resourceful, and where neighbors help neighbors like in generations past .</p>
+                        <p>We envision a world where communities are strong, resourceful, and where neighbors help neighbors like in generations past .</p>
                         <div class="row">
                             <div class="col-sm-6">
                                 <a href="register"><button type="button" class="btn btn-warning">Register</button></a>
