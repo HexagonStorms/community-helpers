@@ -95,7 +95,7 @@
 							<span><a href="/users/create">Register</a> | </span>
 							@endif
 							<span><a href="/search">Listings</a> | </span>
-							<span><a href="#about">About</a></span>
+							<span><a href="http://community-helpers.com/#about">About</a></span>
 							@if(Auth::check())
 							<span><a href="/logout"> | Logout</a></span>
 							@endif
