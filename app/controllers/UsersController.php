@@ -222,7 +222,7 @@ class UsersController extends \BaseController {
 				$query->whereNotIn('id', $activeJobIds);
 			}
 
-			$jobs = $query->orderBy('created_at', 'desc')->paginate(4);
+			$jobs = $query->orderBy('required_date')->paginate(4);
 		} else {
 			$jobs = [];
 		}
