@@ -358,7 +358,7 @@
 	                	<div class="row">
 		            		<div class="col-sm-offset-2 col-sm-4">
 		                        @if($helper->user_pic_path)
-		                            <img id="helperPic" src="{{ $helper->user_pic_path }}" class="img-responsive img-circle">
+		                            <img id="helperPic" src="{{ $user->user_pic_path }}" class="img-responsive img-circle">
 		                        @else
 		                            <img id="helperPic" src="/img/user.jpg">
 		                        @endif
@@ -415,7 +415,7 @@
             $("#helperBirth").text(data.birth_date);
             $("#helperGender").text(data.gender);
             $("#helperBio").text(data.bio);
-            $("#helperPic").text(data.user_pic_path);
+            $("#helperPic").attr('src', data.user_pic_path);
             $("#btn-select").data('helperid', data.helper_id);
             $("#btn-select").data('jobid', jobId);
             $("#myModal").modal();
