@@ -40,7 +40,7 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Parents</h3>
                             <img class="adjustable-width" src="/css/images/parent.jpg" />
-                            <p>Your kids are safe with Community Helpers. We know that our helpers are the most important clients. We want to make sure they have all the support they need to complete their jobs and are receiving great experiences at each new opportunity. We have safety guidelines to make sure both helper and giver are being honest and fair with expectations and that they can come to our support team for any reason. If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
+                            <p>Your kids are safe with Community Helpers. We know that our helpers are the most important users. We want to make sure they have all the support they need to complete their jobs and are receiving great experiences at each new opportunity. We have safety guidelines to make sure both helper and giver are being honest and fair with expectations and that they can come to our support team for any reason. If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Youth</h3>

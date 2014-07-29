@@ -415,7 +415,7 @@
             $("#helperBirth").text(data.birth_date);
             $("#helperGender").text(data.gender);
             $("#helperBio").text(data.bio);
-            $("#helperPic").text(data.user_pic_path);
+            $("#helperPic").attr('src', data.user_pic_path);
             $("#btn-select").data('helperid', data.helper_id);
             $("#btn-select").data('jobid', jobId);
             $("#myModal").modal();
