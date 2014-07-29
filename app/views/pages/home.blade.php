@@ -38,7 +38,7 @@
                 <div class="row">
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Parents</h3>
-                            <img class="adjustable-width" src="/css/images/community.jpg" />
+                            <img class="adjustable-width" src="/css/images/parent.jpg" />
                             <p>Your kids are safe with Community Helpers.  Coming soon, all of our jobs in the listings will be cross-checked against the <a href="https://records.txdps.state.tx.us/sexoffender/" alt="sex offender database" target="_blank">sex offenders database</a>.  If the address of the job listing matches the database, it will not be allowed to post on our listing and that user will be removed. We strive to do everything to keep your kids safe.  If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
                         </div>
                         <div class="col-sm-4 text-center">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Seniors</h3>
-                            <img class="adjustable-width" src="/css/images/seniors.png" />
+                            <img class="adjustable-width" src="/css/images/seniors3.jpg" />
                             <p>If you need jobs around the house completed, let the youth in the community work for you. Post jobs in our easy-to-use listings page. Set the desired due date, time, and price you're willing to pay for the work. You'll be able to review applications from helpers who apply for your job by browsing their work history, reviews made from other givers, and more. Once you choose a helper, sit back and wait for them to complete the work!</p>
                         </div>
                 </div>
@@ -84,7 +84,7 @@
 
                         <!-- Frank -->
                         <div class="col-sm-4 text-center">
-                            
+
                             <img class="adjustable-width-75 img-circle" src="/css/images/Frank1_250.png" />
 
                             <br /><br />
