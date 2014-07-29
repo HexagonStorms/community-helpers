@@ -9,7 +9,8 @@
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
                         <h2>COMMUNITY HELPERS</H2>
-                        <p>Community-Helpers is an online service that connects seniors who need odd-jobs done around their home to the youth in their community who want to earn money.</p>
+                        <p>Community Helpers is an online service that connects seniors (givers) who need odd-jobs done around their home to the youth (helpers) in their community who want to earn money.</p>
+                        <p>We envision a world where communities are strong, resourceful, and where neighbors help neighbors like in generations past .</p>
                         <div class="row">
                             <div class="col-sm-6">
                                 <a href="register"><button type="button" class="btn btn-warning">Register</button></a>
@@ -39,12 +40,12 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Parents</h3>
                             <img class="adjustable-width" src="/css/images/parent.jpg" />
-                            <p>Your kids are safe with Community Helpers.  Coming soon, all of our jobs in the listings will be cross-checked against the <a href="https://records.txdps.state.tx.us/sexoffender/" alt="sex offender database" target="_blank">sex offenders database</a>.  If the address of the job listing matches the database, it will not be allowed to post on our listing and that user will be removed. We strive to do everything to keep your kids safe.  If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
+                            <p>Your kids are safe with Community Helpers. We know that our helpers are the most important clients. We want to make sure they have all the support they need to complete their jobs and are recieving great experiences at each new opportunity. We have safety guidelines to make sure both helper and giver are being honest and fair with expectations and that they can come to our support team for any reason. If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Youth</h3>
                             <img class="adjustable-width" src="/css/images/teen.jpg" />
-                            <p>Our company knows that our helpers are our most important clients and we want  to make sure they have all the support they need to complete their jobs and they are recieving great experiences at each new opportunity.  We have safety guidelines to make sure both helper and creator are being honest and fair with expectations and that they can come to or support team for any reason.</p>
+                            <p> Saving up for a new Xbox or bicycle? Tired of being bored and broke? There are always new opportinities to earn some cash in our <a href="{{ action('HomeController@search') }}">listings</a> area. Maybe there will be a job that is right for you. You can also earn community service hours for your middle or high school.  At the end of the day, you can feel proud that you are lending a helping hand to someone that really needs it.  What are you waiting for?  <a href="/register">Register</a> today!</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Seniors</h3>
@@ -67,7 +68,7 @@
                         <img class="adjustable-width" src="/css/images/str_comm.png" />
                     </div>
                     <div class="col-sm-6">
-                        <p>Community-Helpers give residents a better opportunity to connect with neighbors, parents, and senior citizens. By encouraging members to participate, volunteer, and work, we are developing a better environment where our children can grasp the importance of hard work. Organizations can come together and hire many helpers to improve the park, or clean up a highway. Children are also encouraged to get out of the house more and contribute to their community in a way that is beneficial for both parties. What are you waiting for? <a href="/register">Sign up</a> and start helping today!</p>
+                        <p>Community Helpers give residents a better opportunity to connect with neighbors, parents, and senior citizens. By encouraging members to participate, volunteer, and work, we are developing a better environment where our youth can grasp the importance of hard work. Organizations can come together and hire many helpers to improve the park or clean up a highway. Youth are also encouraged to get out of the house and contribute to their community in a way that is beneficial for both parties. What are you waiting for? <a href="/register">Sign up</a> and start helping today!</p>
                     </div>
                 </div>
             </div>
