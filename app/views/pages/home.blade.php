@@ -81,7 +81,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <h2> About Us </h2>
-                <div class="row">
+                <div class="row" id="about">
 
                         <!-- Frank -->
                         <div class="col-sm-4 text-center">
