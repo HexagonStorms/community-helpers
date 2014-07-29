@@ -40,12 +40,12 @@
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Parents</h3>
                             <img class="adjustable-width" src="/css/images/parent.jpg" />
-                            <p>Your kids are safe with Community Helpers. We know that our helpers are the most important clients. We want to make sure they have all the support they need to complete their jobs and are recieving great experiences at each new opportunity. We have safety guidelines to make sure both helper and giver are being honest and fair with expectations and that they can come to our support team for any reason. If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
+                            <p>Your kids are safe with Community Helpers. We know that our helpers are the most important clients. We want to make sure they have all the support they need to complete their jobs and are receiving great experiences at each new opportunity. We have safety guidelines to make sure both helper and giver are being honest and fair with expectations and that they can come to our support team for any reason. If you have any concerns please <a href="http://community-helpers.dev/contact" alt="Contact Us form">contact us</a>.</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Youth</h3>
                             <img class="adjustable-width" src="/css/images/teen.jpg" />
-                            <p> Saving up for a new Xbox or bicycle? Tired of being bored and broke? There are always new opportinities to earn some cash in our <a href="{{ action('HomeController@search') }}">listings</a> area. Maybe there will be a job that is right for you. You can also earn community service hours for your middle or high school.  At the end of the day, you can feel proud that you are lending a helping hand to someone that really needs it.  What are you waiting for?  <a href="/register">Register</a> today!</p>
+                            <p> Saving up for a new Xbox or bicycle? Tired of being bored and broke? There are always new opportunities to earn some cash in our <a href="{{ action('HomeController@search') }}">listings</a> area. Maybe there will be a job that is right for you. You can also earn community service hours for your middle or high school.  At the end of the day, you can feel proud that you are lending a helping hand to someone that really needs it.  What are you waiting for?  <a href="/register">Register</a> today!</p>
                         </div>
                         <div class="col-sm-4 text-center">
                             <h3 class="text-center">Seniors</h3>
@@ -109,7 +109,7 @@
                                     <div class="col-sm-4"><a href="https://twitter.com/jonbrobinson"><span class="fa fa-twitter-square fa-3x"></span></a></div>
                             </div>
 
-                            <p><strong>Jonathan Robinson</strong> is a Full Stack Web Developer with a solid foundation of front-end and back-end programming. Before developing Jonathan worked as a sales rep for a Fortune 500 company and worked in a high school school helping students find community service activites.</p>
+                            <p><strong>Jonathan Robinson</strong> is a Full Stack Web Developer with a solid foundation of front-end and back-end programming. Before developing Jonathan worked as a sales rep for a Fortune 500 company and worked in a high school helping students find community service activities.</p>
                         </div>
 
                         <!-- Josue -->
