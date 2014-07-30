@@ -380,7 +380,7 @@
                 	<div class="col-sm-6">
                 		<h4><strong>Bio</strong></h4>
                 		@if (!isset($helper->bio))
-                		<p>Hi my name is {{ $helper->first_name }}.  I am exicted to show you I can do.  I work hard, love getting things done and I am here to help.  Please feel free to select me for any job you need.</p>
+                		<p id="helperBio">Hi my name is {{ $helper->first_name }}.  I am exicted to show you I can do.  I work hard, love getting things done and I am here to help.  Please feel free to select me for any job you need.</p>
                 		@else
                 		<p id="helperBio"></p>
                 		@endif
