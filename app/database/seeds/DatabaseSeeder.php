@@ -39,7 +39,7 @@ class UsersTableSeeder extends Seeder{
 		$user = new User();
 		$user->first_name = 'Johnny';
 		$user->last_name = 'Helper';
-		$user->email = 'johnnyhelper@email.com';
+		$user->email = 'helper@email.com';
 		$user->password = Hash::make('password');
 		$user->birth_date = '2001-02-19';
 		$user->gender = 'M';
@@ -59,7 +59,7 @@ class UsersTableSeeder extends Seeder{
 		$user = new User();
 		$user->first_name = 'Grandma';
 		$user->last_name = 'Peggy';
-		$user->email = 'grandma@codeup.com';
+		$user->email = 'creator@email.com';
 		$user->password = Hash::make('password');
 		$user->birth_date = '1946-04-19';
 		$user->is_helper = '0';
@@ -71,9 +71,9 @@ class UsersTableSeeder extends Seeder{
 		$user->save();
 
 		function check_in_range($start_date, $end_date, $date_from_user)
-			{
-			   return ( $date_from_user >= $start_date ) && ( $date_from_user <= $end_date );
-			}
+		{
+		   return ( $date_from_user >= $start_date ) && ( $date_from_user <= $end_date );
+		}
 		for ($i = 0; $i < 50; $i++)
 		{
 		  	$user = new User();
@@ -133,7 +133,7 @@ class JobsTableSeeder extends Seeder {
     {
         DB::table('jobs')->delete();
 
-        $catArray = [
+        $categories = [
         	'1' => 'Landscaping',
         	'2' => 'Outdoor',
         	'3' => 'Indoor',
@@ -141,33 +141,78 @@ class JobsTableSeeder extends Seeder {
         	'5' => 'Moving',
         	'6' => 'Other'
         ];
-        $landscaping = [
+        $landscaping_jobs = [
         	'1' => 'Mow the grass',
-        	'2' => 'Pull weeds'
+        	'2' => 'Pull weeds',
         	'3' => 'Plant garden seeds',
         	'4' => 'Trim the bushes',
         	'5' => 'Water the lawn',
         ];
-        $indoor = [
+        $indoor_jobs = [
         	'1' => 'Vacuum the front room',
-        	'2' => 'Clean the windows'
+        	'2' => 'Clean the windows',
         	'3' => 'Dust the blinds',
         	'4' => 'Replace the light bulbs',
         	'5' => 'Take out the trash'
         ];
-        $outdoor = [
-        	'1' => 'Vacuum the front room',
-        	'2' => 'Clean the windows'
-        	'3' => 'Dust the blinds',
-        	'4' => 'Replace the light bulbs',
-        	'5' => 'Take out the trash'
+        $outdoor_jobs = [
+        	'1' => 'Powerwash the driveway',
+        	'2' => 'Clean bird degree from front porch',
+        	'3' => 'Wash the windows',
+        	'4' => 'Clear leaves from gutter',
+        	'5' => 'Pull strawberries from garden'
+        ];
+
+        $pet_jobs = [
+        	'1' => 'Walk the dog',
+        	'2' => 'Give the dog a bathe',
+        	'3' => 'Clean out bird cage',
+        	'4' => 'Clean fish bowl',
+        	'5' => 'Take out cat litter'
+        ];
+
+        $moving_jobs = [
+        	'1' => 'Move books from office to garage',
+        	'2' => 'Move boxes to the garage',
+        	'3' => 'Dust books and move into library',
+        	'4' => 'Pack up bowls from the kitchen',
+        	'5' => 'Move office items to the dumpster'
+        ];
+
+        $other_jobs = [
+        	'1' => 'Pick up milk and eggs from H-E-B',
+        	'2' => 'Take clothes to the Thrift Store',
+        	'3' => 'Prepare a nice lunch for 4 friends',
+        	'4' => 'Bake cookies',
+        	'5' => 'Organize documents in office'
         ];
 
         for ($i = 1; $i <= 30; $i++)
         {
         	$job = new Job();
-            $job->category = $catArray[rand(1,6)];
-            $job->description = $catDesc[rand(1,10)];
+            $job->category = $categories[rand(1,6)];
+           	switch($job->category)
+           	{
+           		case 'Landscaping':
+           			$job->description = $landscaping_jobs[rand(1,5)];
+           			break;
+           		case 'Indoor':
+           			$job->description = $indoor_jobs[rand(1,5)];
+           			break;
+           		case 'Outdoor':
+           			$job->description = $outdoor_jobs[rand(1,5)];
+           			break;
+           		case 'Pets':
+           			$job->description = $pet_jobs[rand(1,5)];
+           			break;
+           		case 'Moving':
+           			$job->description = $moving_jobs[rand(1,5)];
+           			break;
+           		case 'Other':
+           			$job->description = $other_jobs[rand(1,5)];
+           			break;
+           	}
+
             $job->price = rand(10.00, 50.00);
             $job->is_complete = 0;
             $job->required_date = '2014-08-'.$i;
