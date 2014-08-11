@@ -70,7 +70,7 @@ class HomeController extends BaseController {
 				$jobQuery->whereNotIn('id', $appliedJobIds);
 			}
 			//show all jobs if user has not applied to any
-			$jobs = $jobQuery->orderBy('created_at', 'desc')->paginate(5);
+			$jobs = $jobQuery->orderBy('required_date')->paginate(5);
 
 			$data = array(
 				'jobs' => $jobs,
