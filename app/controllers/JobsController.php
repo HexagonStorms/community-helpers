@@ -206,8 +206,8 @@ class JobsController extends \BaseController {
 	{
 		$job = Job::findorFail($id);
         $job->delete();
-        Session::flash('successMessage', 'Post successfully deleted');
-        return Redirect::action('JobsController@index');
+        Session::flash('successMessage', 'Job successfully deleted');
+        return Redirect::action('UsersController@dashboard_creator', Auth::id());
 	}
 
 	public function modal($id) {
