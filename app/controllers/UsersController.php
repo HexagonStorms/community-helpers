@@ -115,9 +115,9 @@ class UsersController extends \BaseController {
 	public function show($id)
 	{
 		$user = User::findOrFail($id);
-		$job = Job::findOrFail($id);
 		$jobIds = array();
-		foreach ($user->appliedJobs as $job) {
+		foreach ($user->appliedJobs as $job)
+		{
 		 	$jobIds[] = $job->id;
 		}
 
