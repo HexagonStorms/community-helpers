@@ -71,9 +71,18 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<button type="submit" class="btn btn-sm btn-primary">Save Job</button>
+					{{ Form::close() }}
+					<!-- Delete job if user is an giver-->
+					@if(Auth::user()->is_helper == FALSE)
+	                    <!-- For giver to delete job -->
+	                    {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
+	                        <button type="submit" class="btn btn-sm btn-danger pull-right muted">Delete</button>
+	                    {{ Form::close() }}
+	                @endif
+				</div>
 
-				<button type="submit" class="btn btn-sm btn-primary">Save Job</button>
-				{{ Form::close() }}
 			</div>
 		</div>
 	</div>
