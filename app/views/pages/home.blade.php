@@ -1,5 +1,11 @@
 @extends('layouts.master')
 
+@section('title')
+
+Community-Helpers | Home
+
+@stop
+
 @section('content')
 
 <div class="jumbotron">
