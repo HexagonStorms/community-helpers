@@ -64,6 +64,9 @@ Route::resource('users', 'UsersController');
 //for givers to select a helper
 Route::post('users/{id}', 'JobsController@selectHelper');
 
+//for givers to complete a job
+Route::post('jobs/{id}', 'JobsController@completeJob');
+
 Route::resource('reviews', 'ReviewsController');
 
 Route::get('/login', 'HomeController@showLogin');
