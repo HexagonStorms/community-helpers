@@ -276,7 +276,7 @@
 								@endforeach
 								<td>
 									{{ Form::open(array('action' => array('JobsController@completeJob', $job->id))) }}
-									{{ Form::submit('Complete') }}
+										<button type="submit" class="btn btn-warning btn-sm">Complete</button>
 									{{ Form::close() }}
 								</td>
 							</tr>
