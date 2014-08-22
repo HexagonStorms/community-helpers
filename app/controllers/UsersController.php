@@ -205,7 +205,8 @@ class UsersController extends \BaseController {
         {
             $join->on('jobs.id', '=', 'helpers_jobs_mapping.job_id')
                  ->where('helpers_jobs_mapping.is_accepted', '=', 1)
-                 ->where ('jobs.user_id', '=', Auth::user()->id);
+                 ->where ('jobs.user_id', '=', Auth::user()->id)
+                 ->where ('is_complete', '=', 0);
         })
         ->lists('id');
 

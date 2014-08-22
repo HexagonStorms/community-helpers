@@ -180,7 +180,7 @@
 			</div>
 		</div>
 		@else
-		<!-- CREATOR DASH
+		<!-- GIVER DASH
 		============================================================= -->
 		<div class="col-sm-9">
 			<div class="panel panel-default">
@@ -247,6 +247,7 @@
 							<th>Due Date</th>
 							<th>Helper's Name</th>
 							<th>View Helper</th>
+							<th>Actions</th>
 							</h1>
 						</tr>
 						@foreach ($activeJobs as $job)
@@ -273,6 +274,11 @@
 									<td> {{ $helper->first_name }} {{ $helper->last_name }} </td>
 									<td><a href="{{ action('UsersController@show', $helper->id) }}" class="btn btn-primary btn-sm">View</a></td>
 								@endforeach
+								<td>
+									{{ Form::open(array('action' => array('JobsController@completeJob', $job->id))) }}
+										<button type="submit" class="btn btn-warning btn-sm">Complete</button>
+									{{ Form::close() }}
+								</td>
 							</tr>
 						@endforeach
 					</table>

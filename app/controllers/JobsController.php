@@ -116,6 +116,15 @@ class JobsController extends \BaseController {
         return Redirect::action('UsersController@dashboard_helper', Auth::id());
 	}
 
+	public function completeJob($id)
+	{
+		$job = Job::findOrFail($id);
+		$job->is_complete = 1;
+		$job->save();
+		Session::flash('successMessage', 'This job has been completed.');
+		return Redirect::action('UsersController@dashboard_creator', Auth::id());
+	}
+
 	/**
 	 * on Post giver will select helper to do job
 	 *
