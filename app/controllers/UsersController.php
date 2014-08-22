@@ -133,7 +133,6 @@ class UsersController extends \BaseController {
 
 		$data = array(
 			'user' => $user,
-			'job' => $job,
 			'reviews' => $reviews
 		);
 
