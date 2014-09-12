@@ -75,7 +75,7 @@
 					<button type="submit" class="btn btn-sm btn-primary">Save Job</button>
 					{{ Form::close() }}
 					<!-- Delete job if user is an giver-->
-					@if(Auth::user()->is_helper == FALSE)
+					@if(Auth::user()->is_helper == FALSE && isset($job))
 	                    <!-- For giver to delete job -->
 	                    {{ Form::open(array('action' => array('JobsController@destroy', $job->id), 'method' => 'DELETE')) }}
 	                        <button type="submit" class="btn btn-sm btn-danger pull-right muted">Delete</button>

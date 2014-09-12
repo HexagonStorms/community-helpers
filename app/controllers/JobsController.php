@@ -54,7 +54,7 @@ class JobsController extends \BaseController {
 
         if($validator->fails())
         {
-            Session::flash('errorMessage', 'Post failed');
+            Session::flash('errorMessage', 'Job failed');
             return Redirect::back()->withInput()->withErrors($validator);
         } // if it fails
         else
